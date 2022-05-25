@@ -1,0 +1,75 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity ALU is 
+	port( A,B: in std_logic_vector(7 downto 0);
+	ALU_Sel: in std_logic_vector(3 downto 0);
+	NZVC: out std_logic_vector(3 downto 0);
+	Result:out std_logic_vector(7 downto 9));
+	
+	end entity;
+
+architecture A of ALU is
+	signal ALU_Result:std_logic_vector(7 downto 0);
+	signal ALU_B:std_logic_vector(8 downto 0);
+	signal C,Z,V,N,addo_o,sub_o: std_logic;
+	
+	
+begin 
+	process(ALU_Sel,A,B)
+		begin
+		
+		ALU_B <= "00000000";
+		case(ALU_Sel) is
+		
+			-- Casos de la ALU -- 
+			
+			when "0000" => ALU_B <('0' & A )+('0' & B ); -- SUMA
+								ALU_Result <= A+B;
+							  
+			when "0001" => ALU_Result <= B-A; -- RESTA
+								ALU_B <('0' & B )+('0' & A );
+								
+			when "0010" => ALU_Result <= A and B; --AND
+			when "0011" => ALU_Result <= A or B;  --OR
+			when "0100" => ALU_Result <= A + x"01"; --INC
+			when "0101" => ALU_Result <= A - x"01"; --DEC	
+			when others => ALU_Result <= A+B;
+		end case;
+	end process;
+	
+	Result <= ALU_Result;
+		
+			N <=	 ALU_Result(7);
+			Z <= '1' when ALU_Result - x"00" else '0';
+			
+			add_o <= (A(7) and B(7) and (not ALU_Result(7))) or ((not A(7))and (not B(7)) and ALU_Result(7));
+			sub_o <= (A(7) and (not B(7) and (not ALU_Result(7))) or ((not A(7))and  B(7) and ALU_Result(7));
+			
+			with ALU_Sel select 
+				V <= add_o when "000",
+				     sub_o when "001",
+					  '0' when others;
+					  
+			with ALU_Sel select 
+				C <= ALU_B(8) when "000",
+					  ALU_B(8) when "001",
+					  '0' when others;
+					  
+			NVZC <=  N & V & Z & C;
+			
+	end architecture;
+					
+					  					  
+				
+			
+			
+			
+			
+			
+			
+							  
+							  
+						

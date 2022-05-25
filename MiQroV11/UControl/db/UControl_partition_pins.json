@@ -1,0 +1,181 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "MBusMux[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MBusMux[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RegEn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RegEn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RegVal[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RegVal[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxB",
+					"strict" : false
+				},
+				{
+					"name" : "MuxC",
+					"strict" : false
+				},
+				{
+					"name" : "Destino[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Destino[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Destino[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Destino[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Destino[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Destino[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Destino[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Destino[7]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[16]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[17]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[32]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[33]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[45]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[46]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[48]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[49]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[52]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[53]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[55]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[56]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[59]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[60]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MDR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "MDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "MDR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "MDR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

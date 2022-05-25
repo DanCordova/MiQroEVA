@@ -1,0 +1,22 @@
+library ieee;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity UControl is
+	port(	
+			clk,rst	: in	std_logic;
+			MBusMux	: out	std_logic_vector(3 downto 0);
+			RegMux	: out std_logic_vector(3 downto 0);
+			MuxA		: out
+			MuxB		: out
+			MuxC		: out
+			MuxSel	: out
+			ALU		: out
+			Mux		: out
+			MuxDeco	: out
+			MuxMBus	: out
+			MuxDstFt	: out
+			overflow	: out	std_logic;
+			);
+end UControl;

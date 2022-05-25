@@ -1,0 +1,323 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/DanielC/Desktop/ElMicro/simulation/qsim
+Ealu
+Z1 w1650922032
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 7d5Xo;QBOkc31OfQTzSXV0
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 IfY7Mh2WPBc;@7U@3<I^[0
+Z8 dC:/Users/memof/Downloads/miQro_V5/miQro_V4/ElMicro/simulation/qsim
+Z9 8ElMicro.vho
+Z10 FElMicro.vho
+l0
+L88
+V?l]RkaH2=k9e9lVC5jFcY0
+!s100 A2TTTQYWAWT9Yci^0=9eA0
+Z11 OV;C;10.5b;63
+32
+Z12 !s110 1651527036
+!i10b 1
+Z13 !s108 1651527036.000000
+Z14 !s90 -work|work|ElMicro.vho|
+Z15 !s107 ElMicro.vho|
+!i113 1
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 3 alu 0 22 ?l]RkaH2=k9e9lVC5jFcY0
+l294
+L139
+V]WUhR_W_H:h<R>I>=R42<2
+!s100 WVTFV8]iZ5^ca>kCS_]fN1
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Ealu_vhd_vec_tst
+Z18 w1649352681
+R5
+R6
+Z19 dC:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/miQro_V4/ElMicro/simulation/qsim
+Z20 8Waveform4.vwf.vht
+Z21 FWaveform4.vwf.vht
+l0
+L31
+VM9g^YfSDOcSm9VVBlhjI60
+!s100 e_jiJ7a9ecH56?Rk3`[>[2
+R11
+32
+Z22 !s110 1649352685
+!i10b 1
+Z23 !s108 1649352684.000000
+Z24 !s90 -work|work|Waveform4.vwf.vht|
+Z25 !s107 Waveform4.vwf.vht|
+!i113 1
+R16
+R17
+Aalu_arch
+R5
+R6
+DEx4 work 15 alu_vhd_vec_tst 0 22 M9g^YfSDOcSm9VVBlhjI60
+l56
+L33
+Vb^ofgBQ8YhfSNg1Z]lFg]1
+!s100 5=VD?Ni@JijBiklO[XLB11
+R11
+32
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 1
+R16
+R17
+Eelmicro
+Z26 w1649110491
+R3
+R7
+R2
+Z27 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+R4
+R5
+R6
+Z28 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+R19
+R9
+R10
+l0
+L90
+VP]>2B;nK6<6Wnc<ZAfEZ=1
+!s100 DQ`m5[I9z2Y70[E39`d^J1
+R11
+32
+Z29 !s110 1649110492
+!i10b 1
+Z30 !s108 1649110492.000000
+R14
+R15
+!i113 1
+R16
+R17
+Astructure
+R3
+R7
+R2
+R27
+R4
+R5
+R6
+R28
+DEx4 work 7 elmicro 0 22 P]>2B;nK6<6Wnc<ZAfEZ=1
+l1405
+L246
+VJIhgDL3D:Qc?LN76110PS2
+!s100 :PT<LFNl>D`ITE<R;W9o;2
+R11
+32
+R29
+!i10b 1
+R30
+R14
+R15
+!i113 1
+R16
+R17
+Eelmicro_vhd_vec_tst
+Z31 w1650922033
+R5
+R6
+R8
+Z32 8Waveform3.vwf.vht
+Z33 FWaveform3.vwf.vht
+l0
+L31
+VliD80?47Y2]Y3ZmhZ8G5l1
+!s100 AEPib:FdJb92P=hnoRhIl1
+R11
+32
+R12
+!i10b 1
+R13
+Z34 !s90 -work|work|Waveform3.vwf.vht|
+Z35 !s107 Waveform3.vwf.vht|
+!i113 1
+R16
+R17
+Aelmicro_arch
+R5
+R6
+Z36 DEx4 work 19 elmicro_vhd_vec_tst 0 22 liD80?47Y2]Y3ZmhZ8G5l1
+l188
+L33
+Z37 V:kco7KT1dU``LMK[42m>72
+Z38 !s100 MX<zHTkd=g;M]nVS9hJMb3
+R11
+32
+R12
+!i10b 1
+R13
+R34
+R35
+!i113 1
+R16
+R17
+Ehard_block
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+l0
+L34
+V8_BbEmGd;OHS6h@;gFc7W3
+!s100 ROH=D<N4CT6aCZ<37A[_?0
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 hard_block 0 22 8_BbEmGd;OHS6h@;gFc7W3
+l75
+L53
+Vg=W`CQ>24lhYF71zFSkY43
+!s100 zW6ML5NVY?Ai`]`n2XhME3
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Euniversalshiftregister
+Z39 w1647218369
+R3
+R7
+R2
+R27
+R4
+R5
+R6
+R28
+R0
+R9
+R10
+l0
+L90
+V_Ac;L03<dT`boUAF@NL7;2
+!s100 El4]NQo=B@aEPlGg=faTF2
+R11
+32
+Z40 !s110 1647218369
+!i10b 1
+Z41 !s108 1647218369.000000
+R14
+R15
+!i113 1
+R16
+R17
+Astructure
+R3
+R7
+R2
+R27
+R4
+R5
+R6
+R28
+DEx4 work 22 universalshiftregister 0 22 _Ac;L03<dT`boUAF@NL7;2
+l221
+L124
+Vz`@7oEF59I8=JFo^;cNjR2
+!s100 HW^k]<AM6Dk`ZZAcKI2MC2
+R11
+32
+R40
+!i10b 1
+R41
+R14
+R15
+!i113 1
+R16
+R17
+Euniversalshiftregister_vhd_vec_tst
+Z42 w1647218367
+R5
+R6
+R0
+Z43 8Waveform1.vwf.vht
+Z44 FWaveform1.vwf.vht
+l0
+L31
+V2QdLVmL4jVUPEM85RU7A42
+!s100 CLZS=ef?U;F4laECGZ1_V0
+R11
+32
+R40
+!i10b 1
+R41
+Z45 !s90 -work|work|Waveform1.vwf.vht|
+Z46 !s107 Waveform1.vwf.vht|
+!i113 1
+R16
+R17
+Auniversalshiftregister_arch
+R5
+R6
+DEx4 work 34 universalshiftregister_vhd_vec_tst 0 22 2QdLVmL4jVUPEM85RU7A42
+l50
+L33
+V:A@XmejUSbF@aRaR=9gT60
+!s100 mkmf_K<g>_K73X[jFm9hB0
+R11
+32
+R40
+!i10b 1
+R41
+R45
+R46
+!i113 1
+R16
+R17

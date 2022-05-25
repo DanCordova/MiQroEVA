@@ -1,0 +1,65 @@
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx primitives in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity UniversalShiftRegister is
+    Port ( Data : in  STD_LOGIC_VECTOR(7 downto 0);
+           Clk  : in  STD_LOGIC;
+			  Clr  : in STD_LOGIC;
+			  SEL  : in STD_LOGIC_VECTOR(2 downto 0);
+           Pout : out  STD_LOGIC_VECTOR (7 downto 0));
+end UniversalShiftRegister;
+
+architecture Behavioral of UniversalShiftRegister is
+	signal Regist : std_logic_vector(7 downto 0);
+begin
+
+	Shifter: process(Data,Clk, Regist)
+	begin
+		if(rising_edge(Clk)) then
+			if(Clr = '1') then
+				Regist <= "00000000";
+			else
+-- All choice expressions in a VHDL case statement must be constant
+-- and unique.	Also, the case statement must be complete, or it must
+-- include an others clause. 
+				case SEL is
+					when "000" => Regist <= Regist;
+				-- Sequential Statement(s)
+					when "001" => Regist <= Data; 
+				-- Sequential Statement(s)
+					when "010" => Regist <= Regist + 1;
+					when "011" => Regist <= Regist - 1;
+					when "100" => Regist <= Regist(6 downto 0) & "0";
+					when "101" => Regist <= "0" & Regist(7 downto 1);
+					when "110" => Regist <= Regist(6 downto 0) & Regist(7);
+					when "111" => Regist <= Regist(0) & Regist(7 downto 1);
+				-- Sequential Statement(s)
+					when others => Regist <= Regist;
+				end case;
+			
+			end if;
+			
+			
+
+				--Regist <= Regist(7 downto 0) & Data;
+		end if;
+			Pout <= Regist;
+		
+		--Sout <= Data;
+			
+	end process Shifter;
+
+end Behavioral;
+

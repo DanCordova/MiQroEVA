@@ -1,0 +1,62 @@
+PARAMETERS
+(
+	WIDTH = 8
+);
+
+SUBDESIGN busmux16to1
+(
+	data0[WIDTH-1..0]			: INPUT;
+	data1[WIDTH-1..0]			: INPUT;
+	data2[WIDTH-1..0]			: INPUT;
+	data3[WIDTH-1..0]			: INPUT;
+	data4[WIDTH-1..0]			: INPUT;
+	data5[WIDTH-1..0]			: INPUT;
+	data6[WIDTH-1..0]			: INPUT;
+	data7[WIDTH-1..0]			: INPUT;
+	data8[WIDTH-1..0]			: INPUT;
+	data9[WIDTH-1..0]			: INPUT;
+	data10[WIDTH-1..0]		: INPUT;
+	data11[WIDTH-1..0]		: INPUT;
+	data12[WIDTH-1..0]		: INPUT;
+	data13[WIDTH-1..0]		: INPUT;
+	data14[WIDTH-1..0]		: INPUT;
+	data15[WIDTH-1..0]		: INPUT;
+	sel[4..0]					: INPUT;
+	result[WIDTH-1..0]		: OUTPUT;
+)
+BEGIN
+	CASE sel IS
+		when 0 =>
+			result = data0[];
+		when 1 =>
+			result = data1[];
+		when 2 =>
+			result = data2[];
+		when 3 =>
+			result = data3[];
+		when 4 =>
+			result = data4[];
+		when 5 =>
+			result = data5[];
+		when 6 =>
+			result = data6[];
+		when 7 =>
+			result = data7[];
+		when 8 =>
+			result = data8[];
+		when 9 =>
+			result = data9[];
+		when 10 =>
+			result = data10[];
+		when 11 =>
+			result = data11[];
+		when 12 =>
+			result = data12[];
+		when 13 =>
+			result = data13[];
+		when 14 =>
+			result = data14[];
+		when 15 =>
+			result = data15[];
+	END CASE;
+END;

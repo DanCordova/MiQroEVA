@@ -1,0 +1,221 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "cacheOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "cacheOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "cacheOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Outd[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Outd[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Outd[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Outd[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Outd[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Outd[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Outd[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Outd[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "muxSel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "muxSel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "muxSel[4]",
+					"strict" : false
+				},
+				{
+					"name" : "muxSel[3]",
+					"strict" : false
+				},
+				{
+					"name" : "muxSel[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SelBus[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SelBus[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SelBus[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SelBus[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CLR",
+					"strict" : false
+				},
+				{
+					"name" : "SelRegD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SelRegD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SelRegD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SelRegD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "EnDec",
+					"strict" : false
+				},
+				{
+					"name" : "MUX_MAR",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "MUX_A",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dataB[7]",
+					"strict" : false
+				},
+				{
+					"name" : "MUX_B",
+					"strict" : false
+				},
+				{
+					"name" : "dataB[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dataB[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dataB[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dataB[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dataB[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dataB[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dataB[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MUX_MDR",
+					"strict" : false
+				},
+				{
+					"name" : "WR",
+					"strict" : false
+				},
+				{
+					"name" : "MUX_RAM",
+					"strict" : false
+				},
+				{
+					"name" : "AluSel[3]",
+					"strict" : false
+				},
+				{
+					"name" : "AluSel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "AluSel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "AluSel[2]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

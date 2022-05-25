@@ -52,11 +52,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "muxSel[1]",
+					"name" : "Destino[7]",
 					"strict" : false
 				},
 				{
-					"name" : "muxSel[0]",
+					"name" : "Fuente[7]",
 					"strict" : false
 				},
 				{
@@ -68,7 +68,75 @@
 					"strict" : false
 				},
 				{
+					"name" : "muxSel[0]",
+					"strict" : false
+				},
+				{
 					"name" : "muxSel[2]",
+					"strict" : false
+				},
+				{
+					"name" : "muxSel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "muxSel[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Fuente[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Destino[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Fuente[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Destino[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Fuente[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Destino[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Fuente[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Destino[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Fuente[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Destino[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Fuente[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Destino[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Fuente[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Destino[0]",
 					"strict" : false
 				},
 				{
@@ -116,42 +184,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "dataA[7]",
-					"strict" : false
-				},
-				{
-					"name" : "MUX_A",
-					"strict" : false
-				},
-				{
-					"name" : "dataA[6]",
-					"strict" : false
-				},
-				{
-					"name" : "dataA[5]",
-					"strict" : false
-				},
-				{
-					"name" : "dataA[4]",
-					"strict" : false
-				},
-				{
-					"name" : "dataA[3]",
-					"strict" : false
-				},
-				{
-					"name" : "dataA[2]",
-					"strict" : false
-				},
-				{
-					"name" : "dataA[1]",
-					"strict" : false
-				},
-				{
-					"name" : "dataA[0]",
-					"strict" : false
-				},
-				{
 					"name" : "dataB[7]",
 					"strict" : false
 				},
@@ -185,6 +217,42 @@
 				},
 				{
 					"name" : "dataB[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "MUX_A",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[0]",
 					"strict" : false
 				},
 				{

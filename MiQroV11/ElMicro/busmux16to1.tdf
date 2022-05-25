@@ -21,7 +21,23 @@ SUBDESIGN busmux16to1
 	data13[WIDTH-1..0]		: INPUT;
 	data14[WIDTH-1..0]		: INPUT;
 	data15[WIDTH-1..0]		: INPUT;
-	sel[4..0]					: INPUT;
+	data16[WIDTH-1..0]			: INPUT;
+	data17[WIDTH-1..0]			: INPUT;
+	data18[WIDTH-1..0]			: INPUT;
+	data19[WIDTH-1..0]			: INPUT;
+	data20[WIDTH-1..0]			: INPUT;
+	data21[WIDTH-1..0]			: INPUT;
+	data22[WIDTH-1..0]			: INPUT;
+	data23[WIDTH-1..0]			: INPUT;
+	data24[WIDTH-1..0]			: INPUT;
+	data25[WIDTH-1..0]			: INPUT;
+	data26[WIDTH-1..0]		: INPUT;
+	data27[WIDTH-1..0]		: INPUT;
+	data28[WIDTH-1..0]		: INPUT;
+	data29[WIDTH-1..0]		: INPUT;
+	data30[WIDTH-1..0]		: INPUT;
+	data31[WIDTH-1..0]		: INPUT;
+	sel[5..0]					: INPUT;
 	result[WIDTH-1..0]		: OUTPUT;
 )
 BEGIN
@@ -58,5 +74,37 @@ BEGIN
 			result = data14[];
 		when 15 =>
 			result = data15[];
+		when 16 =>
+			result = data16[];
+		when 17 =>
+			result = data17[];
+		when 18 =>
+			result = data18[];
+		when 19 =>
+			result = data19[];
+		when 20 =>
+			result = data20[];
+		when 21 =>
+			result = data21[];
+		when 22 =>
+			result = data22[];
+		when 23 =>
+			result = data23[];
+		when 24 =>
+			result = data24[];
+		when 25 =>
+			result = data25[];
+		when 26 =>
+			result = data26[];
+		when 27 =>
+			result = data27[];
+		when 28 =>
+			result = data28[];
+		when 29 =>
+			result = data29[];
+		when 30 =>
+			result = data30[];
+		when 31 =>
+			result = data31[];
 	END CASE;
 END;

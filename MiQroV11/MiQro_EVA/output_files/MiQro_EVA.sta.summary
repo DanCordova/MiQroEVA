@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'Clk'
+Slack : -6.511
+TNS   : -763.804
+
+Type  : Slow 1100mV 85C Model Setup 'AluSel[0]'
+Slack : -5.628
+TNS   : -42.627
+
+Type  : Slow 1100mV 85C Model Hold 'Clk'
+Slack : 0.584
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'AluSel[0]'
+Slack : 1.407
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Clk'
+Slack : -3.166
+TNS   : -272.459
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'AluSel[0]'
+Slack : 0.268
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'Clk'
+Slack : -6.590
+TNS   : -764.122
+
+Type  : Slow 1100mV 0C Model Setup 'AluSel[0]'
+Slack : -5.860
+TNS   : -45.266
+
+Type  : Slow 1100mV 0C Model Hold 'Clk'
+Slack : 0.506
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'AluSel[0]'
+Slack : 1.281
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Clk'
+Slack : -3.166
+TNS   : -272.183
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'AluSel[0]'
+Slack : 0.265
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'Clk'
+Slack : -2.551
+TNS   : -263.607
+
+Type  : Fast 1100mV 85C Model Setup 'AluSel[0]'
+Slack : -2.484
+TNS   : -18.066
+
+Type  : Fast 1100mV 85C Model Hold 'Clk'
+Slack : 0.226
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'AluSel[0]'
+Slack : 0.473
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Clk'
+Slack : -2.174
+TNS   : -91.312
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'AluSel[0]'
+Slack : -0.125
+TNS   : -0.988
+
+Type  : Fast 1100mV 0C Model Setup 'AluSel[0]'
+Slack : -2.296
+TNS   : -16.750
+
+Type  : Fast 1100mV 0C Model Setup 'Clk'
+Slack : -2.229
+TNS   : -228.438
+
+Type  : Fast 1100mV 0C Model Hold 'Clk'
+Slack : 0.177
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'AluSel[0]'
+Slack : 0.448
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Clk'
+Slack : -2.174
+TNS   : -91.587
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'AluSel[0]'
+Slack : -0.102
+TNS   : -0.637
+
+------------------------------------------------------------

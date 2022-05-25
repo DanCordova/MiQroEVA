@@ -1,15 +1,15 @@
-Fitter Status : Successful - Tue May 24 20:46:29 2022
+Fitter Status : Successful - Wed May 25 12:51:31 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : ElMicro
 Top-level Entity Name : ElMicro
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 935 / 49,760 ( 2 % )
-    Total combinational functions : 932 / 49,760 ( 2 % )
+Total logic elements : 949 / 49,760 ( 2 % )
+    Total combinational functions : 945 / 49,760 ( 2 % )
     Dedicated logic registers : 131 / 49,760 ( < 1 % )
 Total registers : 131
-Total pins : 58 / 360 ( 16 % )
+Total pins : 75 / 360 ( 21 % )
 Total virtual pins : 0
 Total memory bits : 2,048 / 1,677,312 ( < 1 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )

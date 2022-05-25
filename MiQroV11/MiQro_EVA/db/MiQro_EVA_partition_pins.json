@@ -1,0 +1,453 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "MuxB",
+					"strict" : false
+				},
+				{
+					"name" : "MuxC",
+					"strict" : false
+				},
+				{
+					"name" : "ALU[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU[0]",
+					"strict" : false
+				},
+				{
+					"name" : "cacheOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "cacheOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "cacheOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Destino27",
+					"strict" : false
+				},
+				{
+					"name" : "Destino26",
+					"strict" : false
+				},
+				{
+					"name" : "Destino25",
+					"strict" : false
+				},
+				{
+					"name" : "Destino24",
+					"strict" : false
+				},
+				{
+					"name" : "Destino23",
+					"strict" : false
+				},
+				{
+					"name" : "Destino22",
+					"strict" : false
+				},
+				{
+					"name" : "Destino21",
+					"strict" : false
+				},
+				{
+					"name" : "Destino20",
+					"strict" : false
+				},
+				{
+					"name" : "MBusMux[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MBusMux[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Outd[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Outd[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Outd[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Outd[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Outd[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Outd[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Outd[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Outd[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RegEn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RegEn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RegVal[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RegVal[0]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[60]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[59]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[56]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[55]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[53]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[52]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[49]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[48]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[46]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[45]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[33]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[32]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[17]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[16]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MDR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "MDR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "MDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "MDR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "MDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Clk",
+					"strict" : false
+				},
+				{
+					"name" : "muxSel[3]",
+					"strict" : false
+				},
+				{
+					"name" : "muxSel[2]",
+					"strict" : false
+				},
+				{
+					"name" : "muxSel[5]",
+					"strict" : false
+				},
+				{
+					"name" : "muxSel[4]",
+					"strict" : false
+				},
+				{
+					"name" : "muxSel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "muxSel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Destino7",
+					"strict" : false
+				},
+				{
+					"name" : "Fuente7",
+					"strict" : false
+				},
+				{
+					"name" : "Destino6",
+					"strict" : false
+				},
+				{
+					"name" : "Fuente6",
+					"strict" : false
+				},
+				{
+					"name" : "Destino5",
+					"strict" : false
+				},
+				{
+					"name" : "Fuente5",
+					"strict" : false
+				},
+				{
+					"name" : "Destino4",
+					"strict" : false
+				},
+				{
+					"name" : "Fuente4",
+					"strict" : false
+				},
+				{
+					"name" : "Destino3",
+					"strict" : false
+				},
+				{
+					"name" : "Fuente3",
+					"strict" : false
+				},
+				{
+					"name" : "Destino2",
+					"strict" : false
+				},
+				{
+					"name" : "Fuente2",
+					"strict" : false
+				},
+				{
+					"name" : "Destino1",
+					"strict" : false
+				},
+				{
+					"name" : "Fuente1",
+					"strict" : false
+				},
+				{
+					"name" : "Destino0",
+					"strict" : false
+				},
+				{
+					"name" : "Fuente0",
+					"strict" : false
+				},
+				{
+					"name" : "SelBus[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SelBus[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SelBus[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SelBus[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Rst",
+					"strict" : false
+				},
+				{
+					"name" : "SelRegD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SelRegD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SelRegD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SelRegD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "EnDec",
+					"strict" : false
+				},
+				{
+					"name" : "MUX_MAR",
+					"strict" : false
+				},
+				{
+					"name" : "MUX_MDR",
+					"strict" : false
+				},
+				{
+					"name" : "WR",
+					"strict" : false
+				},
+				{
+					"name" : "MUX_A",
+					"strict" : false
+				},
+				{
+					"name" : "AIN[7]",
+					"strict" : false
+				},
+				{
+					"name" : "MUX_B",
+					"strict" : false
+				},
+				{
+					"name" : "BIN[7]",
+					"strict" : false
+				},
+				{
+					"name" : "AIN[6]",
+					"strict" : false
+				},
+				{
+					"name" : "BIN[6]",
+					"strict" : false
+				},
+				{
+					"name" : "AIN[5]",
+					"strict" : false
+				},
+				{
+					"name" : "BIN[5]",
+					"strict" : false
+				},
+				{
+					"name" : "AIN[4]",
+					"strict" : false
+				},
+				{
+					"name" : "BIN[4]",
+					"strict" : false
+				},
+				{
+					"name" : "AIN[3]",
+					"strict" : false
+				},
+				{
+					"name" : "BIN[3]",
+					"strict" : false
+				},
+				{
+					"name" : "AIN[2]",
+					"strict" : false
+				},
+				{
+					"name" : "BIN[2]",
+					"strict" : false
+				},
+				{
+					"name" : "AIN[1]",
+					"strict" : false
+				},
+				{
+					"name" : "BIN[1]",
+					"strict" : false
+				},
+				{
+					"name" : "AIN[0]",
+					"strict" : false
+				},
+				{
+					"name" : "BIN[0]",
+					"strict" : false
+				},
+				{
+					"name" : "AluSel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "AluSel[2]",
+					"strict" : false
+				},
+				{
+					"name" : "AluSel[3]",
+					"strict" : false
+				},
+				{
+					"name" : "AluSel[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

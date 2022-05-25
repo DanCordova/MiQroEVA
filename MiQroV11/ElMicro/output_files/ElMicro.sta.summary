@@ -3,19 +3,19 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'CLK'
-Slack : -8.698
-TNS   : -967.669
+Slack : -8.100
+TNS   : -918.681
 
 Type  : Slow 1200mV 85C Model Setup 'AluSel[0]'
-Slack : -4.956
-TNS   : -38.243
+Slack : -4.743
+TNS   : -35.661
 
 Type  : Slow 1200mV 85C Model Hold 'CLK'
-Slack : 0.288
+Slack : 0.322
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'AluSel[0]'
-Slack : 0.847
+Slack : 0.696
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
@@ -27,19 +27,19 @@ Slack : -3.000
 TNS   : -3.000
 
 Type  : Slow 1200mV 0C Model Setup 'CLK'
-Slack : -8.047
-TNS   : -891.281
+Slack : -7.305
+TNS   : -835.583
 
 Type  : Slow 1200mV 0C Model Setup 'AluSel[0]'
-Slack : -4.474
-TNS   : -34.265
+Slack : -4.272
+TNS   : -32.003
 
 Type  : Slow 1200mV 0C Model Hold 'CLK'
-Slack : 0.292
+Slack : 0.316
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'AluSel[0]'
-Slack : 0.611
+Slack : 0.480
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
@@ -51,24 +51,24 @@ Slack : -3.000
 TNS   : -3.000
 
 Type  : Fast 1200mV 0C Model Setup 'CLK'
-Slack : -3.142
-TNS   : -340.055
+Slack : -3.039
+TNS   : -324.981
 
 Type  : Fast 1200mV 0C Model Setup 'AluSel[0]'
-Slack : -1.859
-TNS   : -13.496
+Slack : -1.729
+TNS   : -12.472
 
 Type  : Fast 1200mV 0C Model Hold 'CLK'
-Slack : 0.119
+Slack : 0.127
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'AluSel[0]'
-Slack : 0.381
+Slack : 0.367
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
 Slack : -3.000
-TNS   : -150.588
+TNS   : -151.124
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'AluSel[0]'
 Slack : -3.000

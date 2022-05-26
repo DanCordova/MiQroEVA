@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Wed May 25 12:54:17 2022
+Analysis & Synthesis Status : Successful - Wed May 25 16:37:13 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : MiQro_EVA
-Top-level Entity Name : MiQro_EVA
+Top-level Entity Name : ElMicro
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 135
-Total pins : 216
+Total registers : 131
+Total pins : 83
 Total virtual pins : 0
 Total block memory bits : 2,048
 Total DSP Blocks : 0

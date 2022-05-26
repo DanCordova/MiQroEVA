@@ -1,404 +1,4 @@
-|MiQro_EVA
-MuxA <= UControl:inst.MuxA
-Clk => UControl:inst.clk
-Clk => ElMicro:inst1.CLK
-Rst => UControl:inst.rst
-Rst => ElMicro:inst1.CLR
-Cache[0] => UControl:inst.Cache[0]
-Cache[1] => UControl:inst.Cache[1]
-Cache[2] => UControl:inst.Cache[2]
-Cache[3] => UControl:inst.Cache[3]
-Cache[4] => UControl:inst.Cache[4]
-Cache[5] => UControl:inst.Cache[5]
-Cache[6] => UControl:inst.Cache[6]
-Cache[7] => UControl:inst.Cache[7]
-Cache[8] => UControl:inst.Cache[8]
-Cache[9] => UControl:inst.Cache[9]
-Cache[10] => UControl:inst.Cache[10]
-Cache[11] => UControl:inst.Cache[11]
-Cache[12] => UControl:inst.Cache[12]
-Cache[13] => UControl:inst.Cache[13]
-Cache[14] => UControl:inst.Cache[14]
-Cache[15] => UControl:inst.Cache[15]
-Flags[0] => UControl:inst.Flags[0]
-Flags[1] => UControl:inst.Flags[1]
-Flags[2] => UControl:inst.Flags[2]
-Flags[3] => UControl:inst.Flags[3]
-Flags[4] => UControl:inst.Flags[4]
-Flags[5] => UControl:inst.Flags[5]
-Flags[6] => UControl:inst.Flags[6]
-Flags[7] => UControl:inst.Flags[7]
-Flags[8] => UControl:inst.Flags[8]
-Flags[9] => UControl:inst.Flags[9]
-Flags[10] => UControl:inst.Flags[10]
-Flags[11] => UControl:inst.Flags[11]
-Flags[12] => UControl:inst.Flags[12]
-Flags[13] => UControl:inst.Flags[13]
-Flags[14] => UControl:inst.Flags[14]
-Flags[15] => UControl:inst.Flags[15]
-MDR[0] => UControl:inst.MDR[0]
-MDR[1] => UControl:inst.MDR[1]
-MDR[2] => UControl:inst.MDR[2]
-MDR[3] => UControl:inst.MDR[3]
-MDR[4] => UControl:inst.MDR[4]
-MDR[5] => UControl:inst.MDR[5]
-MDR[6] => UControl:inst.MDR[6]
-MDR[7] => UControl:inst.MDR[7]
-MuxB <= UControl:inst.MuxB
-MuxC <= UControl:inst.MuxC
-MuxMAR <= UControl:inst.MuxMAR
-EnableDeco <= UControl:inst.EnableDeco
-WR_Ram <= UControl:inst.WR_Ram
-ALU[0] <= UControl:inst.ALU[0]
-ALU[1] <= UControl:inst.ALU[1]
-ALU[2] <= UControl:inst.ALU[2]
-cacheOut[0] <= ElMicro:inst1.cacheOut[0]
-cacheOut[1] <= ElMicro:inst1.cacheOut[1]
-cacheOut[2] <= ElMicro:inst1.cacheOut[2]
-cacheOut[3] <= ElMicro:inst1.cacheOut[3]
-cacheOut[4] <= ElMicro:inst1.cacheOut[4]
-cacheOut[5] <= ElMicro:inst1.cacheOut[5]
-cacheOut[6] <= ElMicro:inst1.cacheOut[6]
-cacheOut[7] <= ElMicro:inst1.cacheOut[7]
-MUX_A => ElMicro:inst1.MUX_A
-MUX_MAR => ElMicro:inst1.MUX_MAR
-MUX_B => ElMicro:inst1.MUX_B
-MUX_MDR => ElMicro:inst1.MUX_MDR
-EnDec => ElMicro:inst1.EnDec
-WR => ElMicro:inst1.WR
-AluSel[0] => ElMicro:inst1.AluSel[0]
-AluSel[1] => ElMicro:inst1.AluSel[1]
-AluSel[2] => ElMicro:inst1.AluSel[2]
-AluSel[3] => ElMicro:inst1.AluSel[3]
-AIN[0] => ElMicro:inst1.dataA[0]
-AIN[1] => ElMicro:inst1.dataA[1]
-AIN[2] => ElMicro:inst1.dataA[2]
-AIN[3] => ElMicro:inst1.dataA[3]
-AIN[4] => ElMicro:inst1.dataA[4]
-AIN[5] => ElMicro:inst1.dataA[5]
-AIN[6] => ElMicro:inst1.dataA[6]
-AIN[7] => ElMicro:inst1.dataA[7]
-BIN[0] => ElMicro:inst1.dataB[0]
-BIN[1] => ElMicro:inst1.dataB[1]
-BIN[2] => ElMicro:inst1.dataB[2]
-BIN[3] => ElMicro:inst1.dataB[3]
-BIN[4] => ElMicro:inst1.dataB[4]
-BIN[5] => ElMicro:inst1.dataB[5]
-BIN[6] => ElMicro:inst1.dataB[6]
-BIN[7] => ElMicro:inst1.dataB[7]
-Destino7 => ElMicro:inst1.Destino[7]
-Destino6 => ElMicro:inst1.Destino[6]
-Destino5 => ElMicro:inst1.Destino[5]
-Destino4 => ElMicro:inst1.Destino[4]
-Destino3 => ElMicro:inst1.Destino[3]
-Destino2 => ElMicro:inst1.Destino[2]
-Destino1 => ElMicro:inst1.Destino[1]
-Destino0 => ElMicro:inst1.Destino[0]
-Fuente7 => ElMicro:inst1.Fuente[7]
-Fuente6 => ElMicro:inst1.Fuente[6]
-Fuente5 => ElMicro:inst1.Fuente[5]
-Fuente4 => ElMicro:inst1.Fuente[4]
-Fuente3 => ElMicro:inst1.Fuente[3]
-Fuente2 => ElMicro:inst1.Fuente[2]
-Fuente1 => ElMicro:inst1.Fuente[1]
-Fuente0 => ElMicro:inst1.Fuente[0]
-muxSel[0] => ElMicro:inst1.muxSel[0]
-muxSel[1] => ElMicro:inst1.muxSel[1]
-muxSel[2] => ElMicro:inst1.muxSel[2]
-muxSel[3] => ElMicro:inst1.muxSel[3]
-muxSel[4] => ElMicro:inst1.muxSel[4]
-muxSel[5] => ElMicro:inst1.muxSel[5]
-SelBus[0] => ElMicro:inst1.SelBus[0]
-SelBus[1] => ElMicro:inst1.SelBus[1]
-SelBus[2] => ElMicro:inst1.SelBus[2]
-SelBus[3] => ElMicro:inst1.SelBus[3]
-SelRegD[0] => ElMicro:inst1.SelRegD[0]
-SelRegD[1] => ElMicro:inst1.SelRegD[1]
-SelRegD[2] => ElMicro:inst1.SelRegD[2]
-SelRegD[3] => ElMicro:inst1.SelRegD[3]
-Destino27 <= UControl:inst.Destino[7]
-Destino26 <= UControl:inst.Destino[6]
-Destino25 <= UControl:inst.Destino[5]
-Destino24 <= UControl:inst.Destino[4]
-Destino23 <= UControl:inst.Destino[3]
-Destino22 <= UControl:inst.Destino[2]
-Destino21 <= UControl:inst.Destino[1]
-Destino20 <= UControl:inst.Destino[0]
-Fuente37 <= UControl:inst.Fuente[7]
-Fuente36 <= UControl:inst.Fuente[6]
-Fuente35 <= UControl:inst.Fuente[5]
-Fuente34 <= UControl:inst.Fuente[4]
-Fuente33 <= UControl:inst.Fuente[3]
-Fuente32 <= UControl:inst.Fuente[2]
-Fuente31 <= UControl:inst.Fuente[1]
-Fuente30 <= UControl:inst.Fuente[0]
-MBusMux[0] <= UControl:inst.MBusMux[0]
-MBusMux[1] <= UControl:inst.MBusMux[1]
-MBusMux[2] <= UControl:inst.MBusMux[2]
-MBusMux[3] <= UControl:inst.MBusMux[3]
-MBusMux[4] <= UControl:inst.MBusMux[4]
-Outd[0] <= ElMicro:inst1.Outd[0]
-Outd[1] <= ElMicro:inst1.Outd[1]
-Outd[2] <= ElMicro:inst1.Outd[2]
-Outd[3] <= ElMicro:inst1.Outd[3]
-Outd[4] <= ElMicro:inst1.Outd[4]
-Outd[5] <= ElMicro:inst1.Outd[5]
-Outd[6] <= ElMicro:inst1.Outd[6]
-Outd[7] <= ElMicro:inst1.Outd[7]
-RegEn[0] <= UControl:inst.RegEn[0]
-RegEn[1] <= UControl:inst.RegEn[1]
-RegEn[2] <= UControl:inst.RegEn[2]
-RegEn[3] <= UControl:inst.RegEn[3]
-RegVal[0] <= UControl:inst.RegVal[0]
-RegVal[1] <= UControl:inst.RegVal[1]
-RegVal[2] <= UControl:inst.RegVal[2]
-RegVal[3] <= UControl:inst.RegVal[3]
-UMemOut[0] <= UControl:inst.UMemOut[0]
-UMemOut[1] <= UControl:inst.UMemOut[1]
-UMemOut[2] <= UControl:inst.UMemOut[2]
-UMemOut[3] <= UControl:inst.UMemOut[3]
-UMemOut[4] <= UControl:inst.UMemOut[4]
-UMemOut[5] <= UControl:inst.UMemOut[5]
-UMemOut[6] <= UControl:inst.UMemOut[6]
-UMemOut[7] <= UControl:inst.UMemOut[7]
-UMemOut[8] <= UControl:inst.UMemOut[8]
-UMemOut[9] <= UControl:inst.UMemOut[9]
-UMemOut[10] <= UControl:inst.UMemOut[10]
-UMemOut[11] <= UControl:inst.UMemOut[11]
-UMemOut[12] <= UControl:inst.UMemOut[12]
-UMemOut[13] <= UControl:inst.UMemOut[13]
-UMemOut[14] <= UControl:inst.UMemOut[14]
-UMemOut[15] <= UControl:inst.UMemOut[15]
-UMemOut[16] <= UControl:inst.UMemOut[16]
-UMemOut[17] <= UControl:inst.UMemOut[17]
-UMemOut[18] <= UControl:inst.UMemOut[18]
-UMemOut[19] <= UControl:inst.UMemOut[19]
-UMemOut[20] <= UControl:inst.UMemOut[20]
-UMemOut[21] <= UControl:inst.UMemOut[21]
-UMemOut[22] <= UControl:inst.UMemOut[22]
-UMemOut[23] <= UControl:inst.UMemOut[23]
-UMemOut[24] <= UControl:inst.UMemOut[24]
-UMemOut[25] <= UControl:inst.UMemOut[25]
-UMemOut[26] <= UControl:inst.UMemOut[26]
-UMemOut[27] <= UControl:inst.UMemOut[27]
-UMemOut[28] <= UControl:inst.UMemOut[28]
-UMemOut[29] <= UControl:inst.UMemOut[29]
-UMemOut[30] <= UControl:inst.UMemOut[30]
-UMemOut[31] <= UControl:inst.UMemOut[31]
-UMemOut[32] <= UControl:inst.UMemOut[32]
-UMemOut[33] <= UControl:inst.UMemOut[33]
-UMemOut[34] <= UControl:inst.UMemOut[34]
-UMemOut[35] <= UControl:inst.UMemOut[35]
-UMemOut[36] <= UControl:inst.UMemOut[36]
-UMemOut[37] <= UControl:inst.UMemOut[37]
-UMemOut[38] <= UControl:inst.UMemOut[38]
-UMemOut[39] <= UControl:inst.UMemOut[39]
-UMemOut[40] <= UControl:inst.UMemOut[40]
-UMemOut[41] <= UControl:inst.UMemOut[41]
-UMemOut[42] <= UControl:inst.UMemOut[42]
-UMemOut[43] <= UControl:inst.UMemOut[43]
-UMemOut[44] <= UControl:inst.UMemOut[44]
-UMemOut[45] <= UControl:inst.UMemOut[45]
-UMemOut[46] <= UControl:inst.UMemOut[46]
-UMemOut[47] <= UControl:inst.UMemOut[47]
-UMemOut[48] <= UControl:inst.UMemOut[48]
-UMemOut[49] <= UControl:inst.UMemOut[49]
-UMemOut[50] <= UControl:inst.UMemOut[50]
-UMemOut[51] <= UControl:inst.UMemOut[51]
-UMemOut[52] <= UControl:inst.UMemOut[52]
-UMemOut[53] <= UControl:inst.UMemOut[53]
-UMemOut[54] <= UControl:inst.UMemOut[54]
-UMemOut[55] <= UControl:inst.UMemOut[55]
-UMemOut[56] <= UControl:inst.UMemOut[56]
-UMemOut[57] <= UControl:inst.UMemOut[57]
-UMemOut[58] <= UControl:inst.UMemOut[58]
-UMemOut[59] <= UControl:inst.UMemOut[59]
-UMemOut[60] <= UControl:inst.UMemOut[60]
-UMemOut[61] <= UControl:inst.UMemOut[61]
-UMemOut[62] <= UControl:inst.UMemOut[62]
-UMemOut[63] <= UControl:inst.UMemOut[63]
-
-
-|MiQro_EVA|UControl:inst
-clk => address[0].CLK
-clk => address[1].CLK
-clk => address[2].CLK
-clk => address[3].CLK
-clk => address[4].CLK
-clk => address[5].CLK
-clk => address[6].CLK
-clk => address[7].CLK
-clk => address[8].CLK
-clk => address[9].CLK
-clk => address[10].CLK
-clk => address[11].CLK
-clk => address[12].CLK
-clk => address[13].CLK
-clk => address[14].CLK
-clk => address[15].CLK
-clk => NextAddUC[0].CLK
-clk => NextAddUC[1].CLK
-clk => NextAddUC[2].CLK
-clk => NextAddUC[3].CLK
-clk => NextAddUC[4].CLK
-clk => NextAddUC[5].CLK
-clk => NextAddUC[6].CLK
-clk => NextAddUC[7].CLK
-clk => NextAddUC[8].CLK
-clk => NextAddUC[9].CLK
-clk => NextAddUC[10].CLK
-clk => NextAddUC[11].CLK
-clk => NextAddUC[12].CLK
-clk => NextAddUC[13].CLK
-clk => NextAddUC[14].CLK
-clk => NextAddUC[15].CLK
-rst => ~NO_FANOUT~
-Flags[0] => ~NO_FANOUT~
-Flags[1] => ~NO_FANOUT~
-Flags[2] => ~NO_FANOUT~
-Flags[3] => ~NO_FANOUT~
-Flags[4] => ~NO_FANOUT~
-Flags[5] => ~NO_FANOUT~
-Flags[6] => ~NO_FANOUT~
-Flags[7] => ~NO_FANOUT~
-Flags[8] => ~NO_FANOUT~
-Flags[9] => ~NO_FANOUT~
-Flags[10] => ~NO_FANOUT~
-Flags[11] => ~NO_FANOUT~
-Flags[12] => ~NO_FANOUT~
-Flags[13] => ~NO_FANOUT~
-Flags[14] => ~NO_FANOUT~
-Flags[15] => ~NO_FANOUT~
-MDR[0] => Destino[0].DATAIN
-MDR[1] => Destino[1].DATAIN
-MDR[2] => Destino[2].DATAIN
-MDR[3] => Destino[3].DATAIN
-MDR[4] => Destino[4].DATAIN
-MDR[5] => Destino[5].DATAIN
-MDR[6] => Destino[6].DATAIN
-MDR[7] => Destino[7].DATAIN
-Cache[0] => ~NO_FANOUT~
-Cache[1] => ~NO_FANOUT~
-Cache[2] => ~NO_FANOUT~
-Cache[3] => ~NO_FANOUT~
-Cache[4] => ~NO_FANOUT~
-Cache[5] => ~NO_FANOUT~
-Cache[6] => ~NO_FANOUT~
-Cache[7] => ~NO_FANOUT~
-Cache[8] => ~NO_FANOUT~
-Cache[9] => ~NO_FANOUT~
-Cache[10] => ~NO_FANOUT~
-Cache[11] => ~NO_FANOUT~
-Cache[12] => ~NO_FANOUT~
-Cache[13] => ~NO_FANOUT~
-Cache[14] => ~NO_FANOUT~
-Cache[15] => ~NO_FANOUT~
-MBusMux[0] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-MBusMux[1] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
-MBusMux[2] <= <GND>
-MBusMux[3] <= <GND>
-MBusMux[4] <= <GND>
-RegEn[0] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-RegEn[1] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
-RegEn[2] <= <GND>
-RegEn[3] <= <GND>
-RegVal[0] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-RegVal[1] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
-RegVal[2] <= <GND>
-RegVal[3] <= <GND>
-MuxA <= <GND>
-MuxB <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
-MuxC <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-MuxMAR <= <GND>
-EnableDeco <= <GND>
-MuxRAM <= <GND>
-WR_Ram <= <GND>
-Destino[0] <= MDR[0].DB_MAX_OUTPUT_PORT_TYPE
-Destino[1] <= MDR[1].DB_MAX_OUTPUT_PORT_TYPE
-Destino[2] <= MDR[2].DB_MAX_OUTPUT_PORT_TYPE
-Destino[3] <= MDR[3].DB_MAX_OUTPUT_PORT_TYPE
-Destino[4] <= MDR[4].DB_MAX_OUTPUT_PORT_TYPE
-Destino[5] <= MDR[5].DB_MAX_OUTPUT_PORT_TYPE
-Destino[6] <= MDR[6].DB_MAX_OUTPUT_PORT_TYPE
-Destino[7] <= MDR[7].DB_MAX_OUTPUT_PORT_TYPE
-Fuente[0] <= <GND>
-Fuente[1] <= <GND>
-Fuente[2] <= <GND>
-Fuente[3] <= <GND>
-Fuente[4] <= <GND>
-Fuente[5] <= <GND>
-Fuente[6] <= <GND>
-Fuente[7] <= <GND>
-UMemOut[0] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-UMemOut[1] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
-UMemOut[2] <= <GND>
-UMemOut[3] <= <GND>
-UMemOut[4] <= <GND>
-UMemOut[5] <= <GND>
-UMemOut[6] <= <GND>
-UMemOut[7] <= <GND>
-UMemOut[8] <= <GND>
-UMemOut[9] <= <GND>
-UMemOut[10] <= <GND>
-UMemOut[11] <= <GND>
-UMemOut[12] <= <GND>
-UMemOut[13] <= <GND>
-UMemOut[14] <= <GND>
-UMemOut[15] <= <GND>
-UMemOut[16] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-UMemOut[17] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
-UMemOut[18] <= <GND>
-UMemOut[19] <= <GND>
-UMemOut[20] <= <GND>
-UMemOut[21] <= <GND>
-UMemOut[22] <= <GND>
-UMemOut[23] <= <GND>
-UMemOut[24] <= <GND>
-UMemOut[25] <= <GND>
-UMemOut[26] <= <GND>
-UMemOut[27] <= <GND>
-UMemOut[28] <= <GND>
-UMemOut[29] <= <GND>
-UMemOut[30] <= <GND>
-UMemOut[31] <= <GND>
-UMemOut[32] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-UMemOut[33] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
-UMemOut[34] <= <GND>
-UMemOut[35] <= <GND>
-UMemOut[36] <= <GND>
-UMemOut[37] <= <GND>
-UMemOut[38] <= <GND>
-UMemOut[39] <= <GND>
-UMemOut[40] <= <GND>
-UMemOut[41] <= <GND>
-UMemOut[42] <= <GND>
-UMemOut[43] <= <GND>
-UMemOut[44] <= <GND>
-UMemOut[45] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-UMemOut[46] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
-UMemOut[47] <= <GND>
-UMemOut[48] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-UMemOut[49] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
-UMemOut[50] <= <GND>
-UMemOut[51] <= <GND>
-UMemOut[52] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-UMemOut[53] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
-UMemOut[54] <= <GND>
-UMemOut[55] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-UMemOut[56] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
-UMemOut[57] <= <GND>
-UMemOut[58] <= <GND>
-UMemOut[59] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-UMemOut[60] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
-UMemOut[61] <= <GND>
-UMemOut[62] <= <GND>
-UMemOut[63] <= <GND>
-ALU[0] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-ALU[1] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
-ALU[2] <= <GND>
-
-
-|MiQro_EVA|ElMicro:inst1
+|ElMicro
 cacheOut[0] <= mem_programa:inst252.data_out[0]
 cacheOut[1] <= mem_programa:inst252.data_out[1]
 cacheOut[2] <= mem_programa:inst252.data_out[2]
@@ -531,7 +131,6 @@ dataB[7] => BUSMUX:inst200.datab[7]
 AluSel[0] => ALU:inst24.ALU_Sel[0]
 AluSel[1] => ALU:inst24.ALU_Sel[1]
 AluSel[2] => ALU:inst24.ALU_Sel[2]
-AluSel[3] => ALU:inst24.ALU_Sel[3]
 WR => RP:inst.wren
 MUX_RAM => BUSMUX:inst22.sel
 MUX_MAR => BUSMUX:inst13.sel
@@ -664,6 +263,15 @@ Fuente[7] => busmux16to1:inst16.data28[7]
 Fuente[7] => busmux16to1:inst16.data29[7]
 Fuente[7] => busmux16to1:inst16.data307
 Fuente[7] => busmux16to1:inst16.data317
+MUX_C => BUSMUX:inst25.sel
+dataC[0] => BUSMUX:inst25.datab[0]
+dataC[1] => BUSMUX:inst25.datab[1]
+dataC[2] => BUSMUX:inst25.datab[2]
+dataC[3] => BUSMUX:inst25.datab[3]
+dataC[4] => BUSMUX:inst25.datab[4]
+dataC[5] => BUSMUX:inst25.datab[5]
+dataC[6] => BUSMUX:inst25.datab[6]
+dataC[7] => BUSMUX:inst25.datab[7]
 muxSel[0] => busmux16to1:inst16.sel[0]
 muxSel[1] => busmux16to1:inst16.sel[1]
 muxSel[2] => busmux16to1:inst16.sel[2]
@@ -680,7 +288,7 @@ Outd[6] <= DataBus[6].DB_MAX_OUTPUT_PORT_TYPE
 Outd[7] <= DataBus[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MiQro_EVA|ElMicro:inst1|mem_programa:inst252
+|ElMicro|mem_programa:inst252
 clk => data_out[0]~reg0.CLK
 clk => data_out[1]~reg0.CLK
 clk => data_out[2]~reg0.CLK
@@ -707,7 +315,7 @@ data_out[6] <= data_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[7] <= data_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MiQro_EVA|ElMicro:inst1|UniversalShiftRegister:inst8
+|ElMicro|UniversalShiftRegister:inst8
 Data[0] => Add2.IN8
 Data[0] => Mux7.IN7
 Data[1] => Add2.IN7
@@ -790,7 +398,7 @@ Pout[6] <= Regist[6].DB_MAX_OUTPUT_PORT_TYPE
 Pout[7] <= Regist[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MiQro_EVA|ElMicro:inst1|Dec:inst21
+|ElMicro|Dec:inst21
 Sel[0] => Mux0.IN19
 Sel[0] => Mux1.IN19
 Sel[0] => Mux2.IN19
@@ -889,7 +497,7 @@ SelOut[14] <= SelOut.DB_MAX_OUTPUT_PORT_TYPE
 SelOut[15] <= SelOut.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MiQro_EVA|ElMicro:inst1|busmux16to1:inst16
+|ElMicro|busmux16to1:inst16
 data0[0] => result[0]~7.IN1
 data0[1] => result[1]~6.IN1
 data0[2] => result[2]~5.IN1
@@ -1348,7 +956,7 @@ result[6] <= result[6].DB_MAX_OUTPUT_PORT_TYPE
 result[7] <= result[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MiQro_EVA|ElMicro:inst1|UniversalShiftRegister:inst6
+|ElMicro|UniversalShiftRegister:inst6
 Data[0] => Add2.IN8
 Data[0] => Mux7.IN7
 Data[1] => Add2.IN7
@@ -1431,7 +1039,7 @@ Pout[6] <= Regist[6].DB_MAX_OUTPUT_PORT_TYPE
 Pout[7] <= Regist[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MiQro_EVA|ElMicro:inst1|BUSMUX:inst15
+|ElMicro|BUSMUX:inst15
 dataa[0] => lpm_mux:$00000.data[0][0]
 dataa[1] => lpm_mux:$00000.data[0][1]
 dataa[2] => lpm_mux:$00000.data[0][2]
@@ -1459,7 +1067,7 @@ result[6] <= lpm_mux:$00000.result[6]
 result[7] <= lpm_mux:$00000.result[7]
 
 
-|MiQro_EVA|ElMicro:inst1|BUSMUX:inst15|lpm_mux:$00000
+|ElMicro|BUSMUX:inst15|lpm_mux:$00000
 data[0][0] => mux_0kc:auto_generated.data[0]
 data[0][1] => mux_0kc:auto_generated.data[1]
 data[0][2] => mux_0kc:auto_generated.data[2]
@@ -1490,7 +1098,7 @@ result[6] <= mux_0kc:auto_generated.result[6]
 result[7] <= mux_0kc:auto_generated.result[7]
 
 
-|MiQro_EVA|ElMicro:inst1|BUSMUX:inst15|lpm_mux:$00000|mux_0kc:auto_generated
+|ElMicro|BUSMUX:inst15|lpm_mux:$00000|mux_0kc:auto_generated
 data[0] => l1_w0_n0_mux_dataout.IN1
 data[1] => l1_w1_n0_mux_dataout.IN1
 data[2] => l1_w2_n0_mux_dataout.IN1
@@ -1533,7 +1141,7 @@ sel[0] => l1_w7_n0_mux_dataout.IN0
 sel[0] => _.IN0
 
 
-|MiQro_EVA|ElMicro:inst1|UniversalShiftRegister:inst5
+|ElMicro|UniversalShiftRegister:inst5
 Data[0] => Add2.IN8
 Data[0] => Mux7.IN7
 Data[1] => Add2.IN7
@@ -1616,7 +1224,7 @@ Pout[6] <= Regist[6].DB_MAX_OUTPUT_PORT_TYPE
 Pout[7] <= Regist[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MiQro_EVA|ElMicro:inst1|BUSMUX:inst200
+|ElMicro|BUSMUX:inst200
 dataa[0] => lpm_mux:$00000.data[0][0]
 dataa[1] => lpm_mux:$00000.data[0][1]
 dataa[2] => lpm_mux:$00000.data[0][2]
@@ -1644,7 +1252,7 @@ result[6] <= lpm_mux:$00000.result[6]
 result[7] <= lpm_mux:$00000.result[7]
 
 
-|MiQro_EVA|ElMicro:inst1|BUSMUX:inst200|lpm_mux:$00000
+|ElMicro|BUSMUX:inst200|lpm_mux:$00000
 data[0][0] => mux_0kc:auto_generated.data[0]
 data[0][1] => mux_0kc:auto_generated.data[1]
 data[0][2] => mux_0kc:auto_generated.data[2]
@@ -1675,7 +1283,7 @@ result[6] <= mux_0kc:auto_generated.result[6]
 result[7] <= mux_0kc:auto_generated.result[7]
 
 
-|MiQro_EVA|ElMicro:inst1|BUSMUX:inst200|lpm_mux:$00000|mux_0kc:auto_generated
+|ElMicro|BUSMUX:inst200|lpm_mux:$00000|mux_0kc:auto_generated
 data[0] => l1_w0_n0_mux_dataout.IN1
 data[1] => l1_w1_n0_mux_dataout.IN1
 data[2] => l1_w2_n0_mux_dataout.IN1
@@ -1718,7 +1326,7 @@ sel[0] => l1_w7_n0_mux_dataout.IN0
 sel[0] => _.IN0
 
 
-|MiQro_EVA|ElMicro:inst1|UniversalShiftRegister:inst18
+|ElMicro|UniversalShiftRegister:inst18
 Data[0] => Add2.IN8
 Data[0] => Mux7.IN7
 Data[1] => Add2.IN7
@@ -1801,7 +1409,7 @@ Pout[6] <= Regist[6].DB_MAX_OUTPUT_PORT_TYPE
 Pout[7] <= Regist[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MiQro_EVA|ElMicro:inst1|UniversalShiftRegister:inst19
+|ElMicro|UniversalShiftRegister:inst19
 Data[0] => Add2.IN8
 Data[0] => Mux7.IN7
 Data[1] => Add2.IN7
@@ -1884,7 +1492,7 @@ Pout[6] <= Regist[6].DB_MAX_OUTPUT_PORT_TYPE
 Pout[7] <= Regist[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MiQro_EVA|ElMicro:inst1|UniversalShiftRegister:inst2
+|ElMicro|UniversalShiftRegister:inst2
 Data[0] => Add2.IN8
 Data[0] => Mux7.IN7
 Data[1] => Add2.IN7
@@ -1967,7 +1575,7 @@ Pout[6] <= Regist[6].DB_MAX_OUTPUT_PORT_TYPE
 Pout[7] <= Regist[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MiQro_EVA|ElMicro:inst1|UniversalShiftRegister:inst20
+|ElMicro|UniversalShiftRegister:inst20
 Data[0] => Add2.IN8
 Data[0] => Mux7.IN7
 Data[1] => Add2.IN7
@@ -2050,70 +1658,70 @@ Pout[6] <= Regist[6].DB_MAX_OUTPUT_PORT_TYPE
 Pout[7] <= Regist[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MiQro_EVA|ElMicro:inst1|ALU:inst24
+|ElMicro|ALU:inst24
 A[0] => LessThan0.IN8
 A[0] => LessThan1.IN8
 A[0] => Equal0.IN7
-A[0] => ALU_Result.IN0
-A[0] => ALU_Result.IN0
-A[0] => ALU_Result.IN0
 A[0] => Add1.IN8
+A[0] => ALU_Result.IN0
+A[0] => ALU_Result.IN0
+A[0] => ALU_Result.IN0
 A[0] => Add0.IN8
 A[1] => LessThan0.IN7
 A[1] => LessThan1.IN7
 A[1] => Equal0.IN6
-A[1] => ALU_Result.IN0
-A[1] => ALU_Result.IN0
-A[1] => ALU_Result.IN0
 A[1] => Add1.IN7
+A[1] => ALU_Result.IN0
+A[1] => ALU_Result.IN0
+A[1] => ALU_Result.IN0
 A[1] => Add0.IN7
 A[2] => LessThan0.IN6
 A[2] => LessThan1.IN6
 A[2] => Equal0.IN5
-A[2] => ALU_Result.IN0
-A[2] => ALU_Result.IN0
-A[2] => ALU_Result.IN0
 A[2] => Add1.IN6
+A[2] => ALU_Result.IN0
+A[2] => ALU_Result.IN0
+A[2] => ALU_Result.IN0
 A[2] => Add0.IN6
 A[3] => LessThan0.IN5
 A[3] => LessThan1.IN5
 A[3] => Equal0.IN4
-A[3] => ALU_Result.IN0
-A[3] => ALU_Result.IN0
-A[3] => ALU_Result.IN0
 A[3] => Add1.IN5
+A[3] => ALU_Result.IN0
+A[3] => ALU_Result.IN0
+A[3] => ALU_Result.IN0
 A[3] => Add0.IN5
 A[4] => LessThan0.IN4
 A[4] => LessThan1.IN4
 A[4] => Equal0.IN3
-A[4] => ALU_Result.IN0
-A[4] => ALU_Result.IN0
-A[4] => ALU_Result.IN0
 A[4] => Add1.IN4
+A[4] => ALU_Result.IN0
+A[4] => ALU_Result.IN0
+A[4] => ALU_Result.IN0
 A[4] => Add0.IN4
 A[5] => LessThan0.IN3
 A[5] => LessThan1.IN3
 A[5] => Equal0.IN2
-A[5] => ALU_Result.IN0
-A[5] => ALU_Result.IN0
-A[5] => ALU_Result.IN0
 A[5] => Add1.IN3
+A[5] => ALU_Result.IN0
+A[5] => ALU_Result.IN0
+A[5] => ALU_Result.IN0
 A[5] => Add0.IN3
 A[6] => LessThan0.IN2
 A[6] => LessThan1.IN2
 A[6] => Equal0.IN1
-A[6] => ALU_Result.IN0
-A[6] => ALU_Result.IN0
-A[6] => ALU_Result.IN0
 A[6] => Add1.IN2
+A[6] => ALU_Result.IN0
+A[6] => ALU_Result.IN0
+A[6] => ALU_Result.IN0
 A[6] => Add0.IN2
 A[7] => LessThan0.IN1
 A[7] => LessThan1.IN1
 A[7] => Equal0.IN0
-A[7] => ALU_Result.IN0
-A[7] => ALU_Result.IN0
-A[7] => ALU_Result.IN0
 A[7] => Add1.IN1
+A[7] => ALU_Result.IN0
+A[7] => ALU_Result.IN0
+A[7] => ALU_Result.IN0
 A[7] => sub_o.IN0
 A[7] => Add0.IN1
 A[7] => sub_o.IN0
@@ -2122,158 +1730,119 @@ B[0] => LessThan0.IN16
 B[0] => LessThan1.IN16
 B[0] => Equal0.IN15
 B[0] => Add0.IN16
-B[0] => ALU_Result.IN1
-B[0] => ALU_Result.IN1
-B[0] => ALU_Result.IN1
 B[0] => Add1.IN16
+B[0] => ALU_Result.IN1
+B[0] => ALU_Result.IN1
+B[0] => ALU_Result.IN1
 B[1] => LessThan0.IN15
 B[1] => LessThan1.IN15
 B[1] => Equal0.IN14
 B[1] => Add0.IN15
-B[1] => ALU_Result.IN1
-B[1] => ALU_Result.IN1
-B[1] => ALU_Result.IN1
 B[1] => Add1.IN15
+B[1] => ALU_Result.IN1
+B[1] => ALU_Result.IN1
+B[1] => ALU_Result.IN1
 B[2] => LessThan0.IN14
 B[2] => LessThan1.IN14
 B[2] => Equal0.IN13
 B[2] => Add0.IN14
-B[2] => ALU_Result.IN1
-B[2] => ALU_Result.IN1
-B[2] => ALU_Result.IN1
 B[2] => Add1.IN14
+B[2] => ALU_Result.IN1
+B[2] => ALU_Result.IN1
+B[2] => ALU_Result.IN1
 B[3] => LessThan0.IN13
 B[3] => LessThan1.IN13
 B[3] => Equal0.IN12
 B[3] => Add0.IN13
-B[3] => ALU_Result.IN1
-B[3] => ALU_Result.IN1
-B[3] => ALU_Result.IN1
 B[3] => Add1.IN13
+B[3] => ALU_Result.IN1
+B[3] => ALU_Result.IN1
+B[3] => ALU_Result.IN1
 B[4] => LessThan0.IN12
 B[4] => LessThan1.IN12
 B[4] => Equal0.IN11
 B[4] => Add0.IN12
-B[4] => ALU_Result.IN1
-B[4] => ALU_Result.IN1
-B[4] => ALU_Result.IN1
 B[4] => Add1.IN12
+B[4] => ALU_Result.IN1
+B[4] => ALU_Result.IN1
+B[4] => ALU_Result.IN1
 B[5] => LessThan0.IN11
 B[5] => LessThan1.IN11
 B[5] => Equal0.IN10
 B[5] => Add0.IN11
-B[5] => ALU_Result.IN1
-B[5] => ALU_Result.IN1
-B[5] => ALU_Result.IN1
 B[5] => Add1.IN11
+B[5] => ALU_Result.IN1
+B[5] => ALU_Result.IN1
+B[5] => ALU_Result.IN1
 B[6] => LessThan0.IN10
 B[6] => LessThan1.IN10
 B[6] => Equal0.IN9
 B[6] => Add0.IN10
-B[6] => ALU_Result.IN1
-B[6] => ALU_Result.IN1
-B[6] => ALU_Result.IN1
 B[6] => Add1.IN10
+B[6] => ALU_Result.IN1
+B[6] => ALU_Result.IN1
+B[6] => ALU_Result.IN1
 B[7] => LessThan0.IN9
 B[7] => LessThan1.IN9
 B[7] => Equal0.IN8
 B[7] => Add0.IN9
-B[7] => ALU_Result.IN1
-B[7] => ALU_Result.IN1
-B[7] => ALU_Result.IN1
 B[7] => Add1.IN9
+B[7] => ALU_Result.IN1
+B[7] => ALU_Result.IN1
+B[7] => ALU_Result.IN1
 B[7] => sub_o.IN1
 B[7] => sub_o.IN1
 B[7] => add_o.IN1
-ALU_Sel[0] => Mux4.IN19
-ALU_Sel[0] => Mux7.IN17
-ALU_Sel[0] => Mux6.IN18
-ALU_Sel[0] => Mux5.IN19
-ALU_Sel[0] => Mux3.IN18
-ALU_Sel[0] => Mux2.IN19
-ALU_Sel[0] => Mux1.IN18
-ALU_Sel[0] => Mux0.IN19
-ALU_Sel[0] => Mux9.IN19
-ALU_Sel[0] => Mux10.IN19
-ALU_Sel[0] => Mux11.IN19
-ALU_Sel[0] => Mux12.IN19
-ALU_Sel[0] => Mux13.IN19
-ALU_Sel[0] => Mux14.IN19
-ALU_Sel[0] => Mux15.IN19
-ALU_Sel[0] => Mux16.IN19
-ALU_Sel[0] => Mux17.IN19
-ALU_Sel[1] => Mux4.IN18
-ALU_Sel[1] => Mux7.IN16
+ALU_Sel[0] => Mux0.IN10
+ALU_Sel[0] => Mux1.IN10
+ALU_Sel[0] => Mux2.IN10
+ALU_Sel[0] => Mux3.IN10
+ALU_Sel[0] => Mux4.IN10
+ALU_Sel[0] => Mux5.IN10
+ALU_Sel[0] => Mux6.IN10
+ALU_Sel[0] => Mux7.IN10
+ALU_Sel[0] => Mux8.IN10
+ALU_Sel[0] => Mux9.IN8
+ALU_Sel[1] => Mux0.IN9
+ALU_Sel[1] => Mux1.IN9
+ALU_Sel[1] => Mux2.IN9
+ALU_Sel[1] => Mux3.IN9
+ALU_Sel[1] => Mux4.IN9
+ALU_Sel[1] => Mux5.IN9
+ALU_Sel[1] => Mux6.IN9
+ALU_Sel[1] => Mux7.IN9
 ALU_Sel[1] => Mux8.IN9
-ALU_Sel[1] => Mux6.IN17
-ALU_Sel[1] => Mux5.IN18
-ALU_Sel[1] => Mux3.IN17
-ALU_Sel[1] => Mux2.IN18
-ALU_Sel[1] => Mux1.IN17
-ALU_Sel[1] => Mux0.IN18
-ALU_Sel[1] => Mux9.IN18
-ALU_Sel[1] => Mux10.IN18
-ALU_Sel[1] => Mux11.IN18
-ALU_Sel[1] => Mux12.IN18
-ALU_Sel[1] => Mux13.IN18
-ALU_Sel[1] => Mux14.IN18
-ALU_Sel[1] => Mux15.IN18
-ALU_Sel[1] => Mux16.IN18
-ALU_Sel[1] => Mux17.IN18
-ALU_Sel[2] => Mux4.IN17
-ALU_Sel[2] => Mux7.IN15
+ALU_Sel[1] => Mux9.IN7
+ALU_Sel[1] => Mux10.IN4
+ALU_Sel[2] => Mux0.IN8
+ALU_Sel[2] => Mux1.IN8
+ALU_Sel[2] => Mux2.IN8
+ALU_Sel[2] => Mux3.IN8
+ALU_Sel[2] => Mux4.IN8
+ALU_Sel[2] => Mux5.IN8
+ALU_Sel[2] => Mux6.IN8
+ALU_Sel[2] => Mux7.IN8
 ALU_Sel[2] => Mux8.IN8
-ALU_Sel[2] => Mux6.IN16
-ALU_Sel[2] => Mux5.IN17
-ALU_Sel[2] => Mux3.IN16
-ALU_Sel[2] => Mux2.IN17
-ALU_Sel[2] => Mux1.IN16
-ALU_Sel[2] => Mux0.IN17
-ALU_Sel[2] => Mux9.IN17
-ALU_Sel[2] => Mux10.IN17
-ALU_Sel[2] => Mux11.IN17
-ALU_Sel[2] => Mux12.IN17
-ALU_Sel[2] => Mux13.IN17
-ALU_Sel[2] => Mux14.IN17
-ALU_Sel[2] => Mux15.IN17
-ALU_Sel[2] => Mux16.IN17
-ALU_Sel[2] => Mux17.IN17
-ALU_Sel[3] => Mux4.IN16
-ALU_Sel[3] => Mux7.IN14
-ALU_Sel[3] => Mux8.IN7
-ALU_Sel[3] => Mux6.IN15
-ALU_Sel[3] => Mux5.IN16
-ALU_Sel[3] => Mux3.IN15
-ALU_Sel[3] => Mux2.IN16
-ALU_Sel[3] => Mux1.IN15
-ALU_Sel[3] => Mux0.IN16
-ALU_Sel[3] => Mux9.IN16
-ALU_Sel[3] => Mux10.IN16
-ALU_Sel[3] => Mux11.IN16
-ALU_Sel[3] => Mux12.IN16
-ALU_Sel[3] => Mux13.IN16
-ALU_Sel[3] => Mux14.IN16
-ALU_Sel[3] => Mux15.IN16
-ALU_Sel[3] => Mux16.IN16
-ALU_Sel[3] => Mux17.IN16
-NZVC[0] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
-NZVC[1] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
-NZVC[2] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
-NZVC[3] <= ALU_Result[7].DB_MAX_OUTPUT_PORT_TYPE
-G <= G$latch.DB_MAX_OUTPUT_PORT_TYPE
-L <= L$latch.DB_MAX_OUTPUT_PORT_TYPE
-E <= E$latch.DB_MAX_OUTPUT_PORT_TYPE
-Result[0] <= ALU_Result[0].DB_MAX_OUTPUT_PORT_TYPE
-Result[1] <= ALU_Result[1].DB_MAX_OUTPUT_PORT_TYPE
-Result[2] <= ALU_Result[2].DB_MAX_OUTPUT_PORT_TYPE
-Result[3] <= ALU_Result[3].DB_MAX_OUTPUT_PORT_TYPE
-Result[4] <= ALU_Result[4].DB_MAX_OUTPUT_PORT_TYPE
-Result[5] <= ALU_Result[5].DB_MAX_OUTPUT_PORT_TYPE
-Result[6] <= ALU_Result[6].DB_MAX_OUTPUT_PORT_TYPE
-Result[7] <= ALU_Result[7].DB_MAX_OUTPUT_PORT_TYPE
+ALU_Sel[2] => Mux9.IN6
+ALU_Sel[2] => Mux10.IN3
+NZVC[0] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+NZVC[1] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+NZVC[2] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+NZVC[3] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+NZVC[4] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+NZVC[5] <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+NZVC[6] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+Result[0] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+Result[1] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+Result[2] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+Result[3] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+Result[4] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+Result[5] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+Result[6] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+Result[7] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MiQro_EVA|ElMicro:inst1|UniversalShiftRegister:inst4
+|ElMicro|UniversalShiftRegister:inst4
 Data[0] => Add2.IN8
 Data[0] => Mux7.IN7
 Data[1] => Add2.IN7
@@ -2356,7 +1925,7 @@ Pout[6] <= Regist[6].DB_MAX_OUTPUT_PORT_TYPE
 Pout[7] <= Regist[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MiQro_EVA|ElMicro:inst1|UniversalShiftRegister:inst3
+|ElMicro|UniversalShiftRegister:inst3
 Data[0] => Add2.IN8
 Data[0] => Mux7.IN7
 Data[1] => Add2.IN7
@@ -2439,7 +2008,7 @@ Pout[6] <= Regist[6].DB_MAX_OUTPUT_PORT_TYPE
 Pout[7] <= Regist[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MiQro_EVA|ElMicro:inst1|RP:inst
+|ElMicro|RP:inst
 address[0] => altsyncram:altsyncram_component.address_a[0]
 address[1] => altsyncram:altsyncram_component.address_a[1]
 address[2] => altsyncram:altsyncram_component.address_a[2]
@@ -2468,7 +2037,7 @@ q[6] <= altsyncram:altsyncram_component.q_a[6]
 q[7] <= altsyncram:altsyncram_component.q_a[7]
 
 
-|MiQro_EVA|ElMicro:inst1|RP:inst|altsyncram:altsyncram_component
+|ElMicro|RP:inst|altsyncram:altsyncram_component
 wren_a => altsyncram_rev3:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -2517,7 +2086,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|MiQro_EVA|ElMicro:inst1|RP:inst|altsyncram:altsyncram_component|altsyncram_rev3:auto_generated
+|ElMicro|RP:inst|altsyncram:altsyncram_component|altsyncram_rev3:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -2616,7 +2185,7 @@ wren_a => ram_block1a6.PORTAWE
 wren_a => ram_block1a7.PORTAWE
 
 
-|MiQro_EVA|ElMicro:inst1|BUSMUX:inst22
+|ElMicro|BUSMUX:inst22
 dataa[0] => lpm_mux:$00000.data[0][0]
 dataa[1] => lpm_mux:$00000.data[0][1]
 dataa[2] => lpm_mux:$00000.data[0][2]
@@ -2644,7 +2213,7 @@ result[6] <= lpm_mux:$00000.result[6]
 result[7] <= lpm_mux:$00000.result[7]
 
 
-|MiQro_EVA|ElMicro:inst1|BUSMUX:inst22|lpm_mux:$00000
+|ElMicro|BUSMUX:inst22|lpm_mux:$00000
 data[0][0] => mux_0kc:auto_generated.data[0]
 data[0][1] => mux_0kc:auto_generated.data[1]
 data[0][2] => mux_0kc:auto_generated.data[2]
@@ -2675,7 +2244,7 @@ result[6] <= mux_0kc:auto_generated.result[6]
 result[7] <= mux_0kc:auto_generated.result[7]
 
 
-|MiQro_EVA|ElMicro:inst1|BUSMUX:inst22|lpm_mux:$00000|mux_0kc:auto_generated
+|ElMicro|BUSMUX:inst22|lpm_mux:$00000|mux_0kc:auto_generated
 data[0] => l1_w0_n0_mux_dataout.IN1
 data[1] => l1_w1_n0_mux_dataout.IN1
 data[2] => l1_w2_n0_mux_dataout.IN1
@@ -2718,7 +2287,7 @@ sel[0] => l1_w7_n0_mux_dataout.IN0
 sel[0] => _.IN0
 
 
-|MiQro_EVA|ElMicro:inst1|UniversalShiftRegister:inst1
+|ElMicro|UniversalShiftRegister:inst1
 Data[0] => Add2.IN8
 Data[0] => Mux7.IN7
 Data[1] => Add2.IN7
@@ -2801,7 +2370,7 @@ Pout[6] <= Regist[6].DB_MAX_OUTPUT_PORT_TYPE
 Pout[7] <= Regist[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MiQro_EVA|ElMicro:inst1|BUSMUX:inst13
+|ElMicro|BUSMUX:inst13
 dataa[0] => lpm_mux:$00000.data[0][0]
 dataa[1] => lpm_mux:$00000.data[0][1]
 dataa[2] => lpm_mux:$00000.data[0][2]
@@ -2829,7 +2398,7 @@ result[6] <= lpm_mux:$00000.result[6]
 result[7] <= lpm_mux:$00000.result[7]
 
 
-|MiQro_EVA|ElMicro:inst1|BUSMUX:inst13|lpm_mux:$00000
+|ElMicro|BUSMUX:inst13|lpm_mux:$00000
 data[0][0] => mux_0kc:auto_generated.data[0]
 data[0][1] => mux_0kc:auto_generated.data[1]
 data[0][2] => mux_0kc:auto_generated.data[2]
@@ -2860,7 +2429,7 @@ result[6] <= mux_0kc:auto_generated.result[6]
 result[7] <= mux_0kc:auto_generated.result[7]
 
 
-|MiQro_EVA|ElMicro:inst1|BUSMUX:inst13|lpm_mux:$00000|mux_0kc:auto_generated
+|ElMicro|BUSMUX:inst13|lpm_mux:$00000|mux_0kc:auto_generated
 data[0] => l1_w0_n0_mux_dataout.IN1
 data[1] => l1_w1_n0_mux_dataout.IN1
 data[2] => l1_w2_n0_mux_dataout.IN1
@@ -2903,7 +2472,7 @@ sel[0] => l1_w7_n0_mux_dataout.IN0
 sel[0] => _.IN0
 
 
-|MiQro_EVA|ElMicro:inst1|UniversalShiftRegister:inst17
+|ElMicro|UniversalShiftRegister:inst17
 Data[0] => Add2.IN8
 Data[0] => Mux7.IN7
 Data[1] => Add2.IN7
@@ -2986,7 +2555,7 @@ Pout[6] <= Regist[6].DB_MAX_OUTPUT_PORT_TYPE
 Pout[7] <= Regist[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MiQro_EVA|ElMicro:inst1|UniversalShiftRegister:inst7
+|ElMicro|UniversalShiftRegister:inst7
 Data[0] => Add2.IN8
 Data[0] => Mux7.IN7
 Data[1] => Add2.IN7
@@ -3069,7 +2638,7 @@ Pout[6] <= Regist[6].DB_MAX_OUTPUT_PORT_TYPE
 Pout[7] <= Regist[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MiQro_EVA|ElMicro:inst1|BUSMUX:inst23
+|ElMicro|BUSMUX:inst23
 dataa[0] => lpm_mux:$00000.data[0][0]
 dataa[1] => lpm_mux:$00000.data[0][1]
 dataa[2] => lpm_mux:$00000.data[0][2]
@@ -3097,7 +2666,7 @@ result[6] <= lpm_mux:$00000.result[6]
 result[7] <= lpm_mux:$00000.result[7]
 
 
-|MiQro_EVA|ElMicro:inst1|BUSMUX:inst23|lpm_mux:$00000
+|ElMicro|BUSMUX:inst23|lpm_mux:$00000
 data[0][0] => mux_0kc:auto_generated.data[0]
 data[0][1] => mux_0kc:auto_generated.data[1]
 data[0][2] => mux_0kc:auto_generated.data[2]
@@ -3128,7 +2697,7 @@ result[6] <= mux_0kc:auto_generated.result[6]
 result[7] <= mux_0kc:auto_generated.result[7]
 
 
-|MiQro_EVA|ElMicro:inst1|BUSMUX:inst23|lpm_mux:$00000|mux_0kc:auto_generated
+|ElMicro|BUSMUX:inst23|lpm_mux:$00000|mux_0kc:auto_generated
 data[0] => l1_w0_n0_mux_dataout.IN1
 data[1] => l1_w1_n0_mux_dataout.IN1
 data[2] => l1_w2_n0_mux_dataout.IN1
@@ -3171,7 +2740,7 @@ sel[0] => l1_w7_n0_mux_dataout.IN0
 sel[0] => _.IN0
 
 
-|MiQro_EVA|ElMicro:inst1|UniversalShiftRegister:inst9
+|ElMicro|UniversalShiftRegister:inst9
 Data[0] => Add2.IN8
 Data[0] => Mux7.IN7
 Data[1] => Add2.IN7
@@ -3254,7 +2823,109 @@ Pout[6] <= Regist[6].DB_MAX_OUTPUT_PORT_TYPE
 Pout[7] <= Regist[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MiQro_EVA|ElMicro:inst1|UniversalShiftRegister:inst10
+|ElMicro|BUSMUX:inst25
+dataa[0] => lpm_mux:$00000.data[0][0]
+dataa[1] => lpm_mux:$00000.data[0][1]
+dataa[2] => lpm_mux:$00000.data[0][2]
+dataa[3] => lpm_mux:$00000.data[0][3]
+dataa[4] => lpm_mux:$00000.data[0][4]
+dataa[5] => lpm_mux:$00000.data[0][5]
+dataa[6] => lpm_mux:$00000.data[0][6]
+dataa[7] => lpm_mux:$00000.data[0][7]
+datab[0] => lpm_mux:$00000.data[1][0]
+datab[1] => lpm_mux:$00000.data[1][1]
+datab[2] => lpm_mux:$00000.data[1][2]
+datab[3] => lpm_mux:$00000.data[1][3]
+datab[4] => lpm_mux:$00000.data[1][4]
+datab[5] => lpm_mux:$00000.data[1][5]
+datab[6] => lpm_mux:$00000.data[1][6]
+datab[7] => lpm_mux:$00000.data[1][7]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+result[1] <= lpm_mux:$00000.result[1]
+result[2] <= lpm_mux:$00000.result[2]
+result[3] <= lpm_mux:$00000.result[3]
+result[4] <= lpm_mux:$00000.result[4]
+result[5] <= lpm_mux:$00000.result[5]
+result[6] <= lpm_mux:$00000.result[6]
+result[7] <= lpm_mux:$00000.result[7]
+
+
+|ElMicro|BUSMUX:inst25|lpm_mux:$00000
+data[0][0] => mux_0kc:auto_generated.data[0]
+data[0][1] => mux_0kc:auto_generated.data[1]
+data[0][2] => mux_0kc:auto_generated.data[2]
+data[0][3] => mux_0kc:auto_generated.data[3]
+data[0][4] => mux_0kc:auto_generated.data[4]
+data[0][5] => mux_0kc:auto_generated.data[5]
+data[0][6] => mux_0kc:auto_generated.data[6]
+data[0][7] => mux_0kc:auto_generated.data[7]
+data[1][0] => mux_0kc:auto_generated.data[8]
+data[1][1] => mux_0kc:auto_generated.data[9]
+data[1][2] => mux_0kc:auto_generated.data[10]
+data[1][3] => mux_0kc:auto_generated.data[11]
+data[1][4] => mux_0kc:auto_generated.data[12]
+data[1][5] => mux_0kc:auto_generated.data[13]
+data[1][6] => mux_0kc:auto_generated.data[14]
+data[1][7] => mux_0kc:auto_generated.data[15]
+sel[0] => mux_0kc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_0kc:auto_generated.result[0]
+result[1] <= mux_0kc:auto_generated.result[1]
+result[2] <= mux_0kc:auto_generated.result[2]
+result[3] <= mux_0kc:auto_generated.result[3]
+result[4] <= mux_0kc:auto_generated.result[4]
+result[5] <= mux_0kc:auto_generated.result[5]
+result[6] <= mux_0kc:auto_generated.result[6]
+result[7] <= mux_0kc:auto_generated.result[7]
+
+
+|ElMicro|BUSMUX:inst25|lpm_mux:$00000|mux_0kc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w1_n0_mux_dataout.IN1
+data[2] => l1_w2_n0_mux_dataout.IN1
+data[3] => l1_w3_n0_mux_dataout.IN1
+data[4] => l1_w4_n0_mux_dataout.IN1
+data[5] => l1_w5_n0_mux_dataout.IN1
+data[6] => l1_w6_n0_mux_dataout.IN1
+data[7] => l1_w7_n0_mux_dataout.IN1
+data[8] => l1_w0_n0_mux_dataout.IN1
+data[9] => l1_w1_n0_mux_dataout.IN1
+data[10] => l1_w2_n0_mux_dataout.IN1
+data[11] => l1_w3_n0_mux_dataout.IN1
+data[12] => l1_w4_n0_mux_dataout.IN1
+data[13] => l1_w5_n0_mux_dataout.IN1
+data[14] => l1_w6_n0_mux_dataout.IN1
+data[15] => l1_w7_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= l1_w1_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= l1_w2_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= l1_w3_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= l1_w4_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= l1_w5_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= l1_w6_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= l1_w7_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+sel[0] => l1_w1_n0_mux_dataout.IN0
+sel[0] => _.IN0
+sel[0] => l1_w2_n0_mux_dataout.IN0
+sel[0] => _.IN0
+sel[0] => l1_w3_n0_mux_dataout.IN0
+sel[0] => _.IN0
+sel[0] => l1_w4_n0_mux_dataout.IN0
+sel[0] => _.IN0
+sel[0] => l1_w5_n0_mux_dataout.IN0
+sel[0] => _.IN0
+sel[0] => l1_w6_n0_mux_dataout.IN0
+sel[0] => _.IN0
+sel[0] => l1_w7_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|ElMicro|UniversalShiftRegister:inst10
 Data[0] => Add2.IN8
 Data[0] => Mux7.IN7
 Data[1] => Add2.IN7
@@ -3337,7 +3008,7 @@ Pout[6] <= Regist[6].DB_MAX_OUTPUT_PORT_TYPE
 Pout[7] <= Regist[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MiQro_EVA|ElMicro:inst1|UniversalShiftRegister:inst11
+|ElMicro|UniversalShiftRegister:inst11
 Data[0] => Add2.IN8
 Data[0] => Mux7.IN7
 Data[1] => Add2.IN7
@@ -3420,7 +3091,7 @@ Pout[6] <= Regist[6].DB_MAX_OUTPUT_PORT_TYPE
 Pout[7] <= Regist[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MiQro_EVA|ElMicro:inst1|UniversalShiftRegister:inst14
+|ElMicro|UniversalShiftRegister:inst14
 Data[0] => Add2.IN8
 Data[0] => Mux7.IN7
 Data[1] => Add2.IN7

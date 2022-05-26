@@ -232,22 +232,6 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 24 544 192 560)
-	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "muxSel[5..0]" (rect 5 0 67 12)(font "Arial" ))
-	(pt 168 8)
-	(drawing
-		(line (pt 84 12)(pt 109 12))
-		(line (pt 84 4)(pt 109 4))
-		(line (pt 113 8)(pt 168 8))
-		(line (pt 84 12)(pt 84 4))
-		(line (pt 109 4)(pt 113 8))
-		(line (pt 109 12)(pt 113 8))
-	)
-	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-)
-(pin
-	(input)
 	(rect -136 320 32 336)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "Fuente[7..0]" (rect 5 0 61 17)(font "Intel Clear" ))
@@ -298,7 +282,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect 2792 -336 2960 -320)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "dataC[7..0]" (rect 5 0 57 17)(font "Intel Clear" ))
+	(text "dataC[7..0]" (rect 5 0 56 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -328,6 +312,22 @@ refer to the applicable agreement for further details.
 	(text "VCC" (rect 20 -1 40 9)(font "Arial" (font_size 6)))
 )
 (pin
+	(input)
+	(rect 24 544 192 560)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "muxSel[4..0]" (rect 5 0 67 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
 	(output)
 	(rect 1592 904 1768 920)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
@@ -348,6 +348,39 @@ refer to the applicable agreement for further details.
 	(rect 296 1008 472 1024)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "cacheOut[7..0]" (rect 90 0 163 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 616 728 792 744)
+	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
+	(text "Flags[6..0]" (rect 5 0 59 12)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 176 8)(pt 124 8))
+		(line (pt 124 4)(pt 98 4))
+		(line (pt 124 12)(pt 98 12))
+		(line (pt 124 12)(pt 124 4))
+		(line (pt 98 4)(pt 94 8))
+		(line (pt 94 8)(pt 98 12))
+		(line (pt 98 12)(pt 94 8))
+	)
+	(flipy)
+)
+(pin
+	(output)
+	(rect 2384 104 2560 120)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "MDROut[7..0]" (rect 90 0 158 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -1532,9 +1565,131 @@ refer to the applicable agreement for further details.
 	(annotation_block (parameter)(rect 2024 -24 2144 14))
 )
 (symbol
+	(rect 56 984 264 1064)
+	(text "mem_programa" (rect 5 0 81 12)(font "Arial" ))
+	(text "inst252" (rect 8 64 42 81)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "address[7..0]" (rect 0 0 64 12)(font "Arial" ))
+		(text "address[7..0]" (rect 21 43 85 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 208 32)
+		(output)
+		(text "data_out[7..0]" (rect 0 0 68 12)(font "Arial" ))
+		(text "data_out[7..0]" (rect 130 27 198 39)(font "Arial" ))
+		(line (pt 208 32)(pt 192 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 192 64))
+	)
+)
+(symbol
+	(rect 2896 0 2984 112)
+	(text "BUSMUX" (rect 0 28 16 91)(font "Arial" (font_size 10))(vertical))
+	(text "inst25" (rect 77 3 94 31)(font "Intel Clear" )(vertical))
+	(port
+		(pt 64 0)
+		(input)
+		(text "datab[WIDTH-1..0]" (rect 6 51 108 65)(font "Arial" (font_size 8)))
+		(text "datab[]" (rect 51 6 65 44)(font "Arial" (font_size 8))(vertical))
+		(line (pt 64 0)(pt 64 44)(line_width 3))
+	)
+	(port
+		(pt 88 56)
+		(input)
+		(text "sel" (rect 59 70 75 84)(font "Arial" (font_size 8)))
+		(text "sel" (rect 70 59 84 75)(font "Arial" (font_size 8))(vertical))
+		(line (pt 88 56)(pt 72 56))
+	)
+	(port
+		(pt 32 0)
+		(input)
+		(text "dataa[WIDTH-1..0]" (rect 6 19 108 33)(font "Arial" (font_size 8)))
+		(text "dataa[]" (rect 19 6 33 44)(font "Arial" (font_size 8))(vertical))
+		(line (pt 32 0)(pt 32 44)(line_width 3))
+	)
+	(port
+		(pt 48 112)
+		(output)
+		(text "result[WIDTH-1..0]" (rect 75 35 177 49)(font "Arial" (font_size 8)))
+		(text "result[]" (rect 35 75 49 113)(font "Arial" (font_size 8))(vertical))
+		(line (pt 48 68)(pt 48 112)(line_width 3))
+	)
+	(parameter
+		"WIDTH"
+		"8"
+		"Width of I/O, any integer > 0"
+		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" "40" "48" "56" "64" 
+	)
+	(drawing
+		(text "0" (rect 31 52 41 56)(font "Arial" (font_size 6))(vertical))
+		(text "1" (rect 55 52 65 56)(font "Arial" (font_size 6))(vertical))
+		(line (pt 64 68)(pt 32 68))
+		(line (pt 80 44)(pt 16 44))
+		(line (pt 16 44)(pt 32 68))
+		(line (pt 80 44)(pt 64 68))
+	)
+	(flipy_rotate90)
+	(annotation_block (parameter)(rect 3040 0 3160 38))
+)
+(symbol
+	(rect 848 376 960 584)
+	(text "ALU" (rect 100 5 112 26)(font "Arial" )(vertical))
+	(text "inst24" (rect 4 8 16 37)(font "Arial" )(vertical))
+	(port
+		(pt 80 0)
+		(input)
+		(text "A[7..0]" (rect 0 0 33 12)(font "Arial" ))
+		(text "A[7..0]" (rect 73 21 85 54)(font "Arial" )(vertical))
+		(line (pt 80 0)(pt 80 16)(line_width 3))
+	)
+	(port
+		(pt 64 0)
+		(input)
+		(text "B[7..0]" (rect 0 0 33 12)(font "Arial" ))
+		(text "B[7..0]" (rect 57 21 69 54)(font "Arial" )(vertical))
+		(line (pt 64 0)(pt 64 16)(line_width 3))
+	)
+	(port
+		(pt 48 0)
+		(input)
+		(text "ALU_Sel[2..0]" (rect 0 0 68 12)(font "Arial" ))
+		(text "ALU_Sel[2..0]" (rect 41 21 53 89)(font "Arial" )(vertical))
+		(line (pt 48 0)(pt 48 16)(line_width 3))
+	)
+	(port
+		(pt 80 208)
+		(output)
+		(text "NZVC[6..0]" (rect 0 0 56 12)(font "Arial" ))
+		(text "NZVC[6..0]" (rect 73 140 85 196)(font "Arial" )(vertical))
+		(line (pt 80 208)(pt 80 192)(line_width 3))
+	)
+	(port
+		(pt 64 208)
+		(output)
+		(text "Result[7..0]" (rect 0 0 57 12)(font "Arial" ))
+		(text "Result[7..0]" (rect 57 139 69 196)(font "Arial" )(vertical))
+		(line (pt 64 208)(pt 64 192)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 96 192))
+	)
+	(rotate270)
+)
+(symbol
 	(rect 256 8 544 600)
 	(text "busmux16to1" (rect 5 0 71 12)(font "Arial" ))
-	(text "inst16" (rect 8 576 36 593)(font "Intel Clear" ))
+	(text "inst16" (rect 8 576 37 588)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -1762,8 +1917,8 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 544)
 		(input)
-		(text "sel[5..0]" (rect 0 0 40 12)(font "Arial" ))
-		(text "sel[5..0]" (rect 21 539 61 551)(font "Arial" ))
+		(text "sel[4..0]" (rect 0 0 40 12)(font "Arial" ))
+		(text "sel[4..0]" (rect 21 539 61 551)(font "Arial" ))
 		(line (pt 0 544)(pt 16 544)(line_width 3))
 	)
 	(port
@@ -1782,128 +1937,6 @@ refer to the applicable agreement for further details.
 		(rectangle (rect 16 16 272 576))
 	)
 	(annotation_block (parameter)(rect 336 -96 456 -56))
-)
-(symbol
-	(rect 56 984 264 1064)
-	(text "mem_programa" (rect 5 0 81 12)(font "Arial" ))
-	(text "inst252" (rect 8 64 42 81)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 27 35 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "address[7..0]" (rect 0 0 64 12)(font "Arial" ))
-		(text "address[7..0]" (rect 21 43 85 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 208 32)
-		(output)
-		(text "data_out[7..0]" (rect 0 0 68 12)(font "Arial" ))
-		(text "data_out[7..0]" (rect 130 27 198 39)(font "Arial" ))
-		(line (pt 208 32)(pt 192 32)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 192 64))
-	)
-)
-(symbol
-	(rect 2896 0 2984 112)
-	(text "BUSMUX" (rect 0 28 16 91)(font "Arial" (font_size 10))(vertical))
-	(text "inst25" (rect 77 3 94 31)(font "Intel Clear" )(vertical))
-	(port
-		(pt 64 0)
-		(input)
-		(text "datab[WIDTH-1..0]" (rect 6 51 108 65)(font "Arial" (font_size 8)))
-		(text "datab[]" (rect 51 6 65 44)(font "Arial" (font_size 8))(vertical))
-		(line (pt 64 0)(pt 64 44)(line_width 3))
-	)
-	(port
-		(pt 88 56)
-		(input)
-		(text "sel" (rect 59 70 75 84)(font "Arial" (font_size 8)))
-		(text "sel" (rect 70 59 84 75)(font "Arial" (font_size 8))(vertical))
-		(line (pt 88 56)(pt 72 56))
-	)
-	(port
-		(pt 32 0)
-		(input)
-		(text "dataa[WIDTH-1..0]" (rect 6 19 108 33)(font "Arial" (font_size 8)))
-		(text "dataa[]" (rect 19 6 33 44)(font "Arial" (font_size 8))(vertical))
-		(line (pt 32 0)(pt 32 44)(line_width 3))
-	)
-	(port
-		(pt 48 112)
-		(output)
-		(text "result[WIDTH-1..0]" (rect 75 35 177 49)(font "Arial" (font_size 8)))
-		(text "result[]" (rect 35 75 49 113)(font "Arial" (font_size 8))(vertical))
-		(line (pt 48 68)(pt 48 112)(line_width 3))
-	)
-	(parameter
-		"WIDTH"
-		"8"
-		"Width of I/O, any integer > 0"
-		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" "40" "48" "56" "64" 
-	)
-	(drawing
-		(text "0" (rect 31 52 41 56)(font "Arial" (font_size 6))(vertical))
-		(text "1" (rect 55 52 65 56)(font "Arial" (font_size 6))(vertical))
-		(line (pt 64 68)(pt 32 68))
-		(line (pt 80 44)(pt 16 44))
-		(line (pt 16 44)(pt 32 68))
-		(line (pt 80 44)(pt 64 68))
-	)
-	(flipy_rotate90)
-	(annotation_block (parameter)(rect 3040 0 3160 38))
-)
-(symbol
-	(rect 848 376 960 584)
-	(text "ALU" (rect 100 5 112 26)(font "Arial" )(vertical))
-	(text "inst24" (rect 4 8 16 37)(font "Arial" )(vertical))
-	(port
-		(pt 80 0)
-		(input)
-		(text "A[7..0]" (rect 0 0 33 12)(font "Arial" ))
-		(text "A[7..0]" (rect 73 21 85 54)(font "Arial" )(vertical))
-		(line (pt 80 0)(pt 80 16)(line_width 3))
-	)
-	(port
-		(pt 64 0)
-		(input)
-		(text "B[7..0]" (rect 0 0 33 12)(font "Arial" ))
-		(text "B[7..0]" (rect 57 21 69 54)(font "Arial" )(vertical))
-		(line (pt 64 0)(pt 64 16)(line_width 3))
-	)
-	(port
-		(pt 48 0)
-		(input)
-		(text "ALU_Sel[2..0]" (rect 0 0 68 12)(font "Arial" ))
-		(text "ALU_Sel[2..0]" (rect 41 21 53 89)(font "Arial" )(vertical))
-		(line (pt 48 0)(pt 48 16)(line_width 3))
-	)
-	(port
-		(pt 80 208)
-		(output)
-		(text "NZVC[6..0]" (rect 0 0 56 12)(font "Arial" ))
-		(text "NZVC[6..0]" (rect 73 140 85 187)(font "Arial" )(vertical))
-		(line (pt 80 208)(pt 80 192)(line_width 3))
-	)
-	(port
-		(pt 64 208)
-		(output)
-		(text "Result[7..0]" (rect 0 0 57 12)(font "Arial" ))
-		(text "Result[7..0]" (rect 57 139 69 187)(font "Arial" )(vertical))
-		(line (pt 64 208)(pt 64 192)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 96 192))
-	)
-	(rotate270)
 )
 (connector
 	(text "Clk" (rect 1570 -112 1586 -95)(font "Intel Clear" ))
@@ -2490,12 +2523,6 @@ refer to the applicable agreement for further details.
 	(pt 2096 88)
 )
 (connector
-	(text "MDR[7..0]" (rect 2450 40 2497 57)(font "Intel Clear" ))
-	(pt 2312 56)
-	(pt 2432 56)
-	(bus)
-)
-(connector
 	(text "SelBUS[3..0]" (rect 2088 120 2147 137)(font "Intel Clear" ))
 	(pt 2096 120)
 	(pt 2136 120)
@@ -2508,7 +2535,7 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "Selector[8]" (rect 2010 88 2061 105)(font "Intel Clear" ))
+	(text "Selector[8]" (rect 2018 88 2069 105)(font "Intel Clear" ))
 	(pt 2136 104)
 	(pt 2096 104)
 )
@@ -3058,12 +3085,6 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "NZVCGLEFlags[3..0]" (rect 779 676 796 771)(font "Intel Clear" )(vertical))
-	(pt 816 768)
-	(pt 816 664)
-	(bus)
-)
-(connector
 	(pt 872 224)
 	(pt 912 224)
 	(bus)
@@ -3081,11 +3102,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 928 224)
 	(pt 928 376)
-	(bus)
-)
-(connector
-	(pt 816 664)
-	(pt 928 664)
 	(bus)
 )
 (connector
@@ -3133,6 +3149,32 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 1072 -264)
 	(pt 1112 -264)
+	(bus)
+)
+(connector
+	(pt 928 664)
+	(pt 816 664)
+	(bus)
+)
+(connector
+	(pt 792 736)
+	(pt 816 736)
+	(bus)
+)
+(connector
+	(pt 816 736)
+	(pt 816 664)
+	(bus)
+)
+(connector
+	(text "MDR[7..0]" (rect 2450 40 2497 57)(font "Intel Clear" ))
+	(pt 2384 56)
+	(pt 2312 56)
+	(bus)
+)
+(connector
+	(pt 2384 56)
+	(pt 2384 112)
 	(bus)
 )
 (junction (pt 1536 200))

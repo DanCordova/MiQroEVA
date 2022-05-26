@@ -6,9 +6,9 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity UControl is
 	port(	
 			clk,rst	: in	std_logic;
-			Flags		: in	std_logic_vector(15 downto 0);
+			Flags		: in	std_logic_vector(6 downto 0);
 			MDR 		: in	std_logic_vector(7 downto 0);
-			Cache		: in	std_logic_vector(15 downto 0);
+			Cache		: in	std_logic_vector(7 downto 0);
 			MBusMux	: out	std_logic_vector(4 downto 0);
 			RegEn		: out std_logic_vector(3 downto 0);
 			RegVal	: out std_logic_vector(3 downto 0);
@@ -16,12 +16,13 @@ entity UControl is
 			MuxB		: out	std_logic;
 			MuxC		: out	std_logic;
 			MuxMAR	: out std_logic;
+			MuxMDR	: out std_logic;
 			EnableDeco : out std_logic;
 			MuxRAM	: out std_logic;
 			WR_Ram 		: out std_logic;
 			Destino	: out	std_logic_vector(7 downto 0);
 			Fuente	: out	std_logic_vector(7 downto 0);
-			UMemOut	: out	std_logic_vector(63 downto 0);
+			UMemOut	: out	std_logic_vector(64 downto 0);
 			ALU		: out	std_logic_vector(2 downto 0)
 			--MuxDeco	: out std_logic;
 			--MuxMBus	: out std_logic;
@@ -37,7 +38,7 @@ architecture archUControl	of UControl is
 	signal NextAddUC		: std_logic_vector(15 downto 0);
 	
 	--señales de la UMem
-	signal UMEM				: std_logic_vector(63 downto 0);
+	signal UMEM				: std_logic_vector(64 downto 0);
 	signal DirMbusUCode	: std_logic_vector(4 downto 0);	--valores del mbus sel en la micromemoría
 	signal RegEnableUCode: std_logic_vector(3 downto 0);
 	signal MuxABC			: std_logic_vector(2 downto 0);
@@ -73,19 +74,20 @@ begin
 	end process;
 	
 	--separar señales de unidad de control internamente
-	DirMbusUCode 	<= UMEM(63 downto 59);
-	RegEnableUCode <= UMEM(58 downto 55);
-	MuxA				<= UMEM(54);
-	MuxB				<= UMEM(53);
-	MuxC				<= UMEM(52);
-	RegVal			<= UMEM(51 downto 48);
-	ALU				<= UMEM(47 downto 45);
-	MuxDeco			<= UMEM(44);
-	MuxMBus			<= UMEM(43);
-	MuxDstFt			<= UMEM(42);
-	MuxNxtAdd		<= UMEM(41 downto 40);
-	MuxMar			<= UMEM(39);
-	MuxRAM			<= UMEM(38);
+	DirMbusUCode 	<= UMEM(64 downto 60);
+	RegEnableUCode <= UMEM(59 downto 56);
+	MuxA				<= UMEM(55);
+	MuxB				<= UMEM(54);
+	MuxC				<= UMEM(53);
+	RegVal			<= UMEM(52 downto 49);
+	ALU				<= UMEM(48 downto 46);
+	MuxDeco			<= UMEM(45);
+	MuxMBus			<= UMEM(44);
+	MuxDstFt			<= UMEM(43);
+	MuxNxtAdd		<= UMEM(42 downto 41);
+	MuxMar			<= UMEM(40);
+	MuxRAM			<= UMEM(39);
+	MuxMDR			<= UMEM(38);
 	WR_Ram			<= UMEM(37);
 	EnableDeco		<= UMEM(36);
 	controlLines   <= UMEM(35 downto 32);
@@ -106,7 +108,7 @@ begin
 			when "0100" => selectedFlag <= flags(4);
 			when "0101" => selectedFlag <= flags(5);
 			when "0110" => selectedFlag <= flags(6);
-			when "0111" => selectedFlag <= flags(7);
+			when "0111" => selectedFlag <= '0';
 			when others => selectedFlag <= '0';
 		end case;
 	end process;
@@ -118,9 +120,9 @@ begin
 		--								MBus     RegEnable MuxABC RegValue ALU    Sen. Int  ControlL 
 --			when X"0000"=>UMem<="00000" & "0000" & "000" & "0011" & "000" & "0000" & "0000" & X"0001" & X"0000";
 --			when X"0001"=>UMem<="00000" & "0000" & "000" & "0011" & "000" & "0000" & "0000" & X"0002" & X"0000";
-			when X"0000"=>UMem<="00001" & "0001" & "001" & "0001" & "001" & "000000000" & "0001" & X"0001" & X"0001";
-			when X"0001"=>UMem<="00010" & "0010" & "010" & "0010" & "010" & "000000000" & "0010" & X"0002" & X"0002";
-			when others =>UMem<="00000" & "0000" & "000" & "0000" & "000" & "000000000" & "0000" & X"0000" & X"0000";
+			when X"0000"=>UMem<="00001" & "0001" & "001" & "0001" & "001" & "0000000000" & "0001" & X"0001" & X"0001";
+			when X"0001"=>UMem<="00010" & "0010" & "010" & "0010" & "010" & "0000000000" & "0010" & X"0002" & X"0002";
+			when others =>UMem<="00000" & "0000" & "000" & "0000" & "000" & "0000000000" & "0000" & X"0000" & X"0000";
 		end case;
 	end process;
 	
@@ -146,7 +148,7 @@ begin
 		case MuxNxtAdd is --mux que controla si nxtAdd se lee desde la unidad de control, el Destino o desde el cache (en ciclo de fetch) 
 			when "00" => nextAdd <= nextAddUC;
 			when "01" => nextAdd <= DestinoI & X"00";
-			when "10" => nextAdd <= Cache;
+			when "10" => nextAdd <= Cache & x"00";
 			when others =>nextAdd<= X"0000";
 		end case;
 		

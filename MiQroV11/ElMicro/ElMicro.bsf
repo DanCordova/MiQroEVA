@@ -124,8 +124,8 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 256)
 		(input)
-		(text "muxSel[5..0]" (rect 0 0 74 19)(font "Intel Clear" (font_size 8)))
-		(text "muxSel[5..0]" (rect 21 251 95 270)(font "Intel Clear" (font_size 8)))
+		(text "muxSel[4..0]" (rect 0 0 74 19)(font "Intel Clear" (font_size 8)))
+		(text "muxSel[4..0]" (rect 21 251 95 270)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 256)(pt 16 256)(line_width 3))
 	)
 	(port
@@ -159,16 +159,30 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 216 32)
 		(output)
-		(text "Outd[7..0]" (rect 0 0 60 19)(font "Intel Clear" (font_size 8)))
-		(text "Outd[7..0]" (rect 135 27 195 46)(font "Intel Clear" (font_size 8)))
+		(text "MDROut[7..0]" (rect 0 0 80 19)(font "Intel Clear" (font_size 8)))
+		(text "MDROut[7..0]" (rect 115 27 195 46)(font "Intel Clear" (font_size 8)))
 		(line (pt 216 32)(pt 200 32)(line_width 3))
 	)
 	(port
 		(pt 216 48)
 		(output)
-		(text "cacheOut[7..0]" (rect 0 0 84 19)(font "Intel Clear" (font_size 8)))
-		(text "cacheOut[7..0]" (rect 111 43 195 62)(font "Intel Clear" (font_size 8)))
+		(text "Flags[6..0]" (rect 0 0 61 19)(font "Intel Clear" (font_size 8)))
+		(text "Flags[6..0]" (rect 134 43 195 62)(font "Intel Clear" (font_size 8)))
 		(line (pt 216 48)(pt 200 48)(line_width 3))
+	)
+	(port
+		(pt 216 64)
+		(output)
+		(text "Outd[7..0]" (rect 0 0 60 19)(font "Intel Clear" (font_size 8)))
+		(text "Outd[7..0]" (rect 135 59 195 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 64)(pt 200 64)(line_width 3))
+	)
+	(port
+		(pt 216 80)
+		(output)
+		(text "cacheOut[7..0]" (rect 0 0 84 19)(font "Intel Clear" (font_size 8)))
+		(text "cacheOut[7..0]" (rect 111 75 195 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 80)(pt 200 80)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 200 336))

@@ -250,8 +250,8 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 544)
 		(input)
-		(text "sel[5..0]" (rect 0 0 30 12)(font "Arial" ))
-		(text "sel[5..0]" (rect 21 539 51 551)(font "Arial" ))
+		(text "sel[4..0]" (rect 0 0 31 12)(font "Arial" ))
+		(text "sel[4..0]" (rect 21 539 52 551)(font "Arial" ))
 		(line (pt 0 544)(pt 16 544)(line_width 3))
 	)
 	(port

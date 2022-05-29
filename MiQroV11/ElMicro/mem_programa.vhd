@@ -14,7 +14,7 @@ architecture rtl of mem_programa is
 	
 	
 	-- Aritmeticas 0x00 -> 0x0F
-	constant ADD      : std_logic_vector(7 downto 0) := x"00"; -- suma directa
+	constant ADD      : std_logic_vector(7 downto 0) := x"10"; -- suma directa
 	constant ADD_IM   : std_logic_vector(7 downto 0) := x"01"; -- suma inmediata 
 	constant SUB      : std_logic_vector(7 downto 0) := x"02"; -- resta directa
 	constant SUB_IM   : std_logic_vector(7 downto 0) := x"03"; -- resta inmediata
@@ -24,7 +24,7 @@ architecture rtl of mem_programa is
 	constant DIV_IM   : std_logic_vector(7 downto 0) := x"07"; -- multiplicacion inmediata
 
     -- Logicas 0x10 -> 0x1F
-	constant AND_DIR  : std_logic_vector(7 downto 0) := x"10";--and
+	--constant AND_DIR  : std_logic_vector(7 downto 0) := x"10";--and
 	constant AND_IM   : std_logic_vector(7 downto 0) := x"11";--
 	constant OR_DIR   : std_logic_vector(7 downto 0) := x"12";--or
 	constant OR_IM    : std_logic_vector(7 downto 0) := x"13";--
@@ -90,17 +90,11 @@ architecture rtl of mem_programa is
 	type instem is array (0 to 127) of std_logic_vector (7 downto 0);
 	
     --WIRTE PROGRAM HERE
-signal ROM: instem :=( 0		=> LDA_DIR ,
-								  1		=> x"00",
-								  2		=> x"00",
-								  3	    => x"00",
-								  others => x"00");
-
-	begin 
-		process(clk)
-			begin
-				if(clk 'event and clk = '1') then
-					data_out <= ROM(conv_integer(unsigned(address)));
-				end if;
-			end process;
+signal ROM: instem :=( 1		=> ADD ,
+							  --1		=> x"00",
+							  2		=> x"00",
+							  3	   => x"00",
+							  others => x"00");
+	begin
+	data_out <= ROM(conv_integer(unsigned(address)));
 end rtl;

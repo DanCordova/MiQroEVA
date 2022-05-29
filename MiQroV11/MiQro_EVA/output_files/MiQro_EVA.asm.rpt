@@ -1,5 +1,5 @@
 Assembler report for MiQro_EVA
-Thu May 26 10:38:39 2022
+Sat May 28 16:33:27 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/DanielC/Desktop/Proyecto/MiQroEVA/MiQroV11/MiQro_EVA/output_files/MiQro_EVA.sof
+  5. Assembler Device Options: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/MiQro_EVA/output_files/MiQro_EVA.sof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu May 26 10:38:39 2022 ;
+; Assembler Status      ; Successful - Sat May 28 16:33:27 2022 ;
 ; Revision Name         ; MiQro_EVA                             ;
 ; Top-level Entity Name ; MiQro_EVA                             ;
 ; Family                ; MAX 10                                ;
@@ -52,23 +52,23 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                ;
-+------------------------------------------------------------------------------------------+
-; File Name                                                                                ;
-+------------------------------------------------------------------------------------------+
-; C:/Users/DanielC/Desktop/Proyecto/MiQroEVA/MiQroV11/MiQro_EVA/output_files/MiQro_EVA.sof ;
-+------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                                            ;
++----------------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                            ;
++----------------------------------------------------------------------------------------------------------------------+
+; C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/MiQro_EVA/output_files/MiQro_EVA.sof ;
++----------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/DanielC/Desktop/Proyecto/MiQroEVA/MiQroV11/MiQro_EVA/output_files/MiQro_EVA.sof ;
-+----------------+---------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                           ;
-+----------------+---------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00265BAB                                                                                        ;
-; Checksum       ; 0x00265BAB                                                                                        ;
-+----------------+---------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/MiQro_EVA/output_files/MiQro_EVA.sof ;
++----------------+-------------------------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                                       ;
++----------------+-------------------------------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x00279228                                                                                                                    ;
+; Checksum       ; 0x00279228                                                                                                                    ;
++----------------+-------------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -77,15 +77,15 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu May 26 10:38:36 2022
+    Info: Processing started: Sat May 28 16:33:24 2022
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off MiQro_EVA -c MiQro_EVA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4685 megabytes
-    Info: Processing ended: Thu May 26 10:38:39 2022
+    Info: Peak virtual memory: 4682 megabytes
+    Info: Processing ended: Sat May 28 16:33:27 2022
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 

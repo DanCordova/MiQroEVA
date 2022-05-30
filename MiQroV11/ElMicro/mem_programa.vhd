@@ -14,14 +14,14 @@ architecture rtl of mem_programa is
 	
 	
 	-- Aritmeticas 0x00 -> 0x0F
-	constant ADD      : std_logic_vector(7 downto 0) := x"10"; -- suma directa
-	constant ADD_IM   : std_logic_vector(7 downto 0) := x"01"; -- suma inmediata 
-	constant SUB      : std_logic_vector(7 downto 0) := x"02"; -- resta directa
-	constant SUB_IM   : std_logic_vector(7 downto 0) := x"03"; -- resta inmediata
-	constant MULT     : std_logic_vector(7 downto 0) := x"04"; -- division directa
-	constant MULT_IM  : std_logic_vector(7 downto 0) := x"05"; -- division inmediata
-	constant DIV      : std_logic_vector(7 downto 0) := x"06"; -- multiplicacion directa
-	constant DIV_IM   : std_logic_vector(7 downto 0) := x"07"; -- multiplicacion inmediata
+	constant ADD      : std_logic_vector(7 downto 0) := x"01"; -- suma directa
+	constant ADD_IM   : std_logic_vector(7 downto 0) := x"02"; -- suma inmediata 
+	constant SUB      : std_logic_vector(7 downto 0) := x"03"; -- resta directa
+	constant SUB_IM   : std_logic_vector(7 downto 0) := x"04"; -- resta inmediata
+	constant MULT     : std_logic_vector(7 downto 0) := x"05"; -- division directa
+	constant MULT_IM  : std_logic_vector(7 downto 0) := x"06"; -- division inmediata
+	constant DIV      : std_logic_vector(7 downto 0) := x"07"; -- multiplicacion directa
+	constant DIV_IM   : std_logic_vector(7 downto 0) := x"08"; -- multiplicacion inmediata
 
     -- Logicas 0x10 -> 0x1F
 	--constant AND_DIR  : std_logic_vector(7 downto 0) := x"10";--and
@@ -90,9 +90,9 @@ architecture rtl of mem_programa is
 	type instem is array (0 to 127) of std_logic_vector (7 downto 0);
 	
     --WIRTE PROGRAM HERE
-signal ROM: instem :=( 1		=> ADD ,
-							  2		=> ADD_IM,
-							  3	   => x"00",
+signal ROM: instem :=( 1		=> ADD ,   -- Aqui pongan el decimal de su instruccion, (x01 = 1 = ADD directo)
+							  2		=> ADD_IM, -- (x02 = 2 = Add_IM)
+							  3	   => SUB,    -- (x03 = 3 = Sub directo 
 							  others => x"00");
 	begin
 	data_out <= ROM(conv_integer(unsigned(address)));

@@ -1,12 +1,12 @@
-Fitter Status : Successful - Sun May 29 23:22:30 2022
+Fitter Status : Successful - Mon May 30 12:25:17 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : MiQro_EVA
 Top-level Entity Name : MiQro_EVA
 Family : MAX 10
 Device : 10M50DAF672C7G
 Timing Models : Final
-Total logic elements : 213 / 49,760 ( < 1 % )
-    Total combinational functions : 190 / 49,760 ( < 1 % )
+Total logic elements : 217 / 49,760 ( < 1 % )
+    Total combinational functions : 194 / 49,760 ( < 1 % )
     Dedicated logic registers : 77 / 49,760 ( < 1 % )
 Total registers : 77
 Total pins : 194 / 500 ( 39 % )

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MiQro_EVA
-Sun May 29 23:21:42 2022
+Mon May 30 12:24:49 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -56,13 +56,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun May 29 23:21:42 2022       ;
+; Analysis & Synthesis Status        ; Successful - Mon May 30 12:24:49 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; MiQro_EVA                                   ;
 ; Top-level Entity Name              ; MiQro_EVA                                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 213                                         ;
-;     Total combinational functions  ; 189                                         ;
+; Total logic elements               ; 217                                         ;
+;     Total combinational functions  ; 193                                         ;
 ;     Dedicated logic registers      ; 77                                          ;
 ; Total registers                    ; 77                                          ;
 ; Total pins                         ; 194                                         ;
@@ -166,50 +166,51 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
-+---------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path      ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                       ; Library ;
-+---------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------+---------+
-; ../ElMicro/mem_programa.vhd           ; yes             ; User VHDL File                     ; C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/mem_programa.vhd           ;         ;
-; ../ElMicro/RP.vhd                     ; yes             ; User Wizard-Generated File         ; C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/RP.vhd                     ;         ;
-; ../ALU_1/ALU.vhd                      ; yes             ; User VHDL File                     ; C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ALU_1/ALU.vhd                      ;         ;
-; ../ElMicro/busmux16to1.tdf            ; yes             ; User AHDL File                     ; C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf            ;         ;
-; ../UControl/UControl.vhd              ; yes             ; User VHDL File                     ; C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd              ;         ;
-; ../ElMicro/UniversalShiftRegister.vhd ; yes             ; User VHDL File                     ; C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/UniversalShiftRegister.vhd ;         ;
-; ../ElMicro/ElMicro.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/ElMicro.bdf                ;         ;
-; ../ElMicro/Dec.vhd                    ; yes             ; User VHDL File                     ; C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/Dec.vhd                    ;         ;
-; MiQro_EVA.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/MiQro_EVA.bdf            ;         ;
-; MiQro_EVA.mif                         ; yes             ; User Memory Initialization File    ; C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/MiQro_EVA.mif            ;         ;
-; busmux.tdf                            ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/busmux.tdf                              ;         ;
-; lpm_mux.inc                           ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/lpm_mux.inc                             ;         ;
-; lpm_mux.tdf                           ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/lpm_mux.tdf                             ;         ;
-; aglobal181.inc                        ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/aglobal181.inc                          ;         ;
-; muxlut.inc                            ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/muxlut.inc                              ;         ;
-; bypassff.inc                          ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/bypassff.inc                            ;         ;
-; altshift.inc                          ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/altshift.inc                            ;         ;
-; db/mux_46c.tdf                        ; yes             ; Auto-Generated Megafunction        ; C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/db/mux_46c.tdf           ;         ;
-; altsyncram.tdf                        ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/altsyncram.tdf                          ;         ;
-; stratix_ram_block.inc                 ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/stratix_ram_block.inc                   ;         ;
-; lpm_decode.inc                        ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/lpm_decode.inc                          ;         ;
-; a_rdenreg.inc                         ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/a_rdenreg.inc                           ;         ;
-; altrom.inc                            ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/altrom.inc                              ;         ;
-; altram.inc                            ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/altram.inc                              ;         ;
-; altdpram.inc                          ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/altdpram.inc                            ;         ;
-; db/altsyncram_2vq3.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/db/altsyncram_2vq3.tdf   ;         ;
-+---------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                      ;
++---------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path      ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                       ; Library ;
++---------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
+; ../ElMicro/mem_programa.vhd           ; yes             ; User VHDL File                     ; C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/mem_programa.vhd           ;         ;
+; ../ElMicro/RP.vhd                     ; yes             ; User Wizard-Generated File         ; C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/RP.vhd                     ;         ;
+; ../ALU_1/ALU.vhd                      ; yes             ; User VHDL File                     ; C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ALU_1/ALU.vhd                      ;         ;
+; ../ElMicro/busmux16to1.tdf            ; yes             ; User AHDL File                     ; C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf            ;         ;
+; ../UControl/UControl.vhd              ; yes             ; User VHDL File                     ; C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd              ;         ;
+; ../ElMicro/UniversalShiftRegister.vhd ; yes             ; User VHDL File                     ; C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/UniversalShiftRegister.vhd ;         ;
+; ../ElMicro/ElMicro.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/ElMicro.bdf                ;         ;
+; ../ElMicro/Dec.vhd                    ; yes             ; User VHDL File                     ; C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/Dec.vhd                    ;         ;
+; MiQro_EVA.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/MiQro_EVA/MiQro_EVA.bdf            ;         ;
+; MiQro_EVA.mif                         ; yes             ; User Memory Initialization File    ; C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/MiQro_EVA/MiQro_EVA.mif            ;         ;
+; busmux.tdf                            ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/busmux.tdf                                                  ;         ;
+; lpm_mux.inc                           ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                 ;         ;
+; lpm_mux.tdf                           ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.tdf                                                 ;         ;
+; aglobal181.inc                        ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                              ;         ;
+; muxlut.inc                            ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/muxlut.inc                                                  ;         ;
+; bypassff.inc                          ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/bypassff.inc                                                ;         ;
+; altshift.inc                          ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.inc                                                ;         ;
+; db/mux_46c.tdf                        ; yes             ; Auto-Generated Megafunction        ; C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/MiQro_EVA/db/mux_46c.tdf           ;         ;
+; altsyncram.tdf                        ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                              ;         ;
+; stratix_ram_block.inc                 ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                       ;         ;
+; lpm_decode.inc                        ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                              ;         ;
+; a_rdenreg.inc                         ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                               ;         ;
+; altrom.inc                            ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                                                  ;         ;
+; altram.inc                            ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                                  ;         ;
+; altdpram.inc                          ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                                ;         ;
+; db/altsyncram_2vq3.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/MiQro_EVA/db/altsyncram_2vq3.tdf   ;         ;
++---------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -217,16 +218,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 213       ;
+; Estimated Total logic elements              ; 217       ;
 ;                                             ;           ;
-; Total combinational functions               ; 189       ;
+; Total combinational functions               ; 193       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 86        ;
-;     -- 3 input functions                    ; 72        ;
-;     -- <=2 input functions                  ; 31        ;
+;     -- 4 input functions                    ; 87        ;
+;     -- 3 input functions                    ; 85        ;
+;     -- <=2 input functions                  ; 21        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 154       ;
+;     -- normal mode                          ; 158       ;
 ;     -- arithmetic mode                      ; 35        ;
 ;                                             ;           ;
 ; Total registers                             ; 77        ;
@@ -240,8 +241,8 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; Clk~input ;
 ; Maximum fan-out                             ; 85        ;
-; Total fan-out                               ; 1370      ;
-; Average fan-out                             ; 2.07      ;
+; Total fan-out                               ; 1393      ;
+; Average fan-out                             ; 2.09      ;
 +---------------------------------------------+-----------+
 
 
@@ -250,9 +251,9 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                             ; Entity Name            ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |MiQro_EVA                                   ; 189 (0)             ; 77 (0)                    ; 2048        ; 0          ; 0            ; 0       ; 0         ; 194  ; 0            ; 0          ; |MiQro_EVA                                                                                      ; MiQro_EVA              ; work         ;
-;    |ElMicro:inst2|                           ; 98 (0)              ; 64 (0)                    ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst2                                                                        ; ElMicro                ; work         ;
-;       |Dec:inst21|                           ; 23 (23)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst2|Dec:inst21                                                             ; Dec                    ; work         ;
+; |MiQro_EVA                                   ; 193 (0)             ; 77 (0)                    ; 2048        ; 0          ; 0            ; 0       ; 0         ; 194  ; 0            ; 0          ; |MiQro_EVA                                                                                      ; MiQro_EVA              ; work         ;
+;    |ElMicro:inst2|                           ; 101 (0)             ; 64 (0)                    ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst2                                                                        ; ElMicro                ; work         ;
+;       |Dec:inst21|                           ; 26 (26)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst2|Dec:inst21                                                             ; Dec                    ; work         ;
 ;       |RP:inst|                              ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst2|RP:inst                                                                ; RP                     ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst2|RP:inst|altsyncram:altsyncram_component                                ; altsyncram             ; work         ;
 ;             |altsyncram_2vq3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst2|RP:inst|altsyncram:altsyncram_component|altsyncram_2vq3:auto_generated ; altsyncram_2vq3        ; work         ;
@@ -266,7 +267,7 @@ refer to the applicable agreement for further details.
 ;       |UniversalShiftRegister:inst8|         ; 1 (1)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst2|UniversalShiftRegister:inst8                                           ; UniversalShiftRegister ; work         ;
 ;       |busmux16to1:inst16|                   ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst2|busmux16to1:inst16                                                     ; busmux16to1            ; work         ;
 ;       |mem_programa:inst252|                 ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst2|mem_programa:inst252                                                   ; mem_programa           ; work         ;
-;    |UControl:inst|                           ; 91 (91)             ; 13 (13)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|UControl:inst                                                                        ; UControl               ; work         ;
+;    |UControl:inst|                           ; 92 (92)             ; 13 (13)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|UControl:inst                                                                        ; UControl               ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -285,13 +286,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------+----------------------------------------+
 ; Register name                                            ; Reason for Removal                     ;
 +----------------------------------------------------------+----------------------------------------+
-; UControl:inst|NextAddUC[5..11,13..15]                    ; Stuck at GND due to stuck port data_in ;
+; UControl:inst|NextAddUC[5..7,9..15]                      ; Stuck at GND due to stuck port data_in ;
 ; ElMicro:inst2|UniversalShiftRegister:inst10|Regist[0..7] ; Lost fanout                            ;
 ; ElMicro:inst2|UniversalShiftRegister:inst9|Regist[0..7]  ; Lost fanout                            ;
 ; ElMicro:inst2|UniversalShiftRegister:inst19|Regist[0..7] ; Lost fanout                            ;
 ; ElMicro:inst2|UniversalShiftRegister:inst18|Regist[0..7] ; Lost fanout                            ;
 ; UControl:inst|address[6,7]                               ; Merged with UControl:inst|address[5]   ;
-; UControl:inst|address[5,9..11,13..15]                    ; Stuck at GND due to stuck port data_in ;
+; UControl:inst|address[5,10..15]                          ; Stuck at GND due to stuck port data_in ;
 ; ElMicro:inst2|UniversalShiftRegister:inst5|Regist[7]     ; Lost fanout                            ;
 ; ElMicro:inst2|UniversalShiftRegister:inst11|Regist[7]    ; Lost fanout                            ;
 ; ElMicro:inst2|UniversalShiftRegister:inst2|Regist[7]     ; Lost fanout                            ;
@@ -332,11 +333,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;                                                      ; due to stuck port data_in ;                                                       ;
 ; UControl:inst|NextAddUC[13]                          ; Stuck at GND              ; UControl:inst|address[13]                             ;
 ;                                                      ; due to stuck port data_in ;                                                       ;
+; UControl:inst|NextAddUC[12]                          ; Stuck at GND              ; UControl:inst|address[12]                             ;
+;                                                      ; due to stuck port data_in ;                                                       ;
 ; UControl:inst|NextAddUC[11]                          ; Stuck at GND              ; UControl:inst|address[11]                             ;
 ;                                                      ; due to stuck port data_in ;                                                       ;
 ; UControl:inst|NextAddUC[10]                          ; Stuck at GND              ; UControl:inst|address[10]                             ;
-;                                                      ; due to stuck port data_in ;                                                       ;
-; UControl:inst|NextAddUC[9]                           ; Stuck at GND              ; UControl:inst|address[9]                              ;
 ;                                                      ; due to stuck port data_in ;                                                       ;
 ; UControl:inst|NextAddUC[5]                           ; Stuck at GND              ; UControl:inst|address[5]                              ;
 ;                                                      ; due to stuck port data_in ;                                                       ;
@@ -549,20 +550,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR           ; 24                          ;
 ;     ENA CLR SLD       ; 40                          ;
 ;     plain             ; 13                          ;
-; cycloneiii_lcell_comb ; 195                         ;
+; cycloneiii_lcell_comb ; 199                         ;
 ;     arith             ; 35                          ;
 ;         2 data inputs ; 4                           ;
 ;         3 data inputs ; 31                          ;
-;     normal            ; 160                         ;
+;     normal            ; 164                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 6                           ;
-;         2 data inputs ; 26                          ;
-;         3 data inputs ; 41                          ;
-;         4 data inputs ; 86                          ;
+;         2 data inputs ; 16                          ;
+;         3 data inputs ; 54                          ;
+;         4 data inputs ; 87                          ;
 ; cycloneiii_ram_block  ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 4.05                        ;
+; Average LUT depth     ; 3.90                        ;
 +-----------------------+-----------------------------+
 
 
@@ -571,7 +572,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -581,71 +582,71 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun May 29 23:21:27 2022
+    Info: Processing started: Mon May 30 12:24:39 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MiQro_EVA -c MiQro_EVA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file /users/danielc/desktop/data/miqroeva/miqrov11/elmicro/mem_programa.vhd
-    Info (12022): Found design unit 1: mem_programa-rtl File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/mem_programa.vhd Line: 13
-    Info (12023): Found entity 1: mem_programa File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/mem_programa.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file /users/danielc/desktop/data/miqroeva/miqrov11/elmicro/rp.vhd
-    Info (12022): Found design unit 1: rp-SYN File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/RP.vhd Line: 54
-    Info (12023): Found entity 1: RP File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/RP.vhd Line: 42
-Info (12021): Found 2 design units, including 1 entities, in source file /users/danielc/desktop/data/miqroeva/miqrov11/alu_1/alu.vhd
-    Info (12022): Found design unit 1: ALU-A File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ALU_1/ALU.vhd Line: 14
-    Info (12023): Found entity 1: ALU File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ALU_1/ALU.vhd Line: 6
-Info (12021): Found 1 design units, including 1 entities, in source file /users/danielc/desktop/data/miqroeva/miqrov11/elmicro/busmux16to1.tdf
-    Info (12023): Found entity 1: busmux16to1 File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file /users/danielc/desktop/data/miqroeva/miqrov11/ucontrol/ucontrol.vhd
-    Info (12022): Found design unit 1: UControl-archUControl File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 33
-    Info (12023): Found entity 1: UControl File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file /users/danielc/desktop/data/miqroeva/miqrov11/elmicro/universalshiftregister.vhd
-    Info (12022): Found design unit 1: UniversalShiftRegister-Behavioral File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/UniversalShiftRegister.vhd Line: 26
-    Info (12023): Found entity 1: UniversalShiftRegister File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/UniversalShiftRegister.vhd Line: 17
-Info (12021): Found 1 design units, including 1 entities, in source file /users/danielc/desktop/data/miqroeva/miqrov11/elmicro/elmicro.bdf
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /users/memof/onedrive/profe ii/8vo/embebidos/miqro/proyecto/miqroeva/miqrov11/elmicro/mem_programa.vhd
+    Info (12022): Found design unit 1: mem_programa-rtl File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/mem_programa.vhd Line: 13
+    Info (12023): Found entity 1: mem_programa File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/mem_programa.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/memof/onedrive/profe ii/8vo/embebidos/miqro/proyecto/miqroeva/miqrov11/elmicro/rp.vhd
+    Info (12022): Found design unit 1: rp-SYN File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/RP.vhd Line: 54
+    Info (12023): Found entity 1: RP File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/RP.vhd Line: 42
+Info (12021): Found 2 design units, including 1 entities, in source file /users/memof/onedrive/profe ii/8vo/embebidos/miqro/proyecto/miqroeva/miqrov11/alu_1/alu.vhd
+    Info (12022): Found design unit 1: ALU-A File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ALU_1/ALU.vhd Line: 14
+    Info (12023): Found entity 1: ALU File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ALU_1/ALU.vhd Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file /users/memof/onedrive/profe ii/8vo/embebidos/miqro/proyecto/miqroeva/miqrov11/elmicro/busmux16to1.tdf
+    Info (12023): Found entity 1: busmux16to1 File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/memof/onedrive/profe ii/8vo/embebidos/miqro/proyecto/miqroeva/miqrov11/ucontrol/ucontrol.vhd
+    Info (12022): Found design unit 1: UControl-archUControl File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 33
+    Info (12023): Found entity 1: UControl File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/memof/onedrive/profe ii/8vo/embebidos/miqro/proyecto/miqroeva/miqrov11/elmicro/universalshiftregister.vhd
+    Info (12022): Found design unit 1: UniversalShiftRegister-Behavioral File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/UniversalShiftRegister.vhd Line: 26
+    Info (12023): Found entity 1: UniversalShiftRegister File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/UniversalShiftRegister.vhd Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file /users/memof/onedrive/profe ii/8vo/embebidos/miqro/proyecto/miqroeva/miqrov11/elmicro/elmicro.bdf
     Info (12023): Found entity 1: ElMicro
-Info (12021): Found 2 design units, including 1 entities, in source file /users/danielc/desktop/data/miqroeva/miqrov11/elmicro/dec.vhd
-    Info (12022): Found design unit 1: Dec-Behavioral File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/Dec.vhd Line: 23
-    Info (12023): Found entity 1: Dec File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/Dec.vhd Line: 17
+Info (12021): Found 2 design units, including 1 entities, in source file /users/memof/onedrive/profe ii/8vo/embebidos/miqro/proyecto/miqroeva/miqrov11/elmicro/dec.vhd
+    Info (12022): Found design unit 1: Dec-Behavioral File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/Dec.vhd Line: 23
+    Info (12023): Found entity 1: Dec File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/Dec.vhd Line: 17
 Info (12021): Found 1 design units, including 1 entities, in source file miqro_eva.bdf
     Info (12023): Found entity 1: MiQro_EVA
 Info (12127): Elaborating entity "MiQro_EVA" for the top level hierarchy
 Info (12128): Elaborating entity "UControl" for hierarchy "UControl:inst"
-Warning (10492): VHDL Process Statement warning at UControl.vhd(104): signal "Flags" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 104
-Warning (10492): VHDL Process Statement warning at UControl.vhd(105): signal "Flags" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 105
-Warning (10492): VHDL Process Statement warning at UControl.vhd(106): signal "Flags" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 106
-Warning (10492): VHDL Process Statement warning at UControl.vhd(107): signal "Flags" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 107
-Warning (10492): VHDL Process Statement warning at UControl.vhd(108): signal "Flags" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 108
-Warning (10492): VHDL Process Statement warning at UControl.vhd(109): signal "Flags" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 109
-Warning (10492): VHDL Process Statement warning at UControl.vhd(110): signal "Flags" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 110
-Warning (10492): VHDL Process Statement warning at UControl.vhd(180): signal "RegEnableUCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 180
-Warning (10492): VHDL Process Statement warning at UControl.vhd(181): signal "FuenteI" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 181
-Warning (10492): VHDL Process Statement warning at UControl.vhd(185): signal "DirMbusUCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 185
-Warning (10492): VHDL Process Statement warning at UControl.vhd(186): signal "DestinoI" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 186
-Warning (10492): VHDL Process Statement warning at UControl.vhd(190): signal "MDR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 190
-Warning (10492): VHDL Process Statement warning at UControl.vhd(191): signal "MDR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 191
-Warning (10492): VHDL Process Statement warning at UControl.vhd(194): signal "MuxNxtAdd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 194
-Warning (10492): VHDL Process Statement warning at UControl.vhd(195): signal "NextAddUC" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 195
-Warning (10492): VHDL Process Statement warning at UControl.vhd(196): signal "DestinoI" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 196
-Warning (10492): VHDL Process Statement warning at UControl.vhd(197): signal "Cache" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 197
-Warning (10631): VHDL Process Statement warning at UControl.vhd(177): inferring latch(es) for signal or variable "DestinoI", which holds its previous value in one or more paths through the process File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 177
-Warning (10631): VHDL Process Statement warning at UControl.vhd(177): inferring latch(es) for signal or variable "FuenteI", which holds its previous value in one or more paths through the process File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 177
-Info (10041): Inferred latch for "FuenteI[0]" at UControl.vhd(177) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 177
-Info (10041): Inferred latch for "FuenteI[1]" at UControl.vhd(177) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 177
-Info (10041): Inferred latch for "FuenteI[2]" at UControl.vhd(177) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 177
-Info (10041): Inferred latch for "FuenteI[3]" at UControl.vhd(177) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 177
-Info (10041): Inferred latch for "FuenteI[4]" at UControl.vhd(177) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 177
-Info (10041): Inferred latch for "FuenteI[5]" at UControl.vhd(177) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 177
-Info (10041): Inferred latch for "FuenteI[6]" at UControl.vhd(177) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 177
-Info (10041): Inferred latch for "FuenteI[7]" at UControl.vhd(177) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 177
-Info (10041): Inferred latch for "DestinoI[0]" at UControl.vhd(177) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 177
-Info (10041): Inferred latch for "DestinoI[1]" at UControl.vhd(177) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 177
-Info (10041): Inferred latch for "DestinoI[2]" at UControl.vhd(177) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 177
-Info (10041): Inferred latch for "DestinoI[3]" at UControl.vhd(177) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 177
-Info (10041): Inferred latch for "DestinoI[4]" at UControl.vhd(177) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 177
-Info (10041): Inferred latch for "DestinoI[5]" at UControl.vhd(177) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 177
-Info (10041): Inferred latch for "DestinoI[6]" at UControl.vhd(177) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 177
-Info (10041): Inferred latch for "DestinoI[7]" at UControl.vhd(177) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 177
+Warning (10492): VHDL Process Statement warning at UControl.vhd(104): signal "Flags" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 104
+Warning (10492): VHDL Process Statement warning at UControl.vhd(105): signal "Flags" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 105
+Warning (10492): VHDL Process Statement warning at UControl.vhd(106): signal "Flags" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 106
+Warning (10492): VHDL Process Statement warning at UControl.vhd(107): signal "Flags" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 107
+Warning (10492): VHDL Process Statement warning at UControl.vhd(108): signal "Flags" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 108
+Warning (10492): VHDL Process Statement warning at UControl.vhd(109): signal "Flags" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 109
+Warning (10492): VHDL Process Statement warning at UControl.vhd(110): signal "Flags" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 110
+Warning (10492): VHDL Process Statement warning at UControl.vhd(175): signal "RegEnableUCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 175
+Warning (10492): VHDL Process Statement warning at UControl.vhd(176): signal "FuenteI" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 176
+Warning (10492): VHDL Process Statement warning at UControl.vhd(180): signal "DirMbusUCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 180
+Warning (10492): VHDL Process Statement warning at UControl.vhd(181): signal "DestinoI" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 181
+Warning (10492): VHDL Process Statement warning at UControl.vhd(185): signal "MDR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 185
+Warning (10492): VHDL Process Statement warning at UControl.vhd(186): signal "MDR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 186
+Warning (10492): VHDL Process Statement warning at UControl.vhd(189): signal "MuxNxtAdd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 189
+Warning (10492): VHDL Process Statement warning at UControl.vhd(190): signal "NextAddUC" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 190
+Warning (10492): VHDL Process Statement warning at UControl.vhd(191): signal "DestinoI" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 191
+Warning (10492): VHDL Process Statement warning at UControl.vhd(192): signal "Cache" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 192
+Warning (10631): VHDL Process Statement warning at UControl.vhd(172): inferring latch(es) for signal or variable "DestinoI", which holds its previous value in one or more paths through the process File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Warning (10631): VHDL Process Statement warning at UControl.vhd(172): inferring latch(es) for signal or variable "FuenteI", which holds its previous value in one or more paths through the process File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "FuenteI[0]" at UControl.vhd(172) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "FuenteI[1]" at UControl.vhd(172) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "FuenteI[2]" at UControl.vhd(172) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "FuenteI[3]" at UControl.vhd(172) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "FuenteI[4]" at UControl.vhd(172) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "FuenteI[5]" at UControl.vhd(172) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "FuenteI[6]" at UControl.vhd(172) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "FuenteI[7]" at UControl.vhd(172) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "DestinoI[0]" at UControl.vhd(172) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "DestinoI[1]" at UControl.vhd(172) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "DestinoI[2]" at UControl.vhd(172) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "DestinoI[3]" at UControl.vhd(172) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "DestinoI[4]" at UControl.vhd(172) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "DestinoI[5]" at UControl.vhd(172) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "DestinoI[6]" at UControl.vhd(172) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "DestinoI[7]" at UControl.vhd(172) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
 Info (12128): Elaborating entity "ElMicro" for hierarchy "ElMicro:inst2"
 Warning (275083): Bus "data10[7..0]" found using same base name as "data1", which might lead to a name conflict.
 Warning (275083): Bus "data11[7..0]" found using same base name as "data1", which might lead to a name conflict.
@@ -713,50 +714,50 @@ Info (12128): Elaborating entity "BUSMUX" for hierarchy "ElMicro:inst2|BUSMUX:in
 Info (12130): Elaborated megafunction instantiation "ElMicro:inst2|BUSMUX:inst15"
 Info (12133): Instantiated megafunction "ElMicro:inst2|BUSMUX:inst15" with the following parameter:
     Info (12134): Parameter "WIDTH" = "8"
-Info (12128): Elaborating entity "lpm_mux" for hierarchy "ElMicro:inst2|BUSMUX:inst15|lpm_mux:$00000" File: d:/quartus/quartus/libraries/megafunctions/busmux.tdf Line: 43
-Info (12131): Elaborated megafunction instantiation "ElMicro:inst2|BUSMUX:inst15|lpm_mux:$00000", which is child of megafunction instantiation "ElMicro:inst2|BUSMUX:inst15" File: d:/quartus/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "ElMicro:inst2|BUSMUX:inst15|lpm_mux:$00000" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12131): Elaborated megafunction instantiation "ElMicro:inst2|BUSMUX:inst15|lpm_mux:$00000", which is child of megafunction instantiation "ElMicro:inst2|BUSMUX:inst15" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/busmux.tdf Line: 43
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_46c.tdf
-    Info (12023): Found entity 1: mux_46c File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/db/mux_46c.tdf Line: 22
-Info (12128): Elaborating entity "mux_46c" for hierarchy "ElMicro:inst2|BUSMUX:inst15|lpm_mux:$00000|mux_46c:auto_generated" File: d:/quartus/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
+    Info (12023): Found entity 1: mux_46c File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/MiQro_EVA/db/mux_46c.tdf Line: 22
+Info (12128): Elaborating entity "mux_46c" for hierarchy "ElMicro:inst2|BUSMUX:inst15|lpm_mux:$00000|mux_46c:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
 Info (12128): Elaborating entity "busmux16to1" for hierarchy "ElMicro:inst2|busmux16to1:inst16"
-Warning (287004): Group name "sel" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 44
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 46
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 48
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 50
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 52
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 54
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 56
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 58
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 60
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 62
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 64
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 66
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 68
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 70
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 72
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 74
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 76
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 78
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 80
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 82
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 84
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 86
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 88
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 90
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 92
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 94
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 96
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 98
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 100
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 102
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 104
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 106
-Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 108
+Warning (287004): Group name "sel" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 44
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 46
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 48
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 50
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 52
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 54
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 56
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 58
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 60
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 62
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 64
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 66
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 68
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 70
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 72
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 74
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 76
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 78
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 80
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 82
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 84
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 86
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 88
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 90
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 92
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 94
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 96
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 98
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 100
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 102
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 104
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 106
+Warning (287004): Group name "result" is missing brackets ([ ]) File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/busmux16to1.tdf Line: 108
 Info (12128): Elaborating entity "ALU" for hierarchy "ElMicro:inst2|ALU:inst24"
 Info (12128): Elaborating entity "RP" for hierarchy "ElMicro:inst2|RP:inst"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "ElMicro:inst2|RP:inst|altsyncram:altsyncram_component" File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/RP.vhd Line: 61
-Info (12130): Elaborated megafunction instantiation "ElMicro:inst2|RP:inst|altsyncram:altsyncram_component" File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/RP.vhd Line: 61
-Info (12133): Instantiated megafunction "ElMicro:inst2|RP:inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/ElMicro/RP.vhd Line: 61
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ElMicro:inst2|RP:inst|altsyncram:altsyncram_component" File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/RP.vhd Line: 61
+Info (12130): Elaborated megafunction instantiation "ElMicro:inst2|RP:inst|altsyncram:altsyncram_component" File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/RP.vhd Line: 61
+Info (12133): Instantiated megafunction "ElMicro:inst2|RP:inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/ElMicro/RP.vhd Line: 61
     Info (12134): Parameter "address_aclr_a" = "UNUSED"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -808,8 +809,8 @@ Info (12133): Instantiated megafunction "ElMicro:inst2|RP:inst|altsyncram:altsyn
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2vq3.tdf
-    Info (12023): Found entity 1: altsyncram_2vq3 File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/db/altsyncram_2vq3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_2vq3" for hierarchy "ElMicro:inst2|RP:inst|altsyncram:altsyncram_component|altsyncram_2vq3:auto_generated" File: d:/quartus/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+    Info (12023): Found entity 1: altsyncram_2vq3 File: C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/MiQro_EVA/db/altsyncram_2vq3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_2vq3" for hierarchy "ElMicro:inst2|RP:inst|altsyncram:altsyncram_component|altsyncram_2vq3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "mem_programa" for hierarchy "ElMicro:inst2|mem_programa:inst252"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SelBus[3]" is stuck at GND
@@ -818,9 +819,9 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "CacheOut[7]" is stuck at GND
     Warning (13410): Pin "CacheOut[6]" is stuck at GND
     Warning (13410): Pin "CacheOut[5]" is stuck at GND
+    Warning (13410): Pin "CacheOut[4]" is stuck at GND
     Warning (13410): Pin "CacheOut[3]" is stuck at GND
     Warning (13410): Pin "CacheOut[2]" is stuck at GND
-    Warning (13410): Pin "CacheOut[1]" is stuck at GND
     Warning (13410): Pin "EnReg[12]" is stuck at GND
     Warning (13410): Pin "EnReg[5]" is stuck at GND
     Warning (13410): Pin "EnReg[4]" is stuck at GND
@@ -850,20 +851,20 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "UMemOut[31]" is stuck at GND
     Warning (13410): Pin "UMemOut[30]" is stuck at GND
     Warning (13410): Pin "UMemOut[29]" is stuck at GND
+    Warning (13410): Pin "UMemOut[28]" is stuck at GND
     Warning (13410): Pin "UMemOut[27]" is stuck at GND
     Warning (13410): Pin "UMemOut[26]" is stuck at GND
     Warning (13410): Pin "UMemOut[25]" is stuck at GND
-    Warning (13410): Pin "UMemOut[24]" is stuck at GND
     Warning (13410): Pin "UMemOut[23]" is stuck at GND
     Warning (13410): Pin "UMemOut[22]" is stuck at GND
     Warning (13410): Pin "UMemOut[21]" is stuck at GND
     Warning (13410): Pin "UMemOut[15]" is stuck at GND
     Warning (13410): Pin "UMemOut[14]" is stuck at GND
     Warning (13410): Pin "UMemOut[13]" is stuck at GND
+    Warning (13410): Pin "UMemOut[12]" is stuck at GND
     Warning (13410): Pin "UMemOut[11]" is stuck at GND
     Warning (13410): Pin "UMemOut[10]" is stuck at GND
     Warning (13410): Pin "UMemOut[9]" is stuck at GND
-    Warning (13410): Pin "UMemOut[8]" is stuck at GND
     Warning (13410): Pin "UMemOut[7]" is stuck at GND
     Warning (13410): Pin "UMemOut[6]" is stuck at GND
     Warning (13410): Pin "UMemOut[5]" is stuck at GND
@@ -888,15 +889,15 @@ Warning (21074): Design contains 16 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "dataC[2]"
     Warning (15610): No output dependent on input pin "dataC[1]"
     Warning (15610): No output dependent on input pin "dataC[0]"
-Info (21057): Implemented 428 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 432 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 26 input pins
     Info (21059): Implemented 168 output pins
-    Info (21061): Implemented 226 logic cells
+    Info (21061): Implemented 230 logic cells
     Info (21064): Implemented 8 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 186 warnings
-    Info: Peak virtual memory: 4817 megabytes
-    Info: Processing ended: Sun May 29 23:21:42 2022
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Peak virtual memory: 4873 megabytes
+    Info: Processing ended: Mon May 30 12:24:49 2022
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:20
 
 

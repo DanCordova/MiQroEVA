@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "05/29/2022 22:43:09"
+-- Generated on "05/29/2022 23:26:51"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          MiQro_EVA
 -- 
@@ -33,6 +33,7 @@ END MiQro_EVA_vhd_vec_tst;
 ARCHITECTURE MiQro_EVA_arch OF MiQro_EVA_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
+SIGNAL AxOut : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL CacheOut : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL Clk : STD_LOGIC;
 SIGNAL dataA : STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -55,6 +56,7 @@ SIGNAL UMemOut : STD_LOGIC_VECTOR(64 DOWNTO 0);
 SIGNAL WR_Output : STD_LOGIC;
 COMPONENT MiQro_EVA
 	PORT (
+	AxOut : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 	CacheOut : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 	Clk : IN STD_LOGIC;
 	dataA : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -81,6 +83,7 @@ BEGIN
 	i1 : MiQro_EVA
 	PORT MAP (
 -- list connections between master ports and signals
+	AxOut => AxOut,
 	CacheOut => CacheOut,
 	Clk => Clk,
 	dataA => dataA,
@@ -111,7 +114,7 @@ LOOP
 	WAIT FOR 5000 ps;
 	Clk <= '1';
 	WAIT FOR 5000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+	IF (NOW >= 4000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_Clk;
 -- dataA[7]
@@ -147,13 +150,13 @@ END PROCESS t_prcs_dataA_3;
 -- dataA[2]
 t_prcs_dataA_2: PROCESS
 BEGIN
-	dataA(2) <= '1';
+	dataA(2) <= '0';
 WAIT;
 END PROCESS t_prcs_dataA_2;
 -- dataA[1]
 t_prcs_dataA_1: PROCESS
 BEGIN
-	dataA(1) <= '1';
+	dataA(1) <= '0';
 WAIT;
 END PROCESS t_prcs_dataA_1;
 -- dataA[0]

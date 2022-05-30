@@ -118,7 +118,7 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 1400 1024 1576 1040)
+	(rect 1368 1024 1544 1040)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "WR" (rect 9 0 27 12)(font "Arial" ))
 	(pt 176 8)
@@ -3183,14 +3183,6 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1568 1032)
-	(pt 1576 1032)
-)
-(connector
-	(pt 1576 1032)
-	(pt 1704 1032)
-)
-(connector
 	(text "SP[7..0]" (rect 1293 772 1310 808)(font "Intel Clear" )(vertical))
 	(pt 1288 896)
 	(pt 1288 760)
@@ -3319,6 +3311,10 @@ refer to the applicable agreement for further details.
 	(pt 1536 352)
 	(bus)
 )
+(connector
+	(pt 1544 1032)
+	(pt 1704 1032)
+)
 (junction (pt 1536 200))
 (junction (pt 624 40))
 (junction (pt 1208 40))
@@ -3331,7 +3327,6 @@ refer to the applicable agreement for further details.
 (junction (pt 2272 928))
 (junction (pt 584 -280))
 (junction (pt 2464 1032))
-(junction (pt 1576 1032))
 (junction (pt 208 -400))
 (junction (pt 208 -376))
 (junction (pt 232 344))

@@ -91,8 +91,7 @@ architecture rtl of mem_programa is
 	
     --WIRTE PROGRAM HERE
 signal ROM: instem :=( 1		=> ADD ,
-							  --1		=> x"00",
-							  2		=> x"00",
+							  2		=> ADD_IM,
 							  3	   => x"00",
 							  others => x"00");
 	begin

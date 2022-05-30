@@ -24,6 +24,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "CacheOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CacheOut[0]",
+					"strict" : false
+				},
+				{
 					"name" : "DataBus[7]",
 					"strict" : false
 				},
@@ -169,6 +177,26 @@
 				},
 				{
 					"name" : "MDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MSELOUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "MSELOUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MSELOUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MSELOUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MSELOUT[0]",
 					"strict" : false
 				},
 				{
@@ -365,10 +393,6 @@
 				},
 				{
 					"name" : "UMemOut[40]",
-					"strict" : false
-				},
-				{
-					"name" : "UMemOut[37]",
 					"strict" : false
 				},
 				{

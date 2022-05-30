@@ -1,13 +1,13 @@
 Determining the location of the ModelSim executable...
 
-Using: C:\intelFPGA_lite\18.1\modelsim_ase\win32aloem\
+Using: d:/quartus/modelsim_ase/win32aloem/
 
 To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
 Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-Altera will be used.
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MiQro_EVA -c MiQro_EVA --vector_source="C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/MiQro_EVA/Waveform2.vwf" --testbench_file="C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/MiQro_EVA/simulation/qsim/Waveform2.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MiQro_EVA -c MiQro_EVA --vector_source="C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/Waveform3.vwf" --testbench_file="C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/simulation/qsim/Waveform3.vwf.vht"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -25,17 +25,17 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Sat May 28 16:34:38 2022
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MiQro_EVA -c MiQro_EVA --vector_source="C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/MiQro_EVA/Waveform2.vwf" --testbench_file="C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/MiQro_EVA/simulation/qsim/Waveform2.vwf.vht"
+    Info: Processing started: Sun May 29 19:39:56 2022
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MiQro_EVA -c MiQro_EVA --vector_source=C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/Waveform3.vwf --testbench_file=C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/simulation/qsim/Waveform3.vwf.vht
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
-writing test bench files
+ector source file when writing test bench files
 
 Completed successfully. 
 
 **** Generating the functional simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/MiQro_EVA/simulation/qsim/" MiQro_EVA -c MiQro_EVA
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/simulation/qsim/" MiQro_EVA -c MiQro_EVA
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -53,39 +53,42 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Sat May 28 16:34:39 2022
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/MiQro_EVA/simulation/qsim/" MiQro_EVA -c MiQro_EVA
+    Info: Processing started: Sun May 29 19:39:59 2022
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/simulation/qsim/ MiQro_EVA -c MiQro_EVA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file MiQro_EVA.vho in folder "C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/MiQro_EVA/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file MiQro_EVA.vho in folder "C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4649 megabytes
-    Info: Processing ended: Sat May 28 16:34:40 2022
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 4651 megabytes
+    Info: Processing ended: Sun May 29 19:40:02 2022
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 Completed successfully. 
 
 **** Generating the ModelSim .do script ****
 
-C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/MiQro_EVA/simulation/qsim/MiQro_EVA.do generated.
+C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/simulation/qsim/MiQro_EVA.do generated.
 
 Completed successfully. 
 
 **** Running the ModelSim simulation ****
 
-C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem//vsim -c -do MiQro_EVA.do
+d:/quartus/modelsim_ase/win32aloem//vsim -c -do MiQro_EVA.do
 
-Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+Reading D:/Quartus/modelsim_ase/tcl/vsim/pref.tcl
 
 # 10.5b
 
+
 # do MiQro_EVA.do
+
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:34:41 on May 28,2022
+# Start time: 19:40:04 on May 29,2022
 # vcom -work work MiQro_EVA.vho 
 # -- Loading package STANDARD
+
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package VITAL_Timing
@@ -98,22 +101,23 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # -- Loading package altera_primitives_components
 # -- Compiling entity MiQro_EVA
 # -- Compiling architecture structure of MiQro_EVA
-# End time: 16:34:41 on May 28,2022, Elapsed time: 0:00:00
+
+# End time: 19:40:04 on May 29,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:34:41 on May 28,2022
-# vcom -work work Waveform2.vwf.vht 
+# Start time: 19:40:04 on May 29,2022
+# vcom -work work Waveform3.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity MiQro_EVA_vhd_vec_tst
 # -- Compiling architecture MiQro_EVA_arch of MiQro_EVA_vhd_vec_tst
-# End time: 16:34:41 on May 28,2022, Elapsed time: 0:00:00
+# End time: 19:40:05 on May 29,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.MiQro_EVA_vhd_vec_tst 
-# Start time: 16:34:41 on May 28,2022
+# Start time: 19:40:05 on May 29,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -137,24 +141,24 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # Loading fiftyfivenm.fiftyfivenm_ram_pulse_generator(pgen_arch)
 # Loading fiftyfivenm.fiftyfivenm_unvm(behavior)
 # Loading fiftyfivenm.fiftyfivenm_adcblock(behavior)
-# ** Warning: Design size of 26370 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 26610 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#35
 
-# End time: 16:34:41 on May 28,2022, Elapsed time: 0:00:00
+# End time: 19:40:07 on May 29,2022, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/MiQro_EVA/Waveform2.vwf...
+Reading C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/Waveform3.vwf...
 
-Reading C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/MiQro_EVA/simulation/qsim/MiQro_EVA.msim.vcd...
+Reading C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/simulation/qsim/MiQro_EVA.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/MiQro_EVA/simulation/qsim/MiQro_EVA_20220528163442.sim.vwf
+Writing the resulting VWF to C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/simulation/qsim/MiQro_EVA_20220529194007.sim.vwf
 
 Finished VCD to VWF conversion.
 

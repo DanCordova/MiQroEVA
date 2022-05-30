@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MiQro_EVA
-Sun May 29 19:15:46 2022
+Sun May 29 22:41:50 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -56,15 +56,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun May 29 19:15:46 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sun May 29 22:41:50 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; MiQro_EVA                                   ;
 ; Top-level Entity Name              ; MiQro_EVA                                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 88                                          ;
-;     Total combinational functions  ; 80                                          ;
-;     Dedicated logic registers      ; 42                                          ;
-; Total registers                    ; 42                                          ;
+; Total logic elements               ; 192                                         ;
+;     Total combinational functions  ; 168                                         ;
+;     Dedicated logic registers      ; 77                                          ;
+; Total registers                    ; 77                                          ;
 ; Total pins                         ; 186                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 2,048                                       ;
@@ -174,7 +174,8 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -217,20 +218,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 88        ;
+; Estimated Total logic elements              ; 192       ;
 ;                                             ;           ;
-; Total combinational functions               ; 80        ;
+; Total combinational functions               ; 168       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 32        ;
-;     -- 3 input functions                    ; 30        ;
-;     -- <=2 input functions                  ; 18        ;
+;     -- 4 input functions                    ; 75        ;
+;     -- 3 input functions                    ; 72        ;
+;     -- <=2 input functions                  ; 21        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 66        ;
-;     -- arithmetic mode                      ; 14        ;
+;     -- normal mode                          ; 133       ;
+;     -- arithmetic mode                      ; 35        ;
 ;                                             ;           ;
-; Total registers                             ; 42        ;
-;     -- Dedicated logic registers            ; 42        ;
+; Total registers                             ; 77        ;
+;     -- Dedicated logic registers            ; 77        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 186       ;
@@ -239,9 +240,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; Clk~input ;
-; Maximum fan-out                             ; 50        ;
-; Total fan-out                               ; 805       ;
-; Average fan-out                             ; 1.60      ;
+; Maximum fan-out                             ; 85        ;
+; Total fan-out                               ; 1286      ;
+; Average fan-out                             ; 2.06      ;
 +---------------------------------------------+-----------+
 
 
@@ -250,19 +251,23 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                             ; Entity Name            ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |MiQro_EVA                                   ; 80 (0)              ; 42 (0)                    ; 2048        ; 0          ; 0            ; 0       ; 0         ; 186  ; 0            ; 0          ; |MiQro_EVA                                                                                      ; MiQro_EVA              ; work         ;
-;    |ElMicro:inst4|                           ; 47 (0)              ; 32 (0)                    ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst4                                                                        ; ElMicro                ; work         ;
-;       |Dec:inst21|                           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst4|Dec:inst21                                                             ; Dec                    ; work         ;
+; |MiQro_EVA                                   ; 168 (0)             ; 77 (0)                    ; 2048        ; 0          ; 0            ; 0       ; 0         ; 186  ; 0            ; 0          ; |MiQro_EVA                                                                                      ; MiQro_EVA              ; work         ;
+;    |ElMicro:inst4|                           ; 97 (0)              ; 64 (0)                    ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst4                                                                        ; ElMicro                ; work         ;
+;       |Dec:inst21|                           ; 22 (22)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst4|Dec:inst21                                                             ; Dec                    ; work         ;
 ;       |RP:inst|                              ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst4|RP:inst                                                                ; RP                     ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst4|RP:inst|altsyncram:altsyncram_component                                ; altsyncram             ; work         ;
 ;             |altsyncram_2vq3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst4|RP:inst|altsyncram:altsyncram_component|altsyncram_2vq3:auto_generated ; altsyncram_2vq3        ; work         ;
 ;       |UniversalShiftRegister:inst17|        ; 9 (9)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst4|UniversalShiftRegister:inst17                                          ; UniversalShiftRegister ; work         ;
 ;       |UniversalShiftRegister:inst1|         ; 17 (17)             ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst4|UniversalShiftRegister:inst1                                           ; UniversalShiftRegister ; work         ;
+;       |UniversalShiftRegister:inst20|        ; 17 (17)             ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst4|UniversalShiftRegister:inst20                                          ; UniversalShiftRegister ; work         ;
+;       |UniversalShiftRegister:inst3|         ; 1 (1)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst4|UniversalShiftRegister:inst3                                           ; UniversalShiftRegister ; work         ;
+;       |UniversalShiftRegister:inst4|         ; 9 (9)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst4|UniversalShiftRegister:inst4                                           ; UniversalShiftRegister ; work         ;
+;       |UniversalShiftRegister:inst6|         ; 9 (9)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst4|UniversalShiftRegister:inst6                                           ; UniversalShiftRegister ; work         ;
 ;       |UniversalShiftRegister:inst7|         ; 1 (1)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst4|UniversalShiftRegister:inst7                                           ; UniversalShiftRegister ; work         ;
-;       |UniversalShiftRegister:inst8|         ; 2 (2)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst4|UniversalShiftRegister:inst8                                           ; UniversalShiftRegister ; work         ;
+;       |UniversalShiftRegister:inst8|         ; 1 (1)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst4|UniversalShiftRegister:inst8                                           ; UniversalShiftRegister ; work         ;
 ;       |busmux16to1:inst16|                   ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst4|busmux16to1:inst16                                                     ; busmux16to1            ; work         ;
 ;       |mem_programa:inst252|                 ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|ElMicro:inst4|mem_programa:inst252                                                   ; mem_programa           ; work         ;
-;    |UControl:inst|                           ; 33 (33)             ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|UControl:inst                                                                        ; UControl               ; work         ;
+;    |UControl:inst|                           ; 71 (71)             ; 13 (13)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MiQro_EVA|UControl:inst                                                                        ; UControl               ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -276,58 +281,75 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+---------------+
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                     ;
-+----------------------------------------------------------+---------------------------------------------+
-; Register name                                            ; Reason for Removal                          ;
-+----------------------------------------------------------+---------------------------------------------+
-; UControl:inst|NextAddUC[4..15]                           ; Stuck at GND due to stuck port data_in      ;
-; ElMicro:inst4|UniversalShiftRegister:inst14|Regist[0..7] ; Lost fanout                                 ;
-; ElMicro:inst4|UniversalShiftRegister:inst11|Regist[0..7] ; Lost fanout                                 ;
-; ElMicro:inst4|UniversalShiftRegister:inst10|Regist[0..7] ; Lost fanout                                 ;
-; ElMicro:inst4|UniversalShiftRegister:inst9|Regist[0..7]  ; Lost fanout                                 ;
-; ElMicro:inst4|UniversalShiftRegister:inst20|Regist[0..7] ; Lost fanout                                 ;
-; ElMicro:inst4|UniversalShiftRegister:inst2|Regist[0..7]  ; Lost fanout                                 ;
-; ElMicro:inst4|UniversalShiftRegister:inst19|Regist[0..7] ; Lost fanout                                 ;
-; ElMicro:inst4|UniversalShiftRegister:inst18|Regist[0..7] ; Lost fanout                                 ;
-; ElMicro:inst4|UniversalShiftRegister:inst5|Regist[0..7]  ; Lost fanout                                 ;
-; UControl:inst|address[5..7]                              ; Merged with UControl:inst|address[4]        ;
-; UControl:inst|address[4]                                 ; Stuck at GND due to stuck port data_in      ;
-; ElMicro:inst4|UniversalShiftRegister:inst3|Regist[0..7]  ; Stuck at GND due to stuck port clock_enable ;
-; ElMicro:inst4|UniversalShiftRegister:inst4|Regist[0..7]  ; Lost fanout                                 ;
-; UControl:inst|address[9..11,13..15]                      ; Stuck at GND due to stuck port data_in      ;
-; ElMicro:inst4|UniversalShiftRegister:inst6|Regist[0..7]  ; Stuck at GND due to stuck port data_in      ;
-; Total Number of Removed Registers = 118                  ;                                             ;
-+----------------------------------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                ;
++----------------------------------------------------------+----------------------------------------+
+; Register name                                            ; Reason for Removal                     ;
++----------------------------------------------------------+----------------------------------------+
+; UControl:inst|NextAddUC[5..11,13..15]                    ; Stuck at GND due to stuck port data_in ;
+; ElMicro:inst4|UniversalShiftRegister:inst10|Regist[0..7] ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst9|Regist[0..7]  ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst19|Regist[0..7] ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst18|Regist[0..7] ; Lost fanout                            ;
+; UControl:inst|address[6,7]                               ; Merged with UControl:inst|address[5]   ;
+; UControl:inst|address[5,9..11,13..15]                    ; Stuck at GND due to stuck port data_in ;
+; ElMicro:inst4|UniversalShiftRegister:inst5|Regist[7]     ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst11|Regist[7]    ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst2|Regist[7]     ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst5|Regist[6]     ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst11|Regist[6]    ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst2|Regist[6]     ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst5|Regist[5]     ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst11|Regist[5]    ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst2|Regist[5]     ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst5|Regist[4]     ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst11|Regist[4]    ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst2|Regist[4]     ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst5|Regist[3]     ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst11|Regist[3]    ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst2|Regist[3]     ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst5|Regist[2]     ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst11|Regist[2]    ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst2|Regist[2]     ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst5|Regist[1]     ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst11|Regist[1]    ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst2|Regist[1]     ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst5|Regist[0]     ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst11|Regist[0]    ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst2|Regist[0]     ; Lost fanout                            ;
+; ElMicro:inst4|UniversalShiftRegister:inst14|Regist[0..7] ; Lost fanout                            ;
+; Total Number of Removed Registers = 83                   ;                                        ;
++----------------------------------------------------------+----------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                        ;
-+------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------+
-; Register name                                        ; Reason for Removal        ; Registers Removed due to This Register                                          ;
-+------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------+
-; UControl:inst|NextAddUC[4]                           ; Stuck at GND              ; UControl:inst|address[4], ElMicro:inst4|UniversalShiftRegister:inst6|Regist[7], ;
-;                                                      ; due to stuck port data_in ; ElMicro:inst4|UniversalShiftRegister:inst6|Regist[6],                           ;
-;                                                      ;                           ; ElMicro:inst4|UniversalShiftRegister:inst6|Regist[5],                           ;
-;                                                      ;                           ; ElMicro:inst4|UniversalShiftRegister:inst6|Regist[4],                           ;
-;                                                      ;                           ; ElMicro:inst4|UniversalShiftRegister:inst6|Regist[3],                           ;
-;                                                      ;                           ; ElMicro:inst4|UniversalShiftRegister:inst6|Regist[2],                           ;
-;                                                      ;                           ; ElMicro:inst4|UniversalShiftRegister:inst6|Regist[1],                           ;
-;                                                      ;                           ; ElMicro:inst4|UniversalShiftRegister:inst6|Regist[0]                            ;
-; UControl:inst|NextAddUC[9]                           ; Stuck at GND              ; UControl:inst|address[9]                                                        ;
-;                                                      ; due to stuck port data_in ;                                                                                 ;
-; UControl:inst|NextAddUC[10]                          ; Stuck at GND              ; UControl:inst|address[10]                                                       ;
-;                                                      ; due to stuck port data_in ;                                                                                 ;
-; UControl:inst|NextAddUC[11]                          ; Stuck at GND              ; UControl:inst|address[11]                                                       ;
-;                                                      ; due to stuck port data_in ;                                                                                 ;
-; UControl:inst|NextAddUC[13]                          ; Stuck at GND              ; UControl:inst|address[13]                                                       ;
-;                                                      ; due to stuck port data_in ;                                                                                 ;
-; UControl:inst|NextAddUC[14]                          ; Stuck at GND              ; UControl:inst|address[14]                                                       ;
-;                                                      ; due to stuck port data_in ;                                                                                 ;
-; UControl:inst|NextAddUC[15]                          ; Stuck at GND              ; UControl:inst|address[15]                                                       ;
-;                                                      ; due to stuck port data_in ;                                                                                 ;
-; ElMicro:inst4|UniversalShiftRegister:inst4|Regist[7] ; Lost Fanouts              ; ElMicro:inst4|UniversalShiftRegister:inst4|Regist[0]                            ;
-+------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                              ;
++------------------------------------------------------+---------------------------+-------------------------------------------------------+
+; Register name                                        ; Reason for Removal        ; Registers Removed due to This Register                ;
++------------------------------------------------------+---------------------------+-------------------------------------------------------+
+; UControl:inst|NextAddUC[15]                          ; Stuck at GND              ; UControl:inst|address[15]                             ;
+;                                                      ; due to stuck port data_in ;                                                       ;
+; UControl:inst|NextAddUC[14]                          ; Stuck at GND              ; UControl:inst|address[14]                             ;
+;                                                      ; due to stuck port data_in ;                                                       ;
+; UControl:inst|NextAddUC[13]                          ; Stuck at GND              ; UControl:inst|address[13]                             ;
+;                                                      ; due to stuck port data_in ;                                                       ;
+; UControl:inst|NextAddUC[11]                          ; Stuck at GND              ; UControl:inst|address[11]                             ;
+;                                                      ; due to stuck port data_in ;                                                       ;
+; UControl:inst|NextAddUC[10]                          ; Stuck at GND              ; UControl:inst|address[10]                             ;
+;                                                      ; due to stuck port data_in ;                                                       ;
+; UControl:inst|NextAddUC[9]                           ; Stuck at GND              ; UControl:inst|address[9]                              ;
+;                                                      ; due to stuck port data_in ;                                                       ;
+; UControl:inst|NextAddUC[5]                           ; Stuck at GND              ; UControl:inst|address[5]                              ;
+;                                                      ; due to stuck port data_in ;                                                       ;
+; ElMicro:inst4|UniversalShiftRegister:inst5|Regist[7] ; Lost Fanouts              ; ElMicro:inst4|UniversalShiftRegister:inst14|Regist[7] ;
+; ElMicro:inst4|UniversalShiftRegister:inst5|Regist[6] ; Lost Fanouts              ; ElMicro:inst4|UniversalShiftRegister:inst14|Regist[6] ;
+; ElMicro:inst4|UniversalShiftRegister:inst5|Regist[5] ; Lost Fanouts              ; ElMicro:inst4|UniversalShiftRegister:inst14|Regist[5] ;
+; ElMicro:inst4|UniversalShiftRegister:inst5|Regist[4] ; Lost Fanouts              ; ElMicro:inst4|UniversalShiftRegister:inst14|Regist[4] ;
+; ElMicro:inst4|UniversalShiftRegister:inst5|Regist[3] ; Lost Fanouts              ; ElMicro:inst4|UniversalShiftRegister:inst14|Regist[3] ;
+; ElMicro:inst4|UniversalShiftRegister:inst5|Regist[2] ; Lost Fanouts              ; ElMicro:inst4|UniversalShiftRegister:inst14|Regist[2] ;
+; ElMicro:inst4|UniversalShiftRegister:inst5|Regist[1] ; Lost Fanouts              ; ElMicro:inst4|UniversalShiftRegister:inst14|Regist[1] ;
+; ElMicro:inst4|UniversalShiftRegister:inst5|Regist[0] ; Lost Fanouts              ; ElMicro:inst4|UniversalShiftRegister:inst14|Regist[0] ;
++------------------------------------------------------+---------------------------+-------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -335,26 +357,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 42    ;
+; Total registers                              ; 77    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 16    ;
-; Number of registers using Asynchronous Clear ; 32    ;
+; Number of registers using Synchronous Load   ; 40    ;
+; Number of registers using Asynchronous Clear ; 64    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 32    ;
+; Number of registers using Clock Enable       ; 64    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |MiQro_EVA|ElMicro:inst4|UniversalShiftRegister:inst7|Regist[7] ;
-; 9:1                ; 8 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |MiQro_EVA|ElMicro:inst4|UniversalShiftRegister:inst6|Regist[5] ;
-; 9:1                ; 8 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |MiQro_EVA|ElMicro:inst4|UniversalShiftRegister:inst1|Regist[0] ;
-; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |MiQro_EVA|ElMicro:inst4|UniversalShiftRegister:inst8|Regist[3] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+; 4:1                ; 48 bits   ; 96 LEs        ; 48 LEs               ; 48 LEs                 ; Yes        ; |MiQro_EVA|ElMicro:inst4|UniversalShiftRegister:inst7|Regist[6]  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |MiQro_EVA|ElMicro:inst4|UniversalShiftRegister:inst20|Regist[5] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |MiQro_EVA|ElMicro:inst4|UniversalShiftRegister:inst6|Regist[2]  ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |MiQro_EVA|ElMicro:inst4|UniversalShiftRegister:inst1|Regist[0]  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |MiQro_EVA|ElMicro:inst4|busmux16to1:inst16|result[7]            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------+
@@ -523,23 +546,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 186                         ;
-; cycloneiii_ff         ; 42                          ;
-;     ENA CLR           ; 16                          ;
-;     ENA CLR SLD       ; 16                          ;
-;     plain             ; 10                          ;
-; cycloneiii_lcell_comb ; 83                          ;
-;     arith             ; 14                          ;
-;         2 data inputs ; 14                          ;
-;     normal            ; 69                          ;
+; cycloneiii_ff         ; 77                          ;
+;     ENA CLR           ; 24                          ;
+;     ENA CLR SLD       ; 40                          ;
+;     plain             ; 13                          ;
+; cycloneiii_lcell_comb ; 176                         ;
+;     arith             ; 35                          ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 31                          ;
+;     normal            ; 141                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 30                          ;
-;         4 data inputs ; 32                          ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 16                          ;
+;         3 data inputs ; 41                          ;
+;         4 data inputs ; 75                          ;
 ; cycloneiii_ram_block  ; 8                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.52                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 3.37                        ;
 +-----------------------+-----------------------------+
 
 
@@ -548,7 +572,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -558,7 +582,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun May 29 19:15:04 2022
+    Info: Processing started: Sun May 29 22:41:35 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MiQro_EVA -c MiQro_EVA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -595,34 +619,34 @@ Warning (10492): VHDL Process Statement warning at UControl.vhd(107): signal "Fl
 Warning (10492): VHDL Process Statement warning at UControl.vhd(108): signal "Flags" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 108
 Warning (10492): VHDL Process Statement warning at UControl.vhd(109): signal "Flags" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 109
 Warning (10492): VHDL Process Statement warning at UControl.vhd(110): signal "Flags" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 110
-Warning (10492): VHDL Process Statement warning at UControl.vhd(146): signal "RegEnableUCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 146
-Warning (10492): VHDL Process Statement warning at UControl.vhd(147): signal "FuenteI" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 147
-Warning (10492): VHDL Process Statement warning at UControl.vhd(151): signal "DirMbusUCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 151
-Warning (10492): VHDL Process Statement warning at UControl.vhd(152): signal "DestinoI" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 152
-Warning (10492): VHDL Process Statement warning at UControl.vhd(156): signal "MDR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 156
-Warning (10492): VHDL Process Statement warning at UControl.vhd(157): signal "MDR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 157
-Warning (10492): VHDL Process Statement warning at UControl.vhd(160): signal "MuxNxtAdd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 160
-Warning (10492): VHDL Process Statement warning at UControl.vhd(161): signal "NextAddUC" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 161
-Warning (10492): VHDL Process Statement warning at UControl.vhd(162): signal "DestinoI" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 162
-Warning (10492): VHDL Process Statement warning at UControl.vhd(163): signal "Cache" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 163
-Warning (10631): VHDL Process Statement warning at UControl.vhd(143): inferring latch(es) for signal or variable "DestinoI", which holds its previous value in one or more paths through the process File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 143
-Warning (10631): VHDL Process Statement warning at UControl.vhd(143): inferring latch(es) for signal or variable "FuenteI", which holds its previous value in one or more paths through the process File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 143
-Info (10041): Inferred latch for "FuenteI[0]" at UControl.vhd(143) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 143
-Info (10041): Inferred latch for "FuenteI[1]" at UControl.vhd(143) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 143
-Info (10041): Inferred latch for "FuenteI[2]" at UControl.vhd(143) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 143
-Info (10041): Inferred latch for "FuenteI[3]" at UControl.vhd(143) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 143
-Info (10041): Inferred latch for "FuenteI[4]" at UControl.vhd(143) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 143
-Info (10041): Inferred latch for "FuenteI[5]" at UControl.vhd(143) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 143
-Info (10041): Inferred latch for "FuenteI[6]" at UControl.vhd(143) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 143
-Info (10041): Inferred latch for "FuenteI[7]" at UControl.vhd(143) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 143
-Info (10041): Inferred latch for "DestinoI[0]" at UControl.vhd(143) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 143
-Info (10041): Inferred latch for "DestinoI[1]" at UControl.vhd(143) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 143
-Info (10041): Inferred latch for "DestinoI[2]" at UControl.vhd(143) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 143
-Info (10041): Inferred latch for "DestinoI[3]" at UControl.vhd(143) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 143
-Info (10041): Inferred latch for "DestinoI[4]" at UControl.vhd(143) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 143
-Info (10041): Inferred latch for "DestinoI[5]" at UControl.vhd(143) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 143
-Info (10041): Inferred latch for "DestinoI[6]" at UControl.vhd(143) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 143
-Info (10041): Inferred latch for "DestinoI[7]" at UControl.vhd(143) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 143
+Warning (10492): VHDL Process Statement warning at UControl.vhd(175): signal "RegEnableUCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 175
+Warning (10492): VHDL Process Statement warning at UControl.vhd(176): signal "FuenteI" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 176
+Warning (10492): VHDL Process Statement warning at UControl.vhd(180): signal "DirMbusUCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 180
+Warning (10492): VHDL Process Statement warning at UControl.vhd(181): signal "DestinoI" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 181
+Warning (10492): VHDL Process Statement warning at UControl.vhd(185): signal "MDR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 185
+Warning (10492): VHDL Process Statement warning at UControl.vhd(186): signal "MDR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 186
+Warning (10492): VHDL Process Statement warning at UControl.vhd(189): signal "MuxNxtAdd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 189
+Warning (10492): VHDL Process Statement warning at UControl.vhd(190): signal "NextAddUC" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 190
+Warning (10492): VHDL Process Statement warning at UControl.vhd(191): signal "DestinoI" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 191
+Warning (10492): VHDL Process Statement warning at UControl.vhd(192): signal "Cache" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 192
+Warning (10631): VHDL Process Statement warning at UControl.vhd(172): inferring latch(es) for signal or variable "DestinoI", which holds its previous value in one or more paths through the process File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Warning (10631): VHDL Process Statement warning at UControl.vhd(172): inferring latch(es) for signal or variable "FuenteI", which holds its previous value in one or more paths through the process File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "FuenteI[0]" at UControl.vhd(172) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "FuenteI[1]" at UControl.vhd(172) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "FuenteI[2]" at UControl.vhd(172) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "FuenteI[3]" at UControl.vhd(172) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "FuenteI[4]" at UControl.vhd(172) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "FuenteI[5]" at UControl.vhd(172) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "FuenteI[6]" at UControl.vhd(172) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "FuenteI[7]" at UControl.vhd(172) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "DestinoI[0]" at UControl.vhd(172) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "DestinoI[1]" at UControl.vhd(172) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "DestinoI[2]" at UControl.vhd(172) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "DestinoI[3]" at UControl.vhd(172) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "DestinoI[4]" at UControl.vhd(172) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "DestinoI[5]" at UControl.vhd(172) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "DestinoI[6]" at UControl.vhd(172) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
+Info (10041): Inferred latch for "DestinoI[7]" at UControl.vhd(172) File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/UControl/UControl.vhd Line: 172
 Info (12128): Elaborating entity "ElMicro" for hierarchy "ElMicro:inst4"
 Warning (275083): Bus "data10[7..0]" found using same base name as "data1", which might lead to a name conflict.
 Warning (275083): Bus "data11[7..0]" found using same base name as "data1", which might lead to a name conflict.
@@ -789,6 +813,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_2vq3 File: C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/db/altsyncram_2vq3.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_2vq3" for hierarchy "ElMicro:inst4|RP:inst|altsyncram:altsyncram_component|altsyncram_2vq3:auto_generated" File: d:/quartus/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "SelBus[3]" is stuck at GND
+    Warning (13410): Pin "SelBus[2]" is stuck at GND
     Warning (13410): Pin "WR_Output" is stuck at GND
     Warning (13410): Pin "CacheOut[7]" is stuck at GND
     Warning (13410): Pin "CacheOut[6]" is stuck at GND
@@ -796,9 +822,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "CacheOut[3]" is stuck at GND
     Warning (13410): Pin "CacheOut[2]" is stuck at GND
     Warning (13410): Pin "CacheOut[1]" is stuck at GND
-    Warning (13410): Pin "EnReg[15]" is stuck at GND
-    Warning (13410): Pin "EnReg[14]" is stuck at GND
-    Warning (13410): Pin "EnReg[13]" is stuck at GND
     Warning (13410): Pin "EnReg[12]" is stuck at GND
     Warning (13410): Pin "EnReg[11]" is stuck at GND
     Warning (13410): Pin "EnReg[10]" is stuck at GND
@@ -807,6 +830,17 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "EnReg[3]" is stuck at GND
     Warning (13410): Pin "EnReg[2]" is stuck at GND
     Warning (13410): Pin "EnReg[1]" is stuck at GND
+    Warning (13410): Pin "MSELOUT[4]" is stuck at GND
+    Warning (13410): Pin "MSELOUT[1]" is stuck at GND
+    Warning (13410): Pin "UMemOut[64]" is stuck at GND
+    Warning (13410): Pin "UMemOut[61]" is stuck at GND
+    Warning (13410): Pin "UMemOut[54]" is stuck at GND
+    Warning (13410): Pin "UMemOut[53]" is stuck at GND
+    Warning (13410): Pin "UMemOut[52]" is stuck at GND
+    Warning (13410): Pin "UMemOut[51]" is stuck at GND
+    Warning (13410): Pin "UMemOut[48]" is stuck at GND
+    Warning (13410): Pin "UMemOut[47]" is stuck at GND
+    Warning (13410): Pin "UMemOut[46]" is stuck at GND
     Warning (13410): Pin "UMemOut[45]" is stuck at GND
     Warning (13410): Pin "UMemOut[44]" is stuck at GND
     Warning (13410): Pin "UMemOut[43]" is stuck at GND
@@ -821,7 +855,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "UMemOut[31]" is stuck at GND
     Warning (13410): Pin "UMemOut[30]" is stuck at GND
     Warning (13410): Pin "UMemOut[29]" is stuck at GND
-    Warning (13410): Pin "UMemOut[28]" is stuck at GND
     Warning (13410): Pin "UMemOut[27]" is stuck at GND
     Warning (13410): Pin "UMemOut[26]" is stuck at GND
     Warning (13410): Pin "UMemOut[25]" is stuck at GND
@@ -829,11 +862,9 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "UMemOut[23]" is stuck at GND
     Warning (13410): Pin "UMemOut[22]" is stuck at GND
     Warning (13410): Pin "UMemOut[21]" is stuck at GND
-    Warning (13410): Pin "UMemOut[20]" is stuck at GND
     Warning (13410): Pin "UMemOut[15]" is stuck at GND
     Warning (13410): Pin "UMemOut[14]" is stuck at GND
     Warning (13410): Pin "UMemOut[13]" is stuck at GND
-    Warning (13410): Pin "UMemOut[12]" is stuck at GND
     Warning (13410): Pin "UMemOut[11]" is stuck at GND
     Warning (13410): Pin "UMemOut[10]" is stuck at GND
     Warning (13410): Pin "UMemOut[9]" is stuck at GND
@@ -841,12 +872,11 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "UMemOut[7]" is stuck at GND
     Warning (13410): Pin "UMemOut[6]" is stuck at GND
     Warning (13410): Pin "UMemOut[5]" is stuck at GND
-    Warning (13410): Pin "UMemOut[4]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 80 registers lost all their fanouts during netlist optimizations.
+Info (17049): 64 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 24 input pin(s) that do not drive logic
+Warning (21074): Design contains 16 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "dataB[7]"
     Warning (15610): No output dependent on input pin "dataB[6]"
     Warning (15610): No output dependent on input pin "dataB[5]"
@@ -863,23 +893,15 @@ Warning (21074): Design contains 24 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "dataC[2]"
     Warning (15610): No output dependent on input pin "dataC[1]"
     Warning (15610): No output dependent on input pin "dataC[0]"
-    Warning (15610): No output dependent on input pin "dataA[7]"
-    Warning (15610): No output dependent on input pin "dataA[6]"
-    Warning (15610): No output dependent on input pin "dataA[5]"
-    Warning (15610): No output dependent on input pin "dataA[4]"
-    Warning (15610): No output dependent on input pin "dataA[3]"
-    Warning (15610): No output dependent on input pin "dataA[2]"
-    Warning (15610): No output dependent on input pin "dataA[1]"
-    Warning (15610): No output dependent on input pin "dataA[0]"
-Info (21057): Implemented 294 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 399 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 26 input pins
     Info (21059): Implemented 160 output pins
-    Info (21061): Implemented 100 logic cells
+    Info (21061): Implemented 205 logic cells
     Info (21064): Implemented 8 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 192 warnings
-    Info: Peak virtual memory: 4837 megabytes
-    Info: Processing ended: Sun May 29 19:15:46 2022
-    Info: Elapsed time: 00:00:42
-    Info: Total CPU time (on all processors): 00:00:53
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 190 warnings
+    Info: Peak virtual memory: 4848 megabytes
+    Info: Processing ended: Sun May 29 22:41:50 2022
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:28
 
 

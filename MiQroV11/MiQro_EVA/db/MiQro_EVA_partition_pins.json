@@ -8,14 +8,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "SelBus[3]",
-					"strict" : false
-				},
-				{
-					"name" : "SelBus[2]",
-					"strict" : false
-				},
-				{
 					"name" : "SelBus[1]",
 					"strict" : false
 				},
@@ -61,6 +53,18 @@
 				},
 				{
 					"name" : "DataBus[0]",
+					"strict" : false
+				},
+				{
+					"name" : "EnReg[15]",
+					"strict" : false
+				},
+				{
+					"name" : "EnReg[14]",
+					"strict" : false
+				},
+				{
+					"name" : "EnReg[13]",
 					"strict" : false
 				},
 				{
@@ -180,19 +184,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "MSELOUT[4]",
-					"strict" : false
-				},
-				{
 					"name" : "MSELOUT[3]",
 					"strict" : false
 				},
 				{
 					"name" : "MSELOUT[2]",
-					"strict" : false
-				},
-				{
-					"name" : "MSELOUT[1]",
 					"strict" : false
 				},
 				{
@@ -312,19 +308,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "UMemOut[64]",
-					"strict" : false
-				},
-				{
 					"name" : "UMemOut[63]",
 					"strict" : false
 				},
 				{
 					"name" : "UMemOut[62]",
-					"strict" : false
-				},
-				{
-					"name" : "UMemOut[61]",
 					"strict" : false
 				},
 				{
@@ -352,39 +340,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "UMemOut[54]",
-					"strict" : false
-				},
-				{
-					"name" : "UMemOut[53]",
-					"strict" : false
-				},
-				{
-					"name" : "UMemOut[52]",
-					"strict" : false
-				},
-				{
-					"name" : "UMemOut[51]",
-					"strict" : false
-				},
-				{
 					"name" : "UMemOut[50]",
 					"strict" : false
 				},
 				{
 					"name" : "UMemOut[49]",
-					"strict" : false
-				},
-				{
-					"name" : "UMemOut[48]",
-					"strict" : false
-				},
-				{
-					"name" : "UMemOut[47]",
-					"strict" : false
-				},
-				{
-					"name" : "UMemOut[46]",
 					"strict" : false
 				},
 				{
@@ -397,6 +357,14 @@
 				},
 				{
 					"name" : "UMemOut[36]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[28]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[20]",
 					"strict" : false
 				},
 				{
@@ -413,6 +381,14 @@
 				},
 				{
 					"name" : "UMemOut[16]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[12]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[4]",
 					"strict" : false
 				},
 				{
@@ -437,6 +413,38 @@
 				},
 				{
 					"name" : "Rst",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[0]",
 					"strict" : false
 				}
 			]

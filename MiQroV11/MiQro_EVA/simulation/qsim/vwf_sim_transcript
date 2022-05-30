@@ -25,7 +25,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Sun May 29 19:39:56 2022
+    Info: Processing started: Sun May 29 22:43:08 2022
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MiQro_EVA -c MiQro_EVA --vector_source=C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/Waveform3.vwf --testbench_file=C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/simulation/qsim/Waveform3.vwf.vht
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
@@ -53,15 +53,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Sun May 29 19:39:59 2022
+    Info: Processing started: Sun May 29 22:43:09 2022
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/simulation/qsim/ MiQro_EVA -c MiQro_EVA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file MiQro_EVA.vho in folder "C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4651 megabytes
-    Info: Processing ended: Sun May 29 19:40:02 2022
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4654 megabytes
+    Info: Processing ended: Sun May 29 22:43:11 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
 
@@ -81,14 +81,12 @@ Reading D:/Quartus/modelsim_ase/tcl/vsim/pref.tcl
 
 
 # do MiQro_EVA.do
-
 # ** Warning: (vlib-34) Library already exists at "work".
-
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:40:04 on May 29,2022
+# Start time: 22:43:11 on May 29,2022
 # vcom -work work MiQro_EVA.vho 
-# -- Loading package STANDARD
 
+# -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package VITAL_Timing
@@ -101,23 +99,22 @@ Reading D:/Quartus/modelsim_ase/tcl/vsim/pref.tcl
 # -- Loading package altera_primitives_components
 # -- Compiling entity MiQro_EVA
 # -- Compiling architecture structure of MiQro_EVA
-
-# End time: 19:40:04 on May 29,2022, Elapsed time: 0:00:00
+# End time: 22:43:11 on May 29,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:40:04 on May 29,2022
+# Start time: 22:43:11 on May 29,2022
 # vcom -work work Waveform3.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity MiQro_EVA_vhd_vec_tst
 # -- Compiling architecture MiQro_EVA_arch of MiQro_EVA_vhd_vec_tst
-# End time: 19:40:05 on May 29,2022, Elapsed time: 0:00:01
+# End time: 22:43:11 on May 29,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.MiQro_EVA_vhd_vec_tst 
-# Start time: 19:40:05 on May 29,2022
+# Start time: 22:43:12 on May 29,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -141,11 +138,11 @@ Reading D:/Quartus/modelsim_ase/tcl/vsim/pref.tcl
 # Loading fiftyfivenm.fiftyfivenm_ram_pulse_generator(pgen_arch)
 # Loading fiftyfivenm.fiftyfivenm_unvm(behavior)
 # Loading fiftyfivenm.fiftyfivenm_adcblock(behavior)
-# ** Warning: Design size of 26610 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 42556 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#35
 
-# End time: 19:40:07 on May 29,2022, Elapsed time: 0:00:02
+# End time: 22:43:13 on May 29,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
@@ -158,7 +155,7 @@ Reading C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/simulation/qsi
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/simulation/qsim/MiQro_EVA_20220529194007.sim.vwf
+Writing the resulting VWF to C:/Users/DanielC/Desktop/Data/MiQroEVA/MiQroV11/MiQro_EVA/simulation/qsim/MiQro_EVA_20220529224313.sim.vwf
 
 Finished VCD to VWF conversion.
 

@@ -1,0 +1,30 @@
+Etiqueta1: Add Ax, Bx
+Add_im Cx, 0x08
+Add Cx, Bx
+Etiqueta2: Sub Dx, Ex
+Sub_im Fx, 0x05
+Mult Gx, Hx
+Mult_im Ax, 0x15
+Etiqueta3: Div Bx, Cx
+Div_im Dx, 0x01
+
+And Ex, Fx
+And_im Gx, 0x02
+Or Hx, Ax
+Or_im Bx, 0x06
+Xor Cx, Dx
+Xor_im Ex, 0x03
+Not Fx
+Etiqueta4: Cmp Ax, Bx
+Cmp_im Ax, 0x010
+
+Mov Ax, Bx
+Etiqueta5: Move_im Ax, 0x05
+Jmp Etiqueta1
+Jeq Etiqueta2
+Jgt Etiqueta3
+Jlt Etiqueta4
+
+Call Etiqueta5 
+Ret Etiqueta2
+Retin Etiqueta3

@@ -93,6 +93,7 @@ architecture rtl of mem_programa is
 signal ROM: instem :=( 1		=> ADD ,   -- Aqui pongan el decimal de su instruccion, (x01 = 1 = ADD directo)
 							  2		=> ADD_IM, -- (x02 = 2 = Add_IM)
 							  3	   => SUB,    -- (x03 = 3 = Sub directo 
+							  34	   => JMP,
 							  others => x"00");
 	begin
 	data_out <= ROM(conv_integer(unsigned(address)));

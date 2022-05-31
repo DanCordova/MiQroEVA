@@ -48,6 +48,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "CacheOut[5]",
+					"strict" : false
+				},
+				{
 					"name" : "CacheOut[1]",
 					"strict" : false
 				},
@@ -408,6 +412,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "UMemOut[29]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[25]",
+					"strict" : false
+				},
+				{
 					"name" : "UMemOut[24]",
 					"strict" : false
 				},
@@ -429,6 +441,14 @@
 				},
 				{
 					"name" : "UMemOut[16]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[13]",
+					"strict" : false
+				},
+				{
+					"name" : "UMemOut[9]",
 					"strict" : false
 				},
 				{

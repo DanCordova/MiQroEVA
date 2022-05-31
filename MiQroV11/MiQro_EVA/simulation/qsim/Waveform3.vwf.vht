@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "05/30/2022 12:19:36"
+-- Generated on "05/30/2022 20:41:21"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          MiQro_EVA
 -- 
@@ -150,7 +150,7 @@ END PROCESS t_prcs_dataA_3;
 -- dataA[2]
 t_prcs_dataA_2: PROCESS
 BEGIN
-	dataA(2) <= '0';
+	dataA(2) <= '1';
 WAIT;
 END PROCESS t_prcs_dataA_2;
 -- dataA[1]

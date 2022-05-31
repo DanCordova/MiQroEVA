@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Mon May 30 13:58:25 2022
+Analysis & Synthesis Status : Successful - Mon May 30 20:40:29 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : MiQro_EVA
 Top-level Entity Name : MiQro_EVA
 Family : MAX 10
-Total logic elements : 191
-    Total combinational functions : 167
-    Dedicated logic registers : 77
-Total registers : 77
+Total logic elements : 252
+    Total combinational functions : 228
+    Dedicated logic registers : 79
+Total registers : 79
 Total pins : 194
 Total virtual pins : 0
 Total memory bits : 2,048

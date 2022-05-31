@@ -33,9 +33,10 @@ end UControl;
 architecture archUControl	of UControl is
 	signal address			: std_logic_vector(15 downto 0);
 	signal nextAdd			: std_logic_vector(15 downto 0);
-	signal DestinoI			: std_logic_vector(7 downto 0);	--valores del destino
+	signal DestinoI		: std_logic_vector(7 downto 0);	--valores del destino
 	signal FuenteI			: std_logic_vector(7 downto 0);	--valores de la fuente
 	signal NextAddUC		: std_logic_vector(15 downto 0);
+	signal DstFntAux		: std_logic_vector(7 downto 0);
 	
 	--señales de la UMem
 	signal UMEM				: std_logic_vector(64 downto 0);
@@ -107,7 +108,7 @@ begin
 			when "0011" => selectedFlag <= flags(3);
 			when "0100" => selectedFlag <= flags(4);
 			when "0101" => selectedFlag <= flags(5);
-			when "0110" => selectedFlag <= flags(6);
+			when "0110" => selectedFlag <= flags(6); -- Equal
 			when "0111" => selectedFlag <= '0';
 			when others => selectedFlag <= '0';
 		end case;
@@ -123,8 +124,8 @@ begin
 			when X"0000"=> UMem <="00000" & "0111" & "000" & "0000" & "000" & "0000010001" & "0000" & X"0001" & X"0001";
 			when X"0001"=> UMem <="00000" & "0111" & "000" & "0001" & "000" & "0000010001" & "0000" & X"0002" & X"0002";
 			when X"0002"=> UMem <="00000" & "0111" & "000" & "0000" & "000" & "0000000001" & "0000" & X"0003" & X"0003";
-			when X"0003"=> UMem <="01000" & "1000" & "000" & "0001" & "000" & "0000000001" & "0000" & X"0004" & X"0004";
-			when X"0004"=> UMem <="01000" & "1000" & "000" & "0000" & "000" & "0000000001" & "0000" & X"0005" & X"0005";
+			when X"0003"=> UMem <="01000" & "1000" & "000" & "0000" & "000" & "0000000001" & "0000" & X"0004" & X"0004";
+			when X"0004"=> UMem <="01000" & "1000" & "000" & "0001" & "000" & "0000000001" & "0000" & X"0005" & X"0005";
 			when X"0005"=> UMem <="01000" & "1000" & "000" & "0000" & "000" & "0000000001" & "0000" & X"0006" & X"0006";
 			when X"0006"=> UMem <="01000" & "1001" & "000" & "0001" & "000" & "0000000001" & "0000" & X"0007" & X"0007";
 			when X"0007"=> UMem <="01000" & "1001" & "000" & "0000" & "000" & "0000000001" & "0000" & X"0008" & X"0008";
@@ -160,6 +161,21 @@ begin
 			when X"0115"=> UMem <="01101" & "0000" & "000" & "0001" & "000" & "0000000001" & "0000" & X"0000" & X"0000";
 			
 			
+			
+			--JMP 
+		   --						  MBusSelect RegEnable MuxABC RegValue   ALU    Muxeslocos		ControlL  NextAdd  Bifurcacion
+			when X"2200"=> UMem <="00000" & "0110" & "000" & "0010" & "000" & "0000000001" & "0000" & X"2201" & X"2201";
+			when X"2201"=> UMem <="00000" & "0110" & "000" & "0000" & "000" & "0000000001" & "0000" & X"2202" & X"2202";
+			when X"2202"=> UMem <="00000" & "0111" & "000" & "0001" & "000" & "0000010001" & "0000" & X"2203" & X"2203";
+			when X"2203"=> UMem <="00000" & "0111" & "000" & "0000" & "000" & "0000010001" & "0000" & X"2204" & X"2204";
+			when X"2204"=> UMem <="00000" & "0000" & "000" & "0000" & "000" & "0000000000" & "0000" & X"2205" & X"2205";
+			when X"2205"=> UMem <="00000" & "0000" & "000" & "0000" & "000" & "0000000000" & "0000" & X"2206" & X"2206";
+			when X"2206"=> UMem <="00000" & "0000" & "000" & "0000" & "000" & "0000000000" & "0000" & X"2207" & X"2207";
+			when X"2207"=> UMem <="00000" & "0000" & "000" & "0000" & "000" & "0000000000" & "0000" & X"2208" & X"2208";
+			when X"2208"=> UMem <="00000" & "1000" & "000" & "0001" & "000" & "0000000001" & "0000" & X"2209" & X"2209";
+			when X"2209"=> UMem <="01000" & "1000" & "000" & "0000" & "000" & "0000000001" & "0000" & X"220A" & X"220A";
+			when X"220A"=> UMem <="01000" & "0110" & "000" & "0001" & "000" & "0000000001" & "0000" & X"220B" & X"220B";
+			when X"220B"=> UMem <="00000" & "0110" & "000" & "0000" & "000" & "0000000001" & "0000" & X"0000" & X"0000";
 			--When others
 			when others => UMem <="01101" & "0000" & "000" & "0001" & "000" & "0000000001" & "0000" & X"0000" & X"0000";
 			
@@ -182,14 +198,15 @@ begin
 		end case;
 		
 		case MuxDstFt is --mux que controla si MDR escribe a Dst o Ft
-			when '0'	=> DestinoI <= MDR;
-			when '1' => FuenteI <= MDR;
+			when '0'	=> DestinoI <= DstFntAux;
+			when '1' => FuenteI <= DstFntAux;
 		end case;
 		
 		case MuxNxtAdd is --mux que controla si nxtAdd se lee desde la unidad de control, el Destino o desde el cache (en ciclo de fetch) 
 			when "00" => nextAdd <= nextAddUC;
 			when "01" => nextAdd <= DestinoI & X"00";
 			when "10" => nextAdd <= Cache & x"00";
+			when "11" => DstFntAux <= MDR;
 			when others =>nextAdd<= X"0000";
 		end case;
 		

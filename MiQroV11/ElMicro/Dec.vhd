@@ -24,7 +24,8 @@ architecture Behavioral of Dec is
 --	constant BoardFreq : integer := 49_999_999;
 	signal IntSel : STD_LOGIC_VECTOR(15 downto 0);
 begin
-	with Sel select IntSel <= "0000000000000001" when "0000",
+	with Sel select IntSel <= 
+	"0000000000000001" when "0000",
 	"0000000000000010" when "0001",
 	"0000000000000100" when "0010",
 	"0000000000001000" when "0011",

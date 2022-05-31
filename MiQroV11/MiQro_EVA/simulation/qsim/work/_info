@@ -81,7 +81,7 @@ R17
 Aalu_arch
 R6
 R7
-Z23 DEx4 work 15 alu_vhd_vec_tst 0 22 M9g^YfSDOcSm9VVBlhjI60
+DEx4 work 15 alu_vhd_vec_tst 0 22 M9g^YfSDOcSm9VVBlhjI60
 l50
 L33
 Vcgok^[P;<R6T[zjVW7DKQ3
@@ -93,6 +93,143 @@ R12
 R13
 R21
 R22
+!i113 1
+R16
+R17
+Ehard_block
+Z23 w1653961283
+R2
+Z24 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 7d5Xo;QBOkc31OfQTzSXV0
+R4
+R6
+R7
+Z25 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 IfY7Mh2WPBc;@7U@3<I^[0
+Z26 dC:/Users/memof/OneDrive/Profe II/8vo/Embebidos/MiQro/Proyecto/MiQroEVA/MiQroV11/MiQro_EVA/simulation/qsim
+R9
+R10
+l0
+L34
+V8_BbEmGd;OHS6h@;gFc7W3
+!s100 ROH=D<N4CT6aCZ<37A[_?0
+R11
+32
+Z27 !s110 1653961283
+!i10b 1
+Z28 !s108 1653961283.000000
+R14
+R15
+!i113 1
+R16
+R17
+Astructure
+R2
+R24
+R4
+R6
+R7
+R25
+DEx4 work 10 hard_block 0 22 8_BbEmGd;OHS6h@;gFc7W3
+l75
+L53
+Vg=W`CQ>24lhYF71zFSkY43
+!s100 zW6ML5NVY?Ai`]`n2XhME3
+R11
+32
+R27
+!i10b 1
+R28
+R14
+R15
+!i113 1
+R16
+R17
+Emiqro_eva
+R23
+R24
+R25
+R2
+Z29 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+R4
+R6
+R7
+Z30 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+R26
+R9
+R10
+l0
+L90
+VO`]z2@XZ0J<<IED5@L_d30
+!s100 <hJBbE_FDGOclc>J@RC141
+R11
+32
+R27
+!i10b 1
+R28
+R14
+R15
+!i113 1
+R16
+R17
+Astructure
+R24
+R25
+R2
+R29
+R4
+R6
+R7
+R30
+DEx4 work 9 miqro_eva 0 22 O`]z2@XZ0J<<IED5@L_d30
+l862
+L313
+VC>8>Q]@EaFL8Do8]_5=CQ3
+!s100 Za>PZPdA@1eKOVoklImBM0
+R11
+32
+R27
+!i10b 1
+R28
+R14
+R15
+!i113 1
+R16
+R17
+Emiqro_eva_vhd_vec_tst
+Z31 w1653961281
+R6
+R7
+R26
+Z32 8Waveform3.vwf.vht
+Z33 FWaveform3.vwf.vht
+l0
+L31
+VLlicFaAS;M6<ERN8]N?GQ0
+!s100 W4>[9T^f_P_NcEOjnj;6S0
+R11
+32
+R27
+!i10b 1
+R28
+Z34 !s90 -work|work|Waveform3.vwf.vht|
+Z35 !s107 Waveform3.vwf.vht|
+!i113 1
+R16
+R17
+Amiqro_eva_arch
+R6
+R7
+Z36 DEx4 work 21 miqro_eva_vhd_vec_tst 0 22 LlicFaAS;M6<ERN8]N?GQ0
+l82
+L33
+Z37 V[AZ]7IA2l:P3H^hlG[gD=0
+Z38 !s100 @Y5V9EBUVBPJ3gb?JidUA1
+R11
+32
+R27
+!i10b 1
+R28
+R34
+R35
 !i113 1
 R16
 R17

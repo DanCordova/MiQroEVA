@@ -33,9 +33,10 @@ end UControl;
 architecture archUControl	of UControl is
 	signal address			: std_logic_vector(15 downto 0);
 	signal nextAdd			: std_logic_vector(15 downto 0);
-	signal DestinoI			: std_logic_vector(7 downto 0);	--valores del destino
+	signal DestinoI		: std_logic_vector(7 downto 0);	--valores del destino
 	signal FuenteI			: std_logic_vector(7 downto 0);	--valores de la fuente
 	signal NextAddUC		: std_logic_vector(15 downto 0);
+	signal DstFntAux		: std_logic_vector(7 downto 0);
 	
 	--señales de la UMem
 	signal UMEM				: std_logic_vector(64 downto 0);
@@ -68,7 +69,7 @@ begin
 	--next address based on the clock
 	process(clk, controlLines)
 	begin
-		if(rising_edge(clk)) then
+		if(falling_edge(clk)) then
 			address <= nextAdd;
 		end if;
 	end process;
@@ -107,7 +108,7 @@ begin
 			when "0011" => selectedFlag <= flags(3);
 			when "0100" => selectedFlag <= flags(4);
 			when "0101" => selectedFlag <= flags(5);
-			when "0110" => selectedFlag <= flags(6);
+			when "0110" => selectedFlag <= flags(6); -- Equal
 			when "0111" => selectedFlag <= '0';
 			when others => selectedFlag <= '0';
 		end case;
@@ -117,12 +118,68 @@ begin
 	process(address)
 	begin
 		case address is
-		--								MBus     RegEnable MuxABC RegValue ALU    Sen. Int  ControlL 
+		--								MBusSelect RegEnable MuxABC RegValue  ALU    Muxeslocos		ControlL  NextAdd   Bifurcacion
 --			when X"0000"=>UMem<="00000" & "0000" & "000" & "0011" & "000" & "0000" & "0000" & X"0001" & X"0000";
 --			when X"0001"=>UMem<="00000" & "0000" & "000" & "0011" & "000" & "0000" & "0000" & X"0002" & X"0000";
-			when X"0000"=>UMem<="00001" & "0001" & "001" & "0001" & "001" & "0000000000" & "0001" & X"0001" & X"0001";
-			when X"0001"=>UMem<="00010" & "0010" & "010" & "0010" & "010" & "0000000000" & "0010" & X"0002" & X"0002";
-			when others =>UMem<="00000" & "0000" & "000" & "0000" & "000" & "0000000000" & "0000" & X"0000" & X"0000";
+			when X"0000"=> UMem <="00000" & "0111" & "000" & "0000" & "000" & "0000010001" & "0000" & X"0001" & X"0001";
+			when X"0001"=> UMem <="00000" & "0111" & "000" & "0001" & "000" & "0000010001" & "0000" & X"0002" & X"0002";
+			when X"0002"=> UMem <="00000" & "0111" & "000" & "0000" & "000" & "0000000001" & "0000" & X"0003" & X"0003";
+			when X"0003"=> UMem <="01000" & "1000" & "000" & "0000" & "000" & "0000000001" & "0000" & X"0004" & X"0004";
+			when X"0004"=> UMem <="01000" & "1000" & "000" & "0001" & "000" & "0000000001" & "0000" & X"0005" & X"0005";
+			when X"0005"=> UMem <="01000" & "1000" & "000" & "0000" & "000" & "0000000001" & "0000" & X"0006" & X"0006";
+			when X"0006"=> UMem <="01000" & "1001" & "000" & "0001" & "000" & "0000000001" & "0000" & X"0007" & X"0007";
+			when X"0007"=> UMem <="01000" & "1001" & "000" & "0000" & "000" & "0000000001" & "0000" & X"0008" & X"0008";
+			when X"0008"=> UMem <="00000" & "1001" & "000" & "0000" & "000" & "0000000001" & "0000" & X"0009" & X"0009";
+			when X"0009"=> UMem <="00000" & "0110" & "000" & "0010" & "000" & "0000000001" & "0000" & X"000A" & X"000A";
+			when X"000A"=> UMem <="00000" & "0110" & "000" & "0000" & "000" & "0001000000" & "0000" & X"000B" & X"000B";
+			when X"000B"=> UMem <="00000" & "0000" & "000" & "0000" & "000" & "0001000001" & "0000" & X"000C" & X"000C";
+			when X"000C"=> UMem <="00000" & "0000" & "000" & "0000" & "000" & "0000000000" & "0000" & X"0000" & X"0000";
+			
+			-- Microprogramación de ADD Directo de Ax Input (Solo sirve en Ax, se tiene que implementar el de reg variable)
+		   --						  MBusSelect RegEnable MuxABC RegValue   ALU    Muxeslocos		ControlL  NextAdd  Bifurcacion			
+			when X"0100"=> UMem <="00000" & "0110" & "000" & "0000" & "000" & "0000000001" & "0000" & X"0101" & X"0101";
+			when X"0101"=> UMem <="00000" & "0110" & "000" & "0010" & "000" & "0000000001" & "0000" & X"0102" & X"0102";
+			when X"0102"=> UMem <="00000" & "0111" & "000" & "0000" & "000" & "0000010001" & "0000" & X"0103" & X"0103";
+			when X"0103"=> UMem <="00000" & "0111" & "000" & "0001" & "000" & "0000010001" & "0000" & X"0104" & X"0104";
+			when X"0104"=> UMem <="00000" & "1000" & "000" & "0000" & "000" & "0000000001" & "0000" & X"0105" & X"0105";
+			when X"0105"=> UMem <="00000" & "1000" & "000" & "0001" & "000" & "0000000001" & "0000" & X"0106" & X"0106";
+			when X"0106"=> UMem <="00000" & "0000" & "100" & "0000" & "000" & "0000000001" & "0000" & X"0107" & X"0107";
+			when X"0107"=> UMem <="00000" & "0000" & "100" & "0001" & "000" & "0000000001" & "0000" & X"0108" & X"0108";
+			when X"0108"=> UMem <="00000" & "1101" & "000" & "0000" & "000" & "0000000001" & "0000" & X"0109" & X"0109";
+			when X"0109"=> UMem <="00000" & "1101" & "000" & "0001" & "000" & "0000000001" & "0000" & X"010A" & X"010A";
+			when X"010A"=> UMem <="00000" & "0110" & "000" & "0000" & "000" & "0000000001" & "0000" & X"010B" & X"010B";
+			when X"010B"=> UMem <="00000" & "0110" & "000" & "0010" & "000" & "0000000001" & "0000" & X"010C" & X"010C";
+			when X"010C"=> UMem <="00000" & "0111" & "000" & "0000" & "000" & "0000010001" & "0000" & X"010D" & X"010D";
+			when X"010D"=> UMem <="00000" & "0111" & "000" & "0001" & "000" & "0000010001" & "0000" & X"010E" & X"010E";
+			when X"010E"=> UMem <="00000" & "1000" & "000" & "0000" & "000" & "0000000001" & "0000" & X"010F" & X"010F";
+			when X"010F"=> UMem <="00000" & "1000" & "000" & "0001" & "000" & "0000000001" & "0000" & X"0110" & X"0110";
+			when X"0110"=> UMem <="01000" & "1110" & "000" & "0000" & "000" & "0000000001" & "0000" & X"0111" & X"0111";
+			when X"0111"=> UMem <="01000" & "1110" & "000" & "0001" & "000" & "0000000001" & "0000" & X"0112" & X"0112";
+			when X"0112"=> UMem <="00000" & "1111" & "000" & "0000" & "000" & "0000000001" & "0000" & X"0113" & X"0113";
+			when X"0113"=> UMem <="00000" & "1111" & "000" & "0001" & "000" & "0000000001" & "0000" & X"0114" & X"0114";
+			when X"0114"=> UMem <="01101" & "0000" & "000" & "0000" & "000" & "0000000001" & "0000" & X"0115" & X"0115";
+			when X"0115"=> UMem <="01101" & "0000" & "000" & "0001" & "000" & "0000000001" & "0000" & X"0000" & X"0000";
+			
+			
+			
+			--JMP 
+		   --						  MBusSelect RegEnable MuxABC RegValue   ALU    Muxeslocos		ControlL  NextAdd  Bifurcacion
+			when X"2200"=> UMem <="00000" & "0110" & "000" & "0010" & "000" & "0000000001" & "0000" & X"2201" & X"2201";
+			when X"2201"=> UMem <="00000" & "0110" & "000" & "0000" & "000" & "0000000001" & "0000" & X"2202" & X"2202";
+			when X"2202"=> UMem <="00000" & "0111" & "000" & "0001" & "000" & "0000010001" & "0000" & X"2203" & X"2203";
+			when X"2203"=> UMem <="00000" & "0111" & "000" & "0000" & "000" & "0000010001" & "0000" & X"2204" & X"2204";
+			when X"2204"=> UMem <="00000" & "0000" & "000" & "0000" & "000" & "0000000000" & "0000" & X"2205" & X"2205";
+			when X"2205"=> UMem <="00000" & "0000" & "000" & "0000" & "000" & "0000000000" & "0000" & X"2206" & X"2206";
+			when X"2206"=> UMem <="00000" & "0000" & "000" & "0000" & "000" & "0000000000" & "0000" & X"2207" & X"2207";
+			when X"2207"=> UMem <="00000" & "0000" & "000" & "0000" & "000" & "0000000000" & "0000" & X"2208" & X"2208";
+			when X"2208"=> UMem <="00000" & "1000" & "000" & "0001" & "000" & "0000000001" & "0000" & X"2209" & X"2209";
+			when X"2209"=> UMem <="01000" & "1000" & "000" & "0000" & "000" & "0000000001" & "0000" & X"220A" & X"220A";
+			when X"220A"=> UMem <="01000" & "0110" & "000" & "0001" & "000" & "0000000001" & "0000" & X"220B" & X"220B";
+			when X"220B"=> UMem <="00000" & "0110" & "000" & "0000" & "000" & "0000000001" & "0000" & X"0000" & X"0000";
+			--When others
+			when others => UMem <="01101" & "0000" & "000" & "0001" & "000" & "0000000001" & "0000" & X"0000" & X"0000";
+			
+			
 		end case;
 	end process;
 	
@@ -141,14 +198,15 @@ begin
 		end case;
 		
 		case MuxDstFt is --mux que controla si MDR escribe a Dst o Ft
-			when '0'	=> DestinoI <= MDR;
-			when '1' => FuenteI <= MDR;
+			when '0'	=> DestinoI <= DstFntAux;
+			when '1' => FuenteI <= DstFntAux;
 		end case;
 		
 		case MuxNxtAdd is --mux que controla si nxtAdd se lee desde la unidad de control, el Destino o desde el cache (en ciclo de fetch) 
 			when "00" => nextAdd <= nextAddUC;
 			when "01" => nextAdd <= DestinoI & X"00";
 			when "10" => nextAdd <= Cache & x"00";
+			when "11" => DstFntAux <= MDR;
 			when others =>nextAdd<= X"0000";
 		end case;
 		
